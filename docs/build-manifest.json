@@ -82,7 +82,7 @@
     },
     {
       "path": "llms.txt",
-      "sha256": "96e4d35234aae390c853154125b5ce4c85655d6dcae6b6cb11ab031227d15360"
+      "sha256": "1964adc7db230b94ae5d6bab0d8d4aef79c4a4db10ba1cc90becb25762df8398"
     },
     {
       "path": "notices/index.html",
@@ -214,7 +214,7 @@
     },
     {
       "path": "research-program/theses/self-modifying-software-substrate-thesis/index.html",
-      "sha256": "17195b1e36740046dd0280a871201e7562f3b18a4fcfbbe41e24ea6bd24b8446"
+      "sha256": "3fa3341056926711a1609592243e9bb730a15a4212eb57b1d79bbac2452bbd93"
     },
     {
       "path": "research-program/theses/standing-guidelines-registry/index.html",
@@ -226,7 +226,7 @@
     },
     {
       "path": "research-program/theses/validated-improvement-loop-thesis/index.html",
-      "sha256": "cc0ab8418db3afdeace6787d738a5f81c863421f4cfa1b5444b02e60959280f4"
+      "sha256": "63f13f1a14c9f65817aebebe6034cb52a09cebfbcc24654113dd273d6937920a"
     },
     {
       "path": "source/CHANGELOG.md",
@@ -458,7 +458,7 @@
     },
     {
       "path": "source/content/research-program/theses/self-modifying-software-substrate-thesis.md",
-      "sha256": "afddbc94a2b0370386bf80d4e649b512e1cf1d30093c358130ec5cbd964bdb88"
+      "sha256": "17f565efb692ac587cc9f0383ada2b556698a1a3f953ddcb4d55b2ed26a2f473"
     },
     {
       "path": "source/content/research-program/theses/standing-guidelines-registry.md",
@@ -470,7 +470,7 @@
     },
     {
       "path": "source/content/research-program/theses/validated-improvement-loop-thesis.md",
-      "sha256": "7091e1991dd401a83f1e756d9f4cfc182f9274b065692234f5becf0afead3578"
+      "sha256": "f1c08766f208b79af03201764f5d20c75d197db1a5c45f66c4891ba22f60c2f0"
     },
     {
       "path": "source/content/start-here.md",
@@ -502,7 +502,7 @@
     },
     {
       "path": "source/llms.txt",
-      "sha256": "f2dc6e9d74c3927ae17dc48d84b3423044d0b9eb019eb2f44055b2fd1013ab9f"
+      "sha256": "aedc8d0cab45d3d8b4a8facc24c855f51bad7e71c005951c8ebf7bcedc26aed6"
     },
     {
       "path": "start-here/index.html",

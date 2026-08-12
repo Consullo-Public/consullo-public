@@ -44,10 +44,10 @@ No indexed page exceeds 32,000 estimated tokens.
 - [Friendship-Governed Goal Architecture — Part 2: Models 4–10](research-program/theses/friendship-governed-goal-architecture-thesis-part-2/): ~23,429 estimated tokens
 - [Friendship-Governed Goal Architecture — Part 3: RSI Protection, Evidence, and Cases](research-program/theses/friendship-governed-goal-architecture-thesis-part-3/): ~28,880 estimated tokens
 - [Friendship-Governed Goal Architecture — Part 4: Risks, Integration, and Acceptance](research-program/theses/friendship-governed-goal-architecture-thesis-part-4/): ~16,472 estimated tokens
-- [The Validated Improvement Loop And Its Invariants](research-program/theses/validated-improvement-loop-thesis/): ~22,484 estimated tokens
+- [The Validated Improvement Loop And Its Invariants](research-program/theses/validated-improvement-loop-thesis/): ~22,576 estimated tokens
 - [A Multi-Agent Cognitive Substrate For Capability Amplification](research-program/theses/multi-agent-cognitive-substrate-thesis/): ~22,297 estimated tokens
 - [Causal-Decision Foundations For Bounded Strategic Reasoning](research-program/theses/causal-decision-foundations-thesis/): ~20,818 estimated tokens
-- [A Self-Modifying Software Substrate With Acceptance Gates](research-program/theses/self-modifying-software-substrate-thesis/): ~20,247 estimated tokens
+- [A Self-Modifying Software Substrate With Acceptance Gates](research-program/theses/self-modifying-software-substrate-thesis/): ~20,366 estimated tokens
 - [Alignment Invariants And Scoped Trust Under Recursive Modification](research-program/theses/alignment-invariants-and-scoped-trust-thesis/): ~20,066 estimated tokens
 - [Risks And Criticisms](research-program/theses/risks-and-criticisms/): ~11,049 estimated tokens
 - [Standing Guidelines Registry](research-program/theses/standing-guidelines-registry/): ~953 estimated tokens
