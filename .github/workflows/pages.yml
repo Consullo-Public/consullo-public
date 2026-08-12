@@ -10,6 +10,20 @@
 # NO PATHS FILTER. The publication dependency closure includes source Markdown,
 # claim records, receipts, generators, validators, licenses, assets, and tests.
 # A hand-maintained filter can silently skip the gate when that closure changes.
+#
+# THIS FILE IS NOT SUFFICIENT. The separation above is only real while the Pages
+# site is configured with `build_type=workflow`. Until 2026-08-12 it was set to
+# `legacy` (branch `main`, path `/docs`), and GitHub's branch builder therefore
+# published every push automatically, independently of Actions. `deploy` was not
+# the publisher; it reported success without being the mechanism serving the
+# site, and a commit whose `verify` job FAILED would have been published anyway.
+#
+# Setting Pages back to branch publishing would restore that failure silently
+# and this file would still read as though it gated anything. If you change the
+# Pages source, re-run the negative control: push a commit that fails `verify`,
+# confirm `deploy` is skipped, and confirm the live site is byte-identical
+# before and after. See `defect-publication-gate-vacuous.md` in the internal
+# planning repository; commit 1a170c1 is the control, 0951faf its revert.
 name: pages
 
 on:
