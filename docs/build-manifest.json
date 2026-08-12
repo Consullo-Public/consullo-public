@@ -82,7 +82,7 @@
     },
     {
       "path": "llms.txt",
-      "sha256": "1964adc7db230b94ae5d6bab0d8d4aef79c4a4db10ba1cc90becb25762df8398"
+      "sha256": "fb83ea82b0b2098b9ef9cc63b6a4ac4c7d6b88e6886c86eb0104f19f880580e5"
     },
     {
       "path": "notices/index.html",
@@ -90,15 +90,19 @@
     },
     {
       "path": "overview/index.html",
-      "sha256": "bb8553d61bddac80596a597658dde5e3d54a5cadc17b617e2c4b7a012594d469"
+      "sha256": "c89be9209e3b7322411ff5f12a89c3881b7b34a2641cf3d0cde5bb4e79ed43bb"
     },
     {
       "path": "research-program/appendices/appendix-evidence-ledger-schema/index.html",
-      "sha256": "3102522c503341a1010f7805e2ee8ea090e8fd61302eebc6effda07f67ba7b7f"
+      "sha256": "a1e2669e0b73130364e26643360909623d79dc7dd59937abaa17678d3420e963"
     },
     {
       "path": "research-program/appendices/appendix-formal-models/index.html",
-      "sha256": "6955e224cfe1dacb41cc29cee14f7b119a145e07b8b737ad5b243c203248273b"
+      "sha256": "890231629ebbef6dbd9c5947d48be9db376f085b650d4da32826ec1e30ea354d"
+    },
+    {
+      "path": "research-program/appendices/appendix-implementation-evidence-map/index.html",
+      "sha256": "b93787ca179d8656a31098a8fa893d0d2268ef22f43a7de495fbceb700b191a7"
     },
     {
       "path": "research-program/appendices/appendix-literature-grounding/index.html",
@@ -110,7 +114,7 @@
     },
     {
       "path": "research-program/appendices/appendix-substrates/index.html",
-      "sha256": "f8c15f08d2df53646a1c47d5893071ee647134652bbb40fa2faedb49a590ca08"
+      "sha256": "8bd355c378fbecae367479ebd954178a6326179cbd96ecbd1fa968444803f5ea"
     },
     {
       "path": "research-program/appendices/appendix-thesis-0-schema-validation-tests/index.html",
@@ -138,7 +142,7 @@
     },
     {
       "path": "research-program/appendices/appendix-thesis-5-operational-contracts/index.html",
-      "sha256": "4005469a1c7b9e01e5022b3b68665ed02a1e453ba12268d231f4085fb318b401"
+      "sha256": "03db6a30f2bbdc4e4500c4fdf5c9c00550881a542f266d1b2cfbee031967a812"
     },
     {
       "path": "research-program/benchmarks/index.html",
@@ -150,39 +154,39 @@
     },
     {
       "path": "research-program/five-theses/index.html",
-      "sha256": "2121728defc189fa3c2944180c7d6d8f0d9b56acde76c30a48e041b5a249227b"
+      "sha256": "dc0407668dbdcd7e916e7c3dda602e4ccf4510148acc77923699750e6b5f7b01"
     },
     {
       "path": "research-program/theses/00-cross-thesis-dependency-map/index.html",
-      "sha256": "a3e1562b1e12d6310546ff1ee82c958e42101782206137abf2b8d00ede20278e"
+      "sha256": "a7e97cd6ab61ed4dbd9014806fe031492e8462759f7d8f43bf189f8f1d488378"
     },
     {
       "path": "research-program/theses/00-master-abstract/index.html",
-      "sha256": "fd1a51b8199c863cab8e3d78c4e291113e8863ca8b380792752d3fcbdc9a5008"
+      "sha256": "25d2addedc6868091712c038dda46b09bd849f81e80828d2e9d532acc3e59587"
     },
     {
       "path": "research-program/theses/00-master-introduction/index.html",
-      "sha256": "62277987dbc6138ba9b7a51c00f1651681a9e65fe25de1d7dfd1a4e7852c2b25"
+      "sha256": "d06a423e9287076b5aa72b3ec2240858c2cc645000e6b57a756eea03220b9e03"
     },
     {
       "path": "research-program/theses/00-master-synthesis/index.html",
-      "sha256": "d459acebd6225d686d97b09cbf951694a28b7eb7ec165da8275c2c25bbf4c02f"
+      "sha256": "43f0976aa33ad88b80c16dc90223ffd0015db148e3df2239e35c941c86560244"
     },
     {
       "path": "research-program/theses/00-thesis-0-naming/index.html",
-      "sha256": "582e7ebe04831ad616195823462d351ed8b475c859e92ce59cb2fce47321a570"
+      "sha256": "bfd5758e85c6ec2ae861bfcb7a242f4d5f1ab7a0d08e8c784762ef4985737233"
     },
     {
       "path": "research-program/theses/00-vocabulary-and-invariants/index.html",
-      "sha256": "a98d5717bfbca98ab3e642f35c84bfcba6109fd0ab7d0873775166e901400b5d"
+      "sha256": "5d6634840e171289008f33413b0adf4bc62611c75d214652e16a5f4d9448b953"
     },
     {
       "path": "research-program/theses/alignment-invariants-and-scoped-trust-thesis/index.html",
-      "sha256": "5429745e3d60a0a48132691ab93b3249f06986c72b9e241f4df5cce5b4a9d118"
+      "sha256": "d145025dfe36c0e29b79f644667518e7601adf590eec6697cec264c6429a78b7"
     },
     {
       "path": "research-program/theses/causal-decision-foundations-thesis/index.html",
-      "sha256": "a9965bec0114f36406d60613635fe2584e0ccf651244dd175a349e90ba254b1e"
+      "sha256": "d7192630ea21a8b55a9861be4e381a163ae57db2780e65d6b4b609eb8e9a8007"
     },
     {
       "path": "research-program/theses/friendship-governed-goal-architecture-thesis/index.html",
@@ -206,7 +210,7 @@
     },
     {
       "path": "research-program/theses/multi-agent-cognitive-substrate-thesis/index.html",
-      "sha256": "ea52390d3ec8f06df1f3231488d343734df6c64502fe90db09077729b85c8681"
+      "sha256": "f05c15d21f9a632438841ca0cc74e81e2aed82d3b065ad8849f2622ac2787e5d"
     },
     {
       "path": "research-program/theses/risks-and-criticisms/index.html",
@@ -214,19 +218,19 @@
     },
     {
       "path": "research-program/theses/self-modifying-software-substrate-thesis/index.html",
-      "sha256": "3fa3341056926711a1609592243e9bb730a15a4212eb57b1d79bbac2452bbd93"
+      "sha256": "f1c884cad9f4aa5167af99e7ef0770958771d5b8acc0e3576f8015630778dc02"
     },
     {
       "path": "research-program/theses/standing-guidelines-registry/index.html",
-      "sha256": "a44c4a6fa28c7a83cccc392b23828ce11b3239e60d535e783b75b074741df4e4"
+      "sha256": "7f0c4c8668de9dd0f27b5229375ab639f93b0c6f58f2f74d319a0338d9463bd2"
     },
     {
       "path": "research-program/theses/thesis-0-cross-reference-map/index.html",
-      "sha256": "051d2276dcbe8029c8455f36ca139d21071db7a0274dbe46173b1ea4097a073d"
+      "sha256": "0022d58662aacd379fdc2e419e4e19a2ae3b3b6276daade0f191c109c32b9734"
     },
     {
       "path": "research-program/theses/validated-improvement-loop-thesis/index.html",
-      "sha256": "63f13f1a14c9f65817aebebe6034cb52a09cebfbcc24654113dd273d6937920a"
+      "sha256": "05aa57e923ca8dd65609d81d96fdbae325e209d029363b71058985015ea86eda"
     },
     {
       "path": "source/CHANGELOG.md",
@@ -266,7 +270,7 @@
     },
     {
       "path": "source/OVERVIEW.md",
-      "sha256": "b0f7c661ffa3e9a3bfa80175e88a9d22b866617e9080167f1f207bb1a6265528"
+      "sha256": "9e3405f1da698f83a6986a19e42b9991d71cf67c61c2e578f187b511da63b0b3"
     },
     {
       "path": "source/README.md",
@@ -338,11 +342,15 @@
     },
     {
       "path": "source/content/research-program/appendices/appendix-evidence-ledger-schema.md",
-      "sha256": "15086155137bbe35dd070b2c08353b36d6ad33c7c0cc62e091e0ec110486eb18"
+      "sha256": "f05949812ef8e4cdc7c59a9a2cf4f9c6abf1c7b2458ce7c11127968a8cfb047e"
     },
     {
       "path": "source/content/research-program/appendices/appendix-formal-models.md",
-      "sha256": "56e324b72dee0b88a9ff708916b0e66699af178c4761a044ed307f2ea3b308c7"
+      "sha256": "4df0f1ee3e666e989abdc8b3194f3d6337cd1be7cf27474eab7f1c4564391c42"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-implementation-evidence-map.md",
+      "sha256": "4f6309a5ce67235fac1386f26630c448d1b3ce25d720eea461beedd17ebd9c2f"
     },
     {
       "path": "source/content/research-program/appendices/appendix-literature-grounding.md",
@@ -354,7 +362,7 @@
     },
     {
       "path": "source/content/research-program/appendices/appendix-substrates.md",
-      "sha256": "62f31ea9c09b3b262c71d6c87bdac5be6bf5dcc30015c4bc57fd3c93e07c0954"
+      "sha256": "587277ba9ae3327f5cb87acdb4d728b01864a7244c791f57b48c0c7a7d26d075"
     },
     {
       "path": "source/content/research-program/appendices/appendix-thesis-0-schema-validation-tests.md",
@@ -382,7 +390,7 @@
     },
     {
       "path": "source/content/research-program/appendices/appendix-thesis-5-operational-contracts.md",
-      "sha256": "fed253772c337e99ee5d69fdbdadd96f2a5df4c708142151ab8a2a293edfc2ee"
+      "sha256": "cfffcabeb301a4e04b613a0da5ae50676a82758fdb9ebb24f0969c3c9a62c6cb"
     },
     {
       "path": "source/content/research-program/benchmarks.md",
@@ -394,39 +402,39 @@
     },
     {
       "path": "source/content/research-program/five-theses.md",
-      "sha256": "7b4b418c65cd2a52c184c8284891272b1239f1b2bdb2e3c8f719544bb0f7b1b2"
+      "sha256": "ba95fd6737810c59d10e610ff693b80f0e3faf2f6545eb82df842e37e85b7edd"
     },
     {
       "path": "source/content/research-program/theses/00-cross-thesis-dependency-map.md",
-      "sha256": "63a919ca583df94c7a1dd20bc379840479b5880e7958a2feee86a3cca599e290"
+      "sha256": "781c2cc059280ffd5d0c6f2cd049ca294cf367b2f62af82e2db32a1ed4f0f24f"
     },
     {
       "path": "source/content/research-program/theses/00-master-abstract.md",
-      "sha256": "b0c2e0d1e50d94651156d1d47452b8d54ed78e222bb1f1be04106f9cdb6d028d"
+      "sha256": "42e8f472261c3827e24738e54ee5dbd499d23fb73ece42013dac06846468984b"
     },
     {
       "path": "source/content/research-program/theses/00-master-introduction.md",
-      "sha256": "072acaa3e1b9480308f98fec2af9ff3be7894f1ebe9ec707d607d5d3398dac6d"
+      "sha256": "bea7c51e18c9e5706c5111083bbf3f1966e40222d8ba4258c85b91dd67f0dad0"
     },
     {
       "path": "source/content/research-program/theses/00-master-synthesis.md",
-      "sha256": "6aec7e3eb0d8cb7c62b2b97ddeefda7dc2740b7954d568a9ce8a51cdfb403a2d"
+      "sha256": "324f3cb111b9b290493b1a385197044495ed33864a018fc70f2a5ac338314967"
     },
     {
       "path": "source/content/research-program/theses/00-thesis-0-naming.md",
-      "sha256": "82e723b5358cb6310a7346567bb34b0be15f06970f1609589bfc36316e9a9d9f"
+      "sha256": "28fa22bab7d1281aa68767b4c94fe3e2e7bdf410c08352247fb206bde8d03632"
     },
     {
       "path": "source/content/research-program/theses/00-vocabulary-and-invariants.md",
-      "sha256": "4a9ce7990e0bc20ef1a033a818f1d1514be76b65b858bf91d9ea262f647a6c40"
+      "sha256": "db1294adb30c37cae4e69a9102be4ffa33765342e7da7a1a8724c5781462368e"
     },
     {
       "path": "source/content/research-program/theses/alignment-invariants-and-scoped-trust-thesis.md",
-      "sha256": "72ca732fb23245a0eb90664c1c1e8bae5f797f5651cca1feddb129371c09b39a"
+      "sha256": "08260f3e7e3c09652fd1af5b726f6165eb779940b163e35c62f07906752c1956"
     },
     {
       "path": "source/content/research-program/theses/causal-decision-foundations-thesis.md",
-      "sha256": "313ffa6de66d07bfe2f747feff091970227248dc57fd129d53f299d895109e3f"
+      "sha256": "9f58d669be4575e057382ea556e00b4c1c6e7bd286e5da146e86449aaae734da"
     },
     {
       "path": "source/content/research-program/theses/friendship-governed-goal-architecture-thesis-part-1.md",
@@ -450,7 +458,7 @@
     },
     {
       "path": "source/content/research-program/theses/multi-agent-cognitive-substrate-thesis.md",
-      "sha256": "7b978ec3b9f8f15ce4874160ac86792665590712afa69919f527a6c2a381e728"
+      "sha256": "a11a7c8173263181e2be24ecfc0f307bf50195a2a1158e2f8681abd39ea8b760"
     },
     {
       "path": "source/content/research-program/theses/risks-and-criticisms.md",
@@ -458,19 +466,19 @@
     },
     {
       "path": "source/content/research-program/theses/self-modifying-software-substrate-thesis.md",
-      "sha256": "17f565efb692ac587cc9f0383ada2b556698a1a3f953ddcb4d55b2ed26a2f473"
+      "sha256": "3fc10825aa2e68100468f11acceb9cf6517c7d7a5784af5f82d358760c679e0f"
     },
     {
       "path": "source/content/research-program/theses/standing-guidelines-registry.md",
-      "sha256": "e4bf5f4f4ceda39d3b54832d580c5ab1e0ae210b545d5fc269b770b18bbb43c9"
+      "sha256": "42b32eade93600de565913f2ccfdbea5c746144d8b9017d31e9af1ef54aa5f94"
     },
     {
       "path": "source/content/research-program/theses/thesis-0-cross-reference-map.md",
-      "sha256": "6dfa9899ff2008523d6ba5899b91d04f20d37338aefa158b8bbb1502acc77f9f"
+      "sha256": "e93924cd0cdc3ba8aff6eb09b677ef195a7b51701ac39b9e4994ff74bd7b0b4c"
     },
     {
       "path": "source/content/research-program/theses/validated-improvement-loop-thesis.md",
-      "sha256": "f1c08766f208b79af03201764f5d20c75d197db1a5c45f66c4891ba22f60c2f0"
+      "sha256": "9a9f826fcc0e9945cf1c34b03df457d3a8b5e8f420788faacafbe57cd5712793"
     },
     {
       "path": "source/content/start-here.md",
@@ -502,7 +510,7 @@
     },
     {
       "path": "source/llms.txt",
-      "sha256": "aedc8d0cab45d3d8b4a8facc24c855f51bad7e71c005951c8ebf7bcedc26aed6"
+      "sha256": "f0be7fed3ac73809218a564b661a009048966662a5063ecf3051537cfcfa0a44"
     },
     {
       "path": "start-here/index.html",

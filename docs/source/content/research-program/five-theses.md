@@ -57,8 +57,20 @@ their narrower status on their own pages.
 - [Thesis 5 alignment benchmarks](appendices/appendix-thesis-5-alignment-benchmarks.md)
 - [Thesis 5 operational contracts](appendices/appendix-thesis-5-operational-contracts.md)
 
-## Withheld evidence appendix
+- [Implementation evidence map](appendices/appendix-implementation-evidence-map.md)
 
-The implementation-evidence appendix is intentionally absent pending owner re-verification. Its
-four `Implemented/Tested` gradings for Theses 1 and 4 depended on five source files that could not
-be found in the workspace, so it cannot presently support any public implementation claim.
+## The evidence appendix, withheld at launch and now published
+
+The implementation-evidence appendix was deliberately absent when this site first went live on
+2026-08-12. Four of its `Implemented/Tested` gradings for Theses 1 and 4 rested on five source
+files that could not be found, so it could not support any public implementation claim.
+
+It is published now because it was **re-graded rather than repaired**. Four of the five files were
+real and were removed on 2026-08-10, two days before launch, by a deliberate refactor that moved
+the agent runtime; the capabilities they evidenced are now marked specified rather than
+implemented. The fifth had never existed in any repository, and its citation was deleted outright
+rather than repointed.
+
+The corrected appendix is a more useful document than the original would have been, and that is the
+reason to publish it rather than quietly fix it. A research record that only reports gains is not a
+record.

@@ -44,7 +44,17 @@ ALLOWED_PAGE_STATUSES = ALLOWED_CAPABILITY_STATUSES | {
     "specified",
 }
 MAX_PAGE_ESTIMATED_TOKENS = 32_000
-WITHHELD_ARTIFACT_BASENAMES = {"appendix-implementation-evidence-map.md"}
+# Artifacts an owner decision keeps off this site. Emptied on 2026-08-12: the
+# implementation-evidence appendix was withheld at launch because four of its
+# `Implemented/Tested` gradings rested on classes a refactor had removed two
+# days earlier, and one citation named a file that had never existed. It was
+# re-graded and published on owner decision the same day.
+#
+# The set is deliberately kept rather than deleted. It is the mechanism by which
+# a withholding decision is enforced instead of remembered, and emptying it had
+# to be a visible edit to this file -- which is the point: the check refused the
+# publish until the decision was written down here.
+WITHHELD_ARTIFACT_BASENAMES: set[str] = set()
 ALLOWED_EVIDENCE_STRATA = {"none", "self-authored diagnostic", "witnessed", "independent"}
 ALLOWED_IMPLEMENTATION_STRATA = {
     "none",

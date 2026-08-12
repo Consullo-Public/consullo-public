@@ -15,7 +15,7 @@ No indexed page exceeds 32,000 estimated tokens.
 
 ## Orientation and status
 
-- [Overview and comprehensive document index](OVERVIEW.md): ~5,709 estimated tokens
+- [Overview and comprehensive document index](OVERVIEW.md): ~5,772 estimated tokens
 - [Consullo public research record](content/index.md): ~286 estimated tokens
 - [Start here](content/start-here.md): ~191 estimated tokens
 - [Evidence and claim status](STATUS.md): ~708 estimated tokens
@@ -26,36 +26,37 @@ No indexed page exceeds 32,000 estimated tokens.
 
 - [Architecture](content/architecture.md): ~148 estimated tokens
 - [Constitutional commitments](content/constitutional-commitments.md): ~5,264 estimated tokens
-- [Five-thesis research program](content/research-program/five-theses.md): ~894 estimated tokens
+- [Five-thesis research program](content/research-program/five-theses.md): ~1,076 estimated tokens
 - [Falsifiers](content/research-program/falsifiers.md): ~310 estimated tokens
 - [Benchmarks](content/research-program/benchmarks.md): ~168 estimated tokens
 - [Atomic decomposition](content/engineering/atomic-decomposition.md): ~133 estimated tokens
 - [LLM-native Functional Java](content/engineering/llm-native-functional-java.md): ~137 estimated tokens
 - [Empirical self-improvement](content/engineering/empirical-self-improvement.md): ~163 estimated tokens
 - [From Cyc to Consullo — A Research History](content/history/from-cyc-to-consullo.md): ~5,736 estimated tokens
-- [Master Abstract](content/research-program/theses/00-master-abstract.md): ~1,258 estimated tokens
-- [Master Introduction](content/research-program/theses/00-master-introduction.md): ~2,485 estimated tokens
-- [Master Synthesis](content/research-program/theses/00-master-synthesis.md): ~3,009 estimated tokens
-- [Vocabulary And Invariants](content/research-program/theses/00-vocabulary-and-invariants.md): ~11,717 estimated tokens
-- [Cross-Thesis Dependency Map](content/research-program/theses/00-cross-thesis-dependency-map.md): ~5,734 estimated tokens
-- [Thesis 0 — Naming, Cross-Reference, and Interpretive Stance](content/research-program/theses/00-thesis-0-naming.md): ~3,368 estimated tokens
+- [Master Abstract](content/research-program/theses/00-master-abstract.md): ~1,271 estimated tokens
+- [Master Introduction](content/research-program/theses/00-master-introduction.md): ~2,498 estimated tokens
+- [Master Synthesis](content/research-program/theses/00-master-synthesis.md): ~3,023 estimated tokens
+- [Vocabulary And Invariants](content/research-program/theses/00-vocabulary-and-invariants.md): ~11,730 estimated tokens
+- [Cross-Thesis Dependency Map](content/research-program/theses/00-cross-thesis-dependency-map.md): ~5,747 estimated tokens
+- [Thesis 0 — Naming, Cross-Reference, and Interpretive Stance](content/research-program/theses/00-thesis-0-naming.md): ~3,381 estimated tokens
 - [Friendship-Governed Goal Architecture](content/research-program/theses/friendship-governed-goal-architecture-thesis.md): ~303 estimated tokens
 - [Friendship-Governed Goal Architecture — Part 1: Foundations and Models 1–3](content/research-program/theses/friendship-governed-goal-architecture-thesis-part-1.md): ~28,588 estimated tokens
 - [Friendship-Governed Goal Architecture — Part 2: Models 4–10](content/research-program/theses/friendship-governed-goal-architecture-thesis-part-2.md): ~23,429 estimated tokens
 - [Friendship-Governed Goal Architecture — Part 3: RSI Protection, Evidence, and Cases](content/research-program/theses/friendship-governed-goal-architecture-thesis-part-3.md): ~28,880 estimated tokens
 - [Friendship-Governed Goal Architecture — Part 4: Risks, Integration, and Acceptance](content/research-program/theses/friendship-governed-goal-architecture-thesis-part-4.md): ~16,472 estimated tokens
-- [The Validated Improvement Loop And Its Invariants](content/research-program/theses/validated-improvement-loop-thesis.md): ~22,576 estimated tokens
-- [A Multi-Agent Cognitive Substrate For Capability Amplification](content/research-program/theses/multi-agent-cognitive-substrate-thesis.md): ~22,297 estimated tokens
-- [Causal-Decision Foundations For Bounded Strategic Reasoning](content/research-program/theses/causal-decision-foundations-thesis.md): ~20,818 estimated tokens
-- [A Self-Modifying Software Substrate With Acceptance Gates](content/research-program/theses/self-modifying-software-substrate-thesis.md): ~20,366 estimated tokens
-- [Alignment Invariants And Scoped Trust Under Recursive Modification](content/research-program/theses/alignment-invariants-and-scoped-trust-thesis.md): ~20,066 estimated tokens
+- [The Validated Improvement Loop And Its Invariants](content/research-program/theses/validated-improvement-loop-thesis.md): ~22,589 estimated tokens
+- [A Multi-Agent Cognitive Substrate For Capability Amplification](content/research-program/theses/multi-agent-cognitive-substrate-thesis.md): ~22,311 estimated tokens
+- [Causal-Decision Foundations For Bounded Strategic Reasoning](content/research-program/theses/causal-decision-foundations-thesis.md): ~20,831 estimated tokens
+- [A Self-Modifying Software Substrate With Acceptance Gates](content/research-program/theses/self-modifying-software-substrate-thesis.md): ~20,380 estimated tokens
+- [Alignment Invariants And Scoped Trust Under Recursive Modification](content/research-program/theses/alignment-invariants-and-scoped-trust-thesis.md): ~20,079 estimated tokens
 - [Risks And Criticisms](content/research-program/theses/risks-and-criticisms.md): ~11,049 estimated tokens
-- [Standing Guidelines Registry](content/research-program/theses/standing-guidelines-registry.md): ~953 estimated tokens
-- [Friendship-Governed Goal Architecture (Thesis 0) Cross-Reference Map](content/research-program/theses/thesis-0-cross-reference-map.md): ~3,153 estimated tokens
-- [Appendix: Formal Models](content/research-program/appendices/appendix-formal-models.md): ~7,363 estimated tokens
-- [Appendix: Evidence Ledger Schema](content/research-program/appendices/appendix-evidence-ledger-schema.md): ~5,969 estimated tokens
+- [Standing Guidelines Registry](content/research-program/theses/standing-guidelines-registry.md): ~966 estimated tokens
+- [Friendship-Governed Goal Architecture (Thesis 0) Cross-Reference Map](content/research-program/theses/thesis-0-cross-reference-map.md): ~3,166 estimated tokens
+- [Appendix: Formal Models](content/research-program/appendices/appendix-formal-models.md): ~7,376 estimated tokens
+- [Appendix: Evidence Ledger Schema](content/research-program/appendices/appendix-evidence-ledger-schema.md): ~5,983 estimated tokens
+- [Appendix: Implementation Evidence Map](content/research-program/appendices/appendix-implementation-evidence-map.md): ~5,443 estimated tokens — which claims have code behind them, which are specified only, and which lost their evidence to the 2026-08-10 refactor
 - [Appendix: Literature Grounding](content/research-program/appendices/appendix-literature-grounding.md): ~6,262 estimated tokens
-- [Appendix: Substrate Context](content/research-program/appendices/appendix-substrates.md): ~1,139 estimated tokens
+- [Appendix: Substrate Context](content/research-program/appendices/appendix-substrates.md): ~1,153 estimated tokens
 - [Appendix: Organizational Recursive Self-Improvement](content/research-program/appendices/appendix-organizational-recursive-self-improvement.md): ~6,949 estimated tokens
 - [Appendix: Thesis 0 Schema Validation Tests](content/research-program/appendices/appendix-thesis-0-schema-validation-tests.md): ~1,562 estimated tokens
 - [Appendix: Thesis 1 Improvement Loop Benchmarks](content/research-program/appendices/appendix-thesis-1-improvement-loop-benchmarks.md): ~4,051 estimated tokens
@@ -63,7 +64,7 @@ No indexed page exceeds 32,000 estimated tokens.
 - [Appendix: Thesis 3 Causal-Decision Benchmarks](content/research-program/appendices/appendix-thesis-3-causal-decision-benchmarks.md): ~2,628 estimated tokens
 - [Appendix: Thesis 4 Software Substrate Benchmarks](content/research-program/appendices/appendix-thesis-4-software-substrate-benchmarks.md): ~2,590 estimated tokens
 - [Appendix: Thesis 5 Alignment And Scoped-Trust Benchmarks](content/research-program/appendices/appendix-thesis-5-alignment-benchmarks.md): ~2,633 estimated tokens
-- [Appendix: Thesis 5 Operational Contracts](content/research-program/appendices/appendix-thesis-5-operational-contracts.md): ~3,323 estimated tokens
+- [Appendix: Thesis 5 Operational Contracts](content/research-program/appendices/appendix-thesis-5-operational-contracts.md): ~3,336 estimated tokens
 
 ## Authority and provenance
 

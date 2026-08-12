@@ -6,7 +6,7 @@ provenance: "derived from the owner-approved private Consullo design corpus; no 
 claim_ids: ["CP-001"]
 last_reviewed: "2026-08-12"
 receipt: "none"
-non_claims: ["Publication does not establish implementation or operational effectiveness.", "The withheld implementation-evidence appendix is not evidence for this page."]
+non_claims: ["Publication does not establish implementation or operational effectiveness.", "The implementation-evidence appendix records component evidence only and is not evidence of operational capability for this page."]
 ---
 # Alignment Invariants And Scoped Trust Under Recursive Modification
 

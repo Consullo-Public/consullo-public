@@ -181,6 +181,7 @@ sources and are not listed again.
 |---|---|---|---|---|
 | [Formal models](content/research-program/appendices/appendix-formal-models.md) | What shared mathematical sketches and acceptance semantics support the suite? | Proposed extension | None | ~20 min |
 | [Evidence-ledger schema](content/research-program/appendices/appendix-evidence-ledger-schema.md) | What should an evidence ledger record? | Specified but not implemented | None | ~15 min |
+| [Implementation evidence map](content/research-program/appendices/appendix-implementation-evidence-map.md) | Which claims have code behind them, which are specified only, and which lost their evidence to a refactor? | Implemented | None | ~20 min |
 | [Literature grounding](content/research-program/appendices/appendix-literature-grounding.md) | Which external literature constrains the research program? | Implemented literature record; not system implementation | Literature synthesis; not independent validation | ~15 min |
 | [Substrates](content/research-program/appendices/appendix-substrates.md) | Which technical and economic substrates support the thesis architecture? | Specified but not implemented | None | ~4 min |
 | [Organizational recursive self-improvement](content/research-program/appendices/appendix-organizational-recursive-self-improvement.md) | How might the five theses compose as an AI-native R&D organization? | Speculative research target | None | ~19 min |

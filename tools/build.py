@@ -40,6 +40,7 @@ DERIVED_RESEARCH_SOURCES = (
     Path("content/research-program/theses/thesis-0-cross-reference-map.md"),
     Path("content/research-program/appendices/appendix-formal-models.md"),
     Path("content/research-program/appendices/appendix-evidence-ledger-schema.md"),
+    Path("content/research-program/appendices/appendix-implementation-evidence-map.md"),
     Path("content/research-program/appendices/appendix-literature-grounding.md"),
     Path("content/research-program/appendices/appendix-substrates.md"),
     Path("content/research-program/appendices/appendix-organizational-recursive-self-improvement.md"),
