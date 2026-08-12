@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root=$(git rev-parse --show-toplevel)
+gate="$repo_root/../consullo-public-internal/extraction/publish_gate.py"
+
+if [[ ! -f "$gate" ]]; then
+  echo "Publication gate is unavailable; refusing the commit." >&2
+  exit 1
+fi
+
+mapfile -d '' staged < <(git diff --cached --name-only --diff-filter=ACMR -z)
+paths=()
+for relative in "${staged[@]}"; do
+  paths+=("$repo_root/$relative")
+done
+
+python3 "$gate" --self-test
+if (( ${#paths[@]} )); then
+  python3 "$gate" --scan "${paths[@]}"
+fi
+python3 "$repo_root/tools/verify_public.py"
+

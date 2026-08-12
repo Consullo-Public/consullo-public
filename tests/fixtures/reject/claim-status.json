@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "allowed_capability_statuses": [
+    "implemented",
+    "specified but not implemented",
+    "proposed extension",
+    "speculative research target"
+  ],
+  "claims": [
+    {
+      "id": "FIXTURE-001",
+      "statement": "This fixture must be rejected.",
+      "capability_status": "validated",
+      "implementation_stratum": "none",
+      "evidence_ids": [],
+      "receipt": "none",
+      "last_reviewed": "2026-08-12",
+      "non_claims": ["Test data only."]
+    }
+  ]
+}

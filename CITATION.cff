@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this public research record, cite the version you inspected."
+title: "Consullo Public: research record for governed recursive capability amplification"
+type: software
+authors:
+  - family-names: Reed
+    given-names: Stephen
+version: 0.1.0
+date-released: 2026-08-12
+license: CC-BY-4.0
+abstract: >-
+  A status-disciplined public record for a research program on governed recursive
+  capability amplification. The repository distinguishes specifications, proposals,
+  implementation evidence, and independent evidence.
+keywords:
+  - artificial intelligence
+  - recursive capability amplification
+  - AI governance
+  - falsification
+  - reproducible research
+

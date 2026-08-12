@@ -1,0 +1,270 @@
+{
+  "files": [
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "CNAME",
+      "sha256": "f219c63eeb6d3e847a655bdcaa8920c796da97f5226a454400a154274342f60b"
+    },
+    {
+      "path": "architecture/index.html",
+      "sha256": "15dd4b83efe822dae9a3dfae8b42f02b6ab8f640aabc4fc43d6d42ea0bd25932"
+    },
+    {
+      "path": "assets/favicon.png",
+      "sha256": "b6163177ebf72d24d9384d58e7022ec8be8cdd0f224f650dd586e88589e59ab6"
+    },
+    {
+      "path": "assets/logo-dark.png",
+      "sha256": "823fd983e81afc74df54fcf21f46590bd96109dd587f019fb5cf1dd373ab3576"
+    },
+    {
+      "path": "assets/logo-light.png",
+      "sha256": "4f9aea9a1f9dff5b946f3d73843956a637ac2d96f1a7afc8aa85922e4671ac7c"
+    },
+    {
+      "path": "assets/site.css",
+      "sha256": "e2d9cfb8aca74de743be7b30b07971e4163bce9415725218eaf81b2bf7bfcd63"
+    },
+    {
+      "path": "constitutional-commitments/index.html",
+      "sha256": "a0172d7bfccc43de1bb2f7d949f53d6ae18d579d8200fd1a36a6b780a2ef5459"
+    },
+    {
+      "path": "engineering/atomic-decomposition/index.html",
+      "sha256": "6bc701d5d3b86c7b763084ed0538e04ad31ab763315b74fec4359d0f9a0fc041"
+    },
+    {
+      "path": "engineering/empirical-self-improvement/index.html",
+      "sha256": "602eeff1058b393ae80e572f366df045d03d20f97532b727168706d019d469b6"
+    },
+    {
+      "path": "engineering/llm-native-functional-java/index.html",
+      "sha256": "6bb9211ce3cc388bdd6c9c0b77caa63f8a6ef8e3ac135864d58a0a4b69934d7d"
+    },
+    {
+      "path": "evidence/index.html",
+      "sha256": "bc609679c8b52cf856f84955ff1c5e81e7c163cf862a3d599ecbc8eee578c201"
+    },
+    {
+      "path": "evidence/negative-results/index.html",
+      "sha256": "00b1b476620e4e56a44893889ecbea9fb9a62c6f5d9199680975bc0b7a28e0ae"
+    },
+    {
+      "path": "evidence/public-experiments/index.html",
+      "sha256": "6af57b9056fa475b8062b1e543fcd8fe7ddf662844adfea2ff25ff8db87a3fa8"
+    },
+    {
+      "path": "governance/authority-and-custody/index.html",
+      "sha256": "cce00d97286d3ed4c11a633aa43b9b423167d79ce4ef74bad0358cd4bf024be9"
+    },
+    {
+      "path": "governance/corrections/index.html",
+      "sha256": "099e4a7a4cbe5828161b671ad7581b6530d627c040568fa5f726932a94bc4504"
+    },
+    {
+      "path": "governance/index.html",
+      "sha256": "35aa50e1ec66e1ac63709dfb8143f91c2c8599dba151acbdadb82f67e4a0455d"
+    },
+    {
+      "path": "governance/oagf-relationship/index.html",
+      "sha256": "306ca078bcdef3d4d512e07aa80af99bb446f90c647680e0bdbfe1b0e4920d5e"
+    },
+    {
+      "path": "history/from-cyc-to-consullo/index.html",
+      "sha256": "cf2b19c33320e6c08982b0aeccbd9e1183cd8647db5da21e30cda215088c8b80"
+    },
+    {
+      "path": "index.html",
+      "sha256": "5d0202d26dd8a5448476d01a30425ab27b2e9ae71e1692c768a17d8e37aafef2"
+    },
+    {
+      "path": "llms.txt",
+      "sha256": "e40123f3db122f226a45bb50448dcac15ba60359bfebae0fbb7dbfe4695f4006"
+    },
+    {
+      "path": "notices/index.html",
+      "sha256": "a558ea53cc11fea9ca6413183ab56ded5b733eb38a5367d84b972b3b5bf74edb"
+    },
+    {
+      "path": "overview/index.html",
+      "sha256": "6477d8155b157fa392bafad9bc4a851094e268beed4f33140c64b5ff41741f38"
+    },
+    {
+      "path": "research-program/benchmarks/index.html",
+      "sha256": "decd43d7e488fe6adf07f598a0091f11bc0174fe3c2a19335812b3e16f43b791"
+    },
+    {
+      "path": "research-program/falsifiers/index.html",
+      "sha256": "e0ab5e2f2993f7ea881d41f6778756c4f4c64ae7e09ced68fb809cf8393f67a4"
+    },
+    {
+      "path": "research-program/five-theses/index.html",
+      "sha256": "bbf4ae584a8c1f86d64a87c8cc1550b351121bef7e71a2079fbb73ddb1474b14"
+    },
+    {
+      "path": "source/CHANGELOG.md",
+      "sha256": "de57c0c50a7be0c355642a160c4b92b03a284a1e048fca5a6c8e51d4f53eaabc"
+    },
+    {
+      "path": "source/CITATION.cff",
+      "sha256": "985df943090efb2b678e9f5d72de72cd777d02630b63413263c3b099cb8abe73"
+    },
+    {
+      "path": "source/CODE_OF_CONDUCT.md",
+      "sha256": "df99228f8f7de31245557752dce1129c3fba97d14c4e1285d3efe865c8552064"
+    },
+    {
+      "path": "source/CONTRIBUTING.md",
+      "sha256": "3eb3e9125cb6c9e5ba6c606777ad5c1a46377fa5ed142f9f985a6664c39e48d2"
+    },
+    {
+      "path": "source/GOVERNANCE.md",
+      "sha256": "51730ad6b9f17b53d744e1062018522436af56a0e25c0ff2dbbb7bb3379ffc89"
+    },
+    {
+      "path": "source/HANDOFF.md",
+      "sha256": "e02d84a215a1581733b641b66f8c58b63df75a50102d00e688d819922724d6db"
+    },
+    {
+      "path": "source/LICENSE",
+      "sha256": "902e1e1b4df2f45c1e322d7e5436aac1d7a5fb4a3cf06e9e3f182d2234bbe8f5"
+    },
+    {
+      "path": "source/LICENSE-CODE",
+      "sha256": "a4ca70fbc44e6a21e1df5f367ac0ed5b6a05dedd71a1a2cf91d758795f1c8446"
+    },
+    {
+      "path": "source/NOTICE.md",
+      "sha256": "a75829cb3c5c8b163ad00ce66add9252cf74ef64739b62bbf4dc769b6d6d63de"
+    },
+    {
+      "path": "source/OVERVIEW.md",
+      "sha256": "1d7992bd564eec7613eaa66dde50755fbd88ed94fa26744d725bfe6bf895d772"
+    },
+    {
+      "path": "source/README.md",
+      "sha256": "44d35cd20ebfcb1e928f86bf885fdc6baa4daea0ee5aac9c3c62434b48d4feb2"
+    },
+    {
+      "path": "source/SECURITY.md",
+      "sha256": "e46b16ae1b328f1883fc893cf409229c7207e322b760b1d586e8a8f87e8fea98"
+    },
+    {
+      "path": "source/STATUS.md",
+      "sha256": "88cf91c6541b88cd194b0a396c8d4ba52e6cec5b6d0444eeb466c8e7bb3c88d1"
+    },
+    {
+      "path": "source/assets/README.md",
+      "sha256": "fdd209d8c452628c44c11511ba9ba828451dd551ebbc5e7e7d75562d42c78ebb"
+    },
+    {
+      "path": "source/claims/claims.yaml",
+      "sha256": "ee2d3d8fd45df8bc5285ea5a589a33173854138a2cbdbc68bc70c9c311fc6557"
+    },
+    {
+      "path": "source/claims/evidence.yaml",
+      "sha256": "bd322276721428ff89bd2422bdc6a70ef0a7950a6d4fa5bb9aefb03993c6e197"
+    },
+    {
+      "path": "source/claims/source-dispositions.yaml",
+      "sha256": "dacfcf6528a42875aba0e946244d3e45d56de51167702d1fc3dbdfd9a4b76b17"
+    },
+    {
+      "path": "source/content/architecture.md",
+      "sha256": "165f906c90f1c5d3e90545fd651d5a82ed735d18e6a08a01fdb46c2d1cacaef0"
+    },
+    {
+      "path": "source/content/constitutional-commitments.md",
+      "sha256": "46fc958e3656ea2b3df008e3a993453e6bc5b028eb058a032c413b77a1138bf9"
+    },
+    {
+      "path": "source/content/engineering/atomic-decomposition.md",
+      "sha256": "fd733b6a3ed71e708823eb3ee3c5055092846a628cf397970f38b167839a2a70"
+    },
+    {
+      "path": "source/content/engineering/empirical-self-improvement.md",
+      "sha256": "dd962620119867925a14c35756f5e7819962958e34f1b29628ab0feca7e2fa38"
+    },
+    {
+      "path": "source/content/engineering/llm-native-functional-java.md",
+      "sha256": "8c9c84751a345aa77899c0d3d19e58058dee8b87e8016fd41f02dc71e78ad919"
+    },
+    {
+      "path": "source/content/governance/authority-and-custody.md",
+      "sha256": "e2ecabdaad3c1437cb08718843388ec555bec339c2637cc1ecbf1aa5b211e32e"
+    },
+    {
+      "path": "source/content/governance/corrections.md",
+      "sha256": "4b4f04cd53c33f16e117c1accb3a2b08ff5cb07eac3cb7dc5347543b3fc547c6"
+    },
+    {
+      "path": "source/content/governance/oagf-relationship.md",
+      "sha256": "7a90a4be0339c0451af461ea76f161b3a63a08466b1450309a22201bb84b3cd8"
+    },
+    {
+      "path": "source/content/history/from-cyc-to-consullo.md",
+      "sha256": "4dc7485acfe74c448c8073d80780fc8771ddf099168ffce6b76b83f4423c5a43"
+    },
+    {
+      "path": "source/content/index.md",
+      "sha256": "06678179d0814d7d3c496edc5a1f84c321af196fa1170188ddedbb052a433956"
+    },
+    {
+      "path": "source/content/research-program/benchmarks.md",
+      "sha256": "7ea12b25c49aebb05044c4db1a8bf95558e211614f0c2eca8a43f738ace077e1"
+    },
+    {
+      "path": "source/content/research-program/falsifiers.md",
+      "sha256": "2e7d322714cab0f1a69cc4d8c9cf20653bc02c9ba2cae8f8ba7252c8a541a2fa"
+    },
+    {
+      "path": "source/content/research-program/five-theses.md",
+      "sha256": "d7d92de7423b06074cf1c7ef038c6cb9a36416bd81d5df82f4f4560acc253c53"
+    },
+    {
+      "path": "source/content/start-here.md",
+      "sha256": "9f8a603911951e399455bf9ef340ec5f3db38537dfc0ce7fe7d0bb90575c6484"
+    },
+    {
+      "path": "source/declassification/RELEASES.md",
+      "sha256": "15671690f5bfb47759ca6ca9e649c52d34be9de8a9a0ae62ce94d0068425fdb2"
+    },
+    {
+      "path": "source/declassification/public-receipts/DDR-0005.md",
+      "sha256": "6dc0580f42e6f5d2ef928407e984af81d22fb9fe331816a347c54fd0f554843f"
+    },
+    {
+      "path": "source/declassification/public-receipts/README.md",
+      "sha256": "0324205ab7721d0dfd26e531dd48583aa3d9f3a05800a50927194a01f955c183"
+    },
+    {
+      "path": "source/evidence/README.md",
+      "sha256": "695673dc6717e7de38349057a72471738337a833ff8c04bd4c0399523707c3c1"
+    },
+    {
+      "path": "source/evidence/negative-results/README.md",
+      "sha256": "3f6b437427dde51d7d9aeec29fd19be485470e9709f6d8fe8bb0f312b0f5b858"
+    },
+    {
+      "path": "source/evidence/public-experiments/README.md",
+      "sha256": "71a910fb47dbe6ab1867bd26463b2ce3f4e454aeff64e7ffd4148081f7b3e339"
+    },
+    {
+      "path": "source/llms.txt",
+      "sha256": "689876fb8d070ceffe651ac4e4d7da5aaad5dba31b1ff739941d4e6ce7bdbac6"
+    },
+    {
+      "path": "start-here/index.html",
+      "sha256": "f4ee6391703e0c5b37fcf92f1f4607a36223a1c3e637fe33ffab940adc77634a"
+    },
+    {
+      "path": "status/index.html",
+      "sha256": "bb0388e5f21944a02fbf103e06eacde20fb403cd979a9109bdc24d206e0948f8"
+    }
+  ],
+  "generator": "tools/build.py",
+  "schema_version": 1
+}

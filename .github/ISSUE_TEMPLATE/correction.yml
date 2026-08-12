@@ -1,0 +1,37 @@
+name: Public-record correction
+description: Identify a factual, attribution, status, or provenance error.
+title: "Correction: "
+labels: [correction]
+body:
+  - type: input
+    id: artifact
+    attributes:
+      label: Artifact and revision
+      description: Give the public path and revision containing the statement.
+    validations:
+      required: true
+  - type: input
+    id: claim
+    attributes:
+      label: Claim IDs
+      description: List affected claim IDs, or state that the error is non-claim metadata.
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current public statement
+      description: Quote only the minimum public text needed to locate the error.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction and evidence
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Status, provenance, and downstream impact
+

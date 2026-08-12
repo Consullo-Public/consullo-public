@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "allowed_evidence_strata": ["none", "self-authored diagnostic", "witnessed", "independent"],
+  "evidence": []
+}
+

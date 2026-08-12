@@ -1,0 +1,40 @@
+name: Research challenge
+description: Propose a falsifier, counterexample, or reproducible evaluation.
+title: "Research challenge: "
+labels: [research-question]
+body:
+  - type: input
+    id: claim
+    attributes:
+      label: Claim under test
+      description: Give a public claim ID or state that this proposes a new claim.
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis or counterexample
+      description: State the bounded proposition without assuming it is true.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Discriminating method
+      description: Define the controlled test and what pass and failure would mean.
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Evidence provenance
+      description: State who controls the scope, method, execution, and interpretation.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limitations and non-claims
+    validations:
+      required: true
+

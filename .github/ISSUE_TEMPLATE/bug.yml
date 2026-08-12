@@ -1,0 +1,43 @@
+name: Repository defect
+description: Report a reproducible defect in the public record, site, or tooling.
+title: "Defect: "
+labels: [defect]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Do not report vulnerabilities, credentials, or accidental disclosures here.
+        Follow SECURITY.md for private reporting.
+  - type: input
+    id: artifact
+    attributes:
+      label: Affected artifact
+      description: Give the public path and revision, if known.
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation
+      description: State what you directly observed, separate from your interpretation.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide the smallest sequence that reproduces the defect.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Claim or reader impact
+      description: Name affected claim IDs or explain the publication impact.
+

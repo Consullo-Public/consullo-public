@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "allowed_capability_statuses": [
+    "implemented",
+    "specified but not implemented",
+    "proposed extension",
+    "speculative research target"
+  ],
+  "claims": [
+    {
+      "id": "CP-001",
+      "statement": "Consullo is a research program for governed recursive capability amplification.",
+      "capability_status": "specified but not implemented",
+      "implementation_stratum": "none",
+      "evidence_ids": [],
+      "receipt": "none",
+      "last_reviewed": "2026-08-12",
+      "non_claims": [
+        "No present AGI or ASI achievement claim.",
+        "No implementation or outcome claim."
+      ]
+    },
+    {
+      "id": "CP-002",
+      "statement": "The program should be evaluated by whether repeatable, independently inspectable capability improvement can coexist with effective governance constraints under recursive change.",
+      "capability_status": "proposed extension",
+      "implementation_stratum": "none",
+      "evidence_ids": [],
+      "receipt": "none",
+      "last_reviewed": "2026-08-12",
+      "non_claims": [
+        "No detailed thesis falsifier has cleared release review.",
+        "No public evidence currently answers the question."
+      ]
+    },
+    {
+      "id": "CP-003",
+      "statement": "Consullo's public constitutional edition specifies fourteen governance commitments while leaving implementation to separate evidence records.",
+      "capability_status": "specified but not implemented",
+      "implementation_stratum": "none",
+      "evidence_ids": [],
+      "receipt": "declassification/public-receipts/DDR-0005.md",
+      "last_reviewed": "2026-08-12",
+      "non_claims": [
+        "The public edition is not the canonical private governing document.",
+        "Publication does not establish that any enforcement mechanism operates or is effective."
+      ]
+    }
+  ]
+}

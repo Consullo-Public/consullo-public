@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "public_artifacts": [
+    {
+      "path": "content/start-here.md",
+      "disposition": "awaiting declassification",
+      "receipt": "none"
+    },
+    {
+      "path": "content/architecture.md",
+      "disposition": "awaiting declassification",
+      "receipt": "none"
+    },
+    {
+      "path": "content/constitutional-commitments.md",
+      "disposition": "publish-derived",
+      "receipt": "declassification/public-receipts/DDR-0005.md"
+    },
+    {
+      "path": "content/research-program/five-theses.md",
+      "disposition": "awaiting declassification",
+      "receipt": "none"
+    },
+    {
+      "path": "content/research-program/benchmarks.md",
+      "disposition": "awaiting declassification",
+      "receipt": "none"
+    },
+    {
+      "path": "content/engineering/atomic-decomposition.md",
+      "disposition": "awaiting declassification",
+      "receipt": "none"
+    },
+    {
+      "path": "content/engineering/llm-native-functional-java.md",
+      "disposition": "awaiting declassification",
+      "receipt": "none"
+    },
+    {
+      "path": "content/engineering/empirical-self-improvement.md",
+      "disposition": "awaiting declassification",
+      "receipt": "none"
+    },
+    {
+      "path": "content/history/from-cyc-to-consullo.md",
+      "disposition": "awaiting declassification",
+      "receipt": "none"
+    }
+  ]
+}

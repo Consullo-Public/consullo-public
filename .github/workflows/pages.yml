@@ -1,0 +1,68 @@
+# Verify the public record, then publish docs/ to GitHub Pages.
+#
+# TWO JOBS ON PURPOSE. Verification is a property of a commit; publication is a
+# separate privileged action. An environment approval or Pages outage must not
+# prevent the integrity checks from running, and a deployment failure must not
+# masquerade as a content-verification failure. `verify` therefore has read-only
+# permissions and no environment. Only `deploy`, after `verify`, receives Pages
+# and OIDC write authority.
+#
+# NO PATHS FILTER. The publication dependency closure includes source Markdown,
+# claim records, receipts, generators, validators, licenses, assets, and tests.
+# A hand-maintained filter can silently skip the gate when that closure changes.
+name: pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install pinned build dependencies
+        run: python3 -m pip install --requirement requirements.txt
+
+      - name: Verify claims, assets, links, fixtures, and reproducibility
+        run: python3 tools/verify_public.py
+
+      - if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy verified Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+
