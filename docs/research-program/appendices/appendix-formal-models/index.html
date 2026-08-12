@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A bounded component of the Consullo public research program: Appendix: Formal Models.">
+  <meta name="color-scheme" content="light dark">
+  <title>Appendix: Formal Models · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>proposed extension</dd><dt>Claims</dt><dd>CP-001</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>Publication does not establish implementation or operational effectiveness.</li><li>The withheld implementation-evidence appendix is not evidence for this page.</li></ul></details></aside>
+    <article><h1 id="appendix-formal-models">Appendix: Formal Models</h1>
+<p>This appendix collects formal sketches used by the five theses. The models are intentionally lightweight in the first drafting pass. Each model defines variables, operators, acceptance criteria, failure modes, and falsification conditions; later drafts should bind more thresholds to implementation evidence.</p>
+<h2 id="model-1-validated-improvement-loop">Model 1: Validated Improvement Loop</h2>
+<h3 id="objects">Objects</h3>
+<p>Let:</p>
+<ul><li><code>pi_t</code> be the Consullo agent population at time <code>t</code>, including agents, method memories, code, prompts, tests, routing policies, trust state, and governance state.</li><li><code>delta</code> be a candidate modification.</li><li><code>s</code> be the scope of the proposed modification.</li><li><code>E_delta</code> be the evidence package for <code>delta</code>.</li><li><code>I</code> be the set of hard invariants.</li><li><code>B</code> be the benchmark and validation set.</li><li><code>K</code> be the cost model.</li><li><code>G</code> be the deployment-stage policy.</li><li><code>A</code> be the Adversarial Alignment Function gate.</li><li><code>R</code> be rollback or mitigation state.</li></ul>
+<h3 id="acceptance-predicate">Acceptance Predicate</h3>
+<pre><code class="language-text">Accept(delta, s, pi_t) =
+  HardInvariants(I, pi_t, delta, s)
+  and EvidenceSufficient(E_delta, B, K)
+  and RiskWithinScope(E_delta, s)
+  and ProtectedSetNonRegression(delta, s)
+  and DeploymentAllowed(G, delta, s)
+  and RollbackDefined(R, delta, s)
+  and AAFGate(A, delta, s)</code></pre>
+<p><code>AAFGate</code> returns true automatically only when invariant I12 does not apply. When I12 applies, it requires Adversarial Alignment Function non-veto or human-authority escalation with preserved dissent.</p>
+<p><code>ProtectedSetNonRegression</code> requires no material degradation on named protected dimensions such as alignment, security, privacy, rollback readiness, provenance, and core reliability unless a human-authorized emergency containment rationale explicitly permits the trade.</p>
+<h3 id="improvement-predicate">Improvement Predicate</h3>
+<p>For task class <code>T</code>, metric <code>M</code>, minimum margin <code>epsilon</code>, and maximum false-accept tolerance <code>alpha</code>:</p>
+<pre><code class="language-text">Improve(delta, T, M) =
+  Pr[M(Promote(pi_t, delta), T) &gt;= M(pi_t, T) + epsilon | E_delta] &gt;= 1 - alpha
+  and SideEffectsWithinBounds(delta)
+  and CostBenefitAcceptable(delta)</code></pre>
+<p>This predicate is empirical. It does not prove global improvement. It supports staged acceptance under the current evidence envelope.</p>
+<p>Owner: Thesis 1 improvement governance, pending Phase 1 calibration. <code>epsilon</code> and <code>alpha</code> must be set per task class and risk lane before high-stakes acceptance use.</p>
+<h3 id="population-update">Population Update</h3>
+<pre><code class="language-text">pi_{t+1} =
+  Promote(pi_t, delta) if Accept(delta, s, pi_t)
+  Revise(pi_t, delta) if evidence is promising but insufficient
+  Reject(pi_t, delta) otherwise</code></pre>
+<p><code>Promote</code> is a population operator, not set union. It may add, replace, demote, retire, specialize, reroute, or constrain other population members as part of accepting <code>delta</code>. All three outcomes update the evidence ledger. Rejection and revision are learning events, not empty outcomes.</p>
+<h3 id="method-memory-update">Method-Memory Update</h3>
+<p>Let <code>m</code> be a method memory and <code>L</code> its lineage.</p>
+<pre><code class="language-text">m&#x27; = Mutate(m, delta)
+Eligible(m&#x27;) iff
+  preconditions defined
+  postconditions defined
+  dependencies defined
+  validation history present
+  cost profile present
+  lineage L preserved</code></pre>
+<p>Promotion of <code>m'</code> requires the same acceptance predicate as other modifications.</p>
+<h3 id="failure-modes">Failure Modes</h3>
+<p>The model fails if:</p>
+<ul><li>benchmarks are gamed faster than validators improve</li><li><code>E_delta</code> omits side-effect channels</li><li>costs exceed benefits across accepted changes</li><li>rollback is unavailable where assumed</li><li>evidence ledger entries are missing or rewritten</li><li>protected dimensions regress silently</li><li>AAF dissent is bypassed or not preserved</li><li>learned subsystems pass tests while hiding capability or intent</li></ul>
+<h3 id="falsification-conditions">Falsification Conditions</h3>
+<p>Evidence against the model includes:</p>
+<ul><li>high false-accept rate on post-deployment monitoring</li><li>accepted improvements degrade outside benchmark distributions</li><li>repeated rollback failure</li><li>increasing trust or alignment incidents after accepted changes</li><li>improvement cost rising faster than measured capability gain</li><li>inability to assign credit to accepted or rejected changes</li></ul>
+<h2 id="model-2-multi-agent-cognitive-substrate">Model 2: Multi-Agent Cognitive Substrate</h2>
+<h3 id="objects">Objects</h3>
+<p>Let:</p>
+<ul><li><code>A = {a_1, ..., a_n}</code> be the set of cognitive agents available for a task.</li><li><code>c_i(T)</code> be the task-conditioned capability vector of agent <code>a_i</code>.</li><li><code>k_i</code> be the cost vector of agent <code>a_i</code>, including latency, token cost, tool cost, and coordination burden.</li><li><code>r_i(s)</code> be the reliability estimate of agent <code>a_i</code> in scope <code>s</code>.</li><li><code>tau_i</code> be the typed interface of agent <code>a_i</code>.</li><li><code>W</code> be a cognitive workflow graph over agents and intermediate artifacts.</li><li><code>T</code> be the task class.</li><li><code>L</code> be the evidence ledger or trace for the workflow.</li></ul>
+<h3 id="capability-vector">Capability Vector</h3>
+<p>For a task class <code>T</code>, a capability vector may include:</p>
+<pre><code class="language-text">c_i(T) =
+  &lt;recall, reasoning_accuracy, option_coverage, uncertainty_calibration,
+   multimodal_interpretation, analogy_quality, implicit_proposal_quality,
+   explicit_validation_quality, error_detection, lacuna_detection,
+   artifact_quality, sustained_reasoning&gt;</code></pre>
+<p>The dimensions are task-dependent projections, not context-free intelligence scores. The implicit/explicit split is included to preserve the distinction between proposal generation, taste, intuition, or creative ranking and explicit validation, explanation, or acceptance support. A thesis claim should name the dimensions it uses and should not treat implicit-style proposal quality as acceptance authority.</p>
+<h3 id="measurement-conventions">Measurement Conventions</h3>
+<p>For first-pass benchmark families, the model uses normalized task-bounded units rather than a single universal cognition score.</p>
+<pre><code class="language-text">Capability(W, T) in [0, 1]</code></pre>
+<p>where <code>Capability(W, T)</code> is a weighted aggregate over the named dimensions for task class <code>T</code>, measured against a declared benchmark or project-local evaluation protocol. The benchmark definition for <code>T</code> must specify:</p>
+<ul><li>the dimension set used for <code>T</code></li><li>the baseline comparator</li><li>the scoring rule for each dimension</li><li>the aggregation weights or ordering rule</li><li>the admissible evidence source</li></ul>
+<p>Typical dimension bindings are:</p>
+<ul><li>retrieval tasks: precision, recall, freshness, provenance completeness, latency</li><li>decomposition/control tasks: routing accuracy, budget discipline, stopping quality, escalation appropriateness</li><li>reasoning tasks: task accuracy, contradiction detection, support-state correctness, option coverage</li><li>creative/design tasks: novelty, downstream usefulness, constraint satisfaction, implicit proposal quality, explicit validation burden, reviewer score</li><li>perspective/AAF-support tasks: objection coverage, severe-risk detection, false-consensus avoidance</li></ul>
+<p>For task classes outside these examples, the benchmark owner must declare the dimension set, scoring rule, and aggregation convention before using <code>Capability(W, T)</code> as an amplification claim.</p>
+<pre><code class="language-text">Reliability(W, T) in [0, 1]</code></pre>
+<p>is the lower-confidence performance floor for the workflow on task class <code>T</code>, using the benchmark family named for <code>T</code>. For early project-local evaluations, this may be an empirical pass rate, calibration-adjusted success rate, or lower confidence bound over repeated runs. For higher-stakes scopes, <code>Reliability(W, T)</code> should penalize high variance and silent failure.</p>
+<pre><code class="language-text">IntegrationCost(W, T) &gt;= 0</code></pre>
+<p>is a normalized cost term measured relative to the declared baseline budget for <code>T</code>. It may combine latency, token cost, tool cost, contradiction-resolution effort, trust-review burden, and human review time. When heterogeneous units are combined, the benchmark definition must state the normalization rule and weight vector.</p>
+<h3 id="workflow-composition">Workflow Composition</h3>
+<pre><code class="language-text">W = (V, E)</code></pre>
+<p>where <code>V</code> are cognitive agents or artifacts and <code>E</code> are typed channels. A workflow is admissible only if:</p>
+<pre><code class="language-text">InterfacesCompatible(W)
+and ScopeAllowed(W)
+and EvidenceLogged(L, W)
+and TrustSufficientForEdges(W)</code></pre>
+<p>Model 2 is an engineering abstraction over Consullo cognitive workflows, not a claim of psychological fidelity to Soar, ACT-R, CLARION, or LIDA. Those architectures inform constraints on explicit state, typed buffers/artifacts, routing/production steps, implicit-vs-explicit proposal/validation distinctions, cognitive-cycle structure, latency, and broadcast/aggregation discipline. A workflow should therefore declare which state, memory, routing, broadcast, or implicit/explicit pattern it relies on when those patterns are load-bearing.</p>
+<p>For composed workflows <code>W1 ; W2</code>, the first-order composition bound is:</p>
+<pre><code class="language-text">Capability(W1 ; W2, T)
+  &lt;= Capability(W1, T) + Capability(W2, T) - IntegrationCost(W1, W2, T)</code></pre>
+<p>Super-additive outcomes are possible only when the evidence ledger shows that the composed workflow beats both component baselines after integration cost. Without that evidence, the default assumption is sub-additivity.</p>
+<h3 id="amplification-predicate">Amplification Predicate</h3>
+<p>Let <code>Baseline(T)</code> be a named single-agent, human, or prior Consullo workflow baseline for task class <code>T</code>.</p>
+<pre><code class="language-text">Amplifies(W, T) =
+  Capability(W, T) - Capability(Baseline(T), T) - IntegrationCost(W, T) &gt; 0
+  and Reliability(W, T) &gt;= threshold(T)
+  and ContradictionBurden(W, T) &lt;= max_contradiction(T)
+  and ConstraintsSatisfied(W)</code></pre>
+<p><code>threshold(T)</code> is a task-class-specific reliability floor set by deployment scope and risk tier.</p>
+<p><code>max_contradiction(T)</code> is the task-class-specific ceiling on unresolved contradiction burden. For low-stakes exploratory tasks it may be permissive; for acceptance-gate, alignment, or externally consequential tasks it should be near zero unless the workflow explicitly returns escalation, abstention, or revision.</p>
+<h3 id="substrate-update">Substrate Update</h3>
+<pre><code class="language-text">A_{t+1} = ImproveCognitiveSubstrate(A_t, L_t)</code></pre>
+<p>Updates may include new agents, retired agents, routing changes, method memories, prompt decompositions, compiled workflows, or trust-scope changes. Such updates are candidate modifications under Thesis 1 and Thesis 5.</p>
+<h3 id="failure-modes">Failure Modes</h3>
+<p>The model fails if:</p>
+<ul><li>added agents increase cost without measured capability gain</li><li>agent interfaces are incompatible or underspecified</li><li>contradictions are hidden rather than resolved or escalated</li><li>memory retrieval increases confidence while reducing accuracy</li><li>creative or intuitive outputs are treated as grounded without evidence</li><li>homogeneous models create cognitive monoculture</li><li>workflow traces are missing, preventing replay and improvement</li></ul>
+<h3 id="falsification-conditions">Falsification Conditions</h3>
+<p>Evidence against the model includes:</p>
+<ul><li>multi-agent workflows underperforming simpler baselines after cost accounting</li><li>repeated failures caused by handoff or state mismatch</li><li>rising contradiction or trust-review burden without improved outcomes</li><li>cognitive lacuna closure claims reopening under regression tests</li><li>benchmark gains disappearing outside narrow prompt formats</li><li>inability to assign credit to cognitive subagents or workflow steps</li></ul>
+<h2 id="model-3-causal-decision-foundations">Model 3: Causal-Decision Foundations</h2>
+<h3 id="objects">Objects</h3>
+<p>Let:</p>
+<ul><li><code>M</code> be a structural causal model with variables <code>X</code>, mechanisms <code>F</code>, exogenous variables <code>U</code>, and validity scope <code>S_M</code>.</li><li><code>d</code> be a candidate decision or intervention.</li><li><code>O</code> be the objective vector.</li><li><code>C</code> be hard constraints imported from Thesis 5.</li><li><code>Theta(M)</code> be an ambiguity set of plausible models near <code>M</code>.</li><li><code>B</code> be benchmark, backtest, calibration, and experiment evidence.</li><li><code>G</code> be a Goodhart-risk assessment.</li><li><code>Q</code> be decision-lineage and provenance evidence.</li><li><code>E</code> be escalation state.</li></ul>
+<h3 id="robust-intervention-rule">Robust Intervention Rule</h3>
+<pre><code class="language-text">d* = argmax_d min_{M&#x27; in Theta(M)} E[U_O | do(d), M&#x27;]</code></pre>
+<p>subject to:</p>
+<pre><code class="language-text">ConstraintsHold(C, d)
+and ModelScopeValid(M&#x27;, d)
+and EvidenceSufficient(B, d)
+and GoodhartRiskAcceptable(G, d, O)
+and ProvenancePresent(Q, d)
+and EscalationNotRequired(E, d)</code></pre>
+<p>If any hard condition fails, the system does not return <code>d*</code> as an executable recommendation. It returns abstention, additional experiment selection, model revision, or escalation.</p>
+<p><code>EscalationNotRequired(E, d)</code> is false when <code>d</code> is high-stakes, irreversible, or externally consequential before rollback and Model 5's AAF gate has not returned non-veto, revision, rejection, or human-authority disposition.</p>
+<h3 id="ambiguity-set-construction">Ambiguity-Set Construction</h3>
+<p><code>Theta(M)</code> is not an unconstrained neighborhood. It is a curated ambiguity class recorded in the evidence ledger for the decision. At minimum, it should be constructed from one or more of:</p>
+<ul><li>parameter perturbations around <code>M</code> within empirically supported ranges</li><li>competing causal structures consistent with current evidence</li><li>mechanism disagreements preserved by <code>MechanismLibrarian</code></li><li>held-out validation failures or backtest residuals</li><li>regime-shift scenarios or adversarial stress cases</li><li>expert or reviewer disagreement preserved as explicit alternatives</li></ul>
+<p>For first-pass implementations, <code>Theta(M)</code> may be scenario-based rather than fully statistical. That is acceptable if the construction rule, inclusion rationale, and curator are named. <code>MechanismLibrarian</code> should maintain candidate mechanisms and disagreement records; <code>CausalBoundaryEnforcer</code> should reject ambiguity-set members that fall outside the stated scope or evidentiary basis.</p>
+<p>The ambiguity-set record must declare its cardinality or scenario count and explain why that size is adequate for the decision scope. This is a formal requirement of Model 3 and is tested in <code>appendix-thesis-3-causal-decision-benchmarks.md</code>. An oversized ambiguity set can make the minimax rule unusably conservative; an undersized set can hide model fragility.</p>
+<h3 id="counterfactual-evaluation">Counterfactual Evaluation</h3>
+<p>For observed evidence <code>e</code>, action <code>d</code>, alternative <code>d_alt</code>, and outcome <code>Y</code>, counterfactual reasoning follows:</p>
+<pre><code class="language-text">Abduction: infer posterior over U given e
+Action: replace structural equations affected by do(d_alt)
+Prediction: compute distribution over Y under modified model</code></pre>
+<p>Counterfactual claims must state model assumptions, scope, and uncertainty. They should be backtested where historical interventions permit.</p>
+<h3 id="experiment-portfolio">Experiment Portfolio</h3>
+<p>Let <code>A</code> be the experiment allocation over strategy families:</p>
+<pre><code class="language-text">A = &lt;random, theory_guided, novelty, adversarial, replication&gt;</code></pre>
+<p>Experiment portfolios are admissible only if:</p>
+<pre><code class="language-text">random &gt; 0
+and objective_quality_metric separated from confidence_metric
+and calibration_gap tracked
+and safety constraints hold</code></pre>
+<p>This prevents theory-guided exploitation from monopolizing experiment choice before evidence maturity.</p>
+<h3 id="goodhart-check">Goodhart Check</h3>
+<p>Let <code>m</code> be the optimized metric and <code>o</code> the target objective.</p>
+<pre><code class="language-text">GoodhartRiskAcceptable(G, d, O) =
+  metric_objective_link documented
+  and proxy drift monitored
+  and side-effect channels checked
+  and adversarial metric-gaming scenario considered
+  and escalation triggered for severe unresolved proxy risk</code></pre>
+<h3 id="failure-modes">Failure Modes</h3>
+<p>The model fails if:</p>
+<ul><li>decisions use causal models outside validity scope</li><li>recommendations optimize proxies while degrading target objectives</li><li>counterfactuals are presented without uncertainty or assumptions</li><li>experiment choice increases confidence without objective model improvement</li><li>strategic bias gates are skipped for high-stakes recommendations</li><li>predictions enable harmful manipulation or unsafe interventions</li><li>model disagreement is hidden instead of escalated or disclosed</li></ul>
+<h3 id="falsification-conditions">Falsification Conditions</h3>
+<p>Evidence against the model includes:</p>
+<ul><li>poor calibration on forecasting or intervention-prediction batteries</li><li>repeated intervention outcomes contradicting model predictions</li><li>high confidence recommendations failing under reframing tests</li><li>strategy commitments made without decision lineage or option-set evidence</li><li>objective-vs-subjective epistemic divergence across experiment portfolios</li><li>Goodhart incidents traceable to optimized decision metrics</li><li>externally consequential predictions delivered without safety validation</li></ul>
+<h2 id="model-4-self-modifying-software-substrate">Model 4: Self-Modifying Software Substrate</h2>
+<h3 id="objects">Objects</h3>
+<p>Let:</p>
+<ul><li><code>P</code> be the current program, agent repository, workflow, or generated artifact set.</li><li><code>P'</code> be a candidate modified program.</li><li><code>sigma</code> be the specification or agent contract.</li><li><code>F</code> be the fault report, feature request, or improvement request.</li><li><code>G_t</code> be the generation or repair pipeline at time <code>t</code>.</li><li><code>C</code> be Consullo coding constraints, including static methods, JSON data passing, and PDCA signatures.</li><li><code>V</code> be the validation suite, including tests, static checks, contrastive tests, and post-verification methods.</li><li><code>Phi</code> be the semantic invariant class available for the scope.</li><li><code>S</code> be security and capability policy.</li><li><code>Prov</code> be provenance evidence.</li><li><code>Perm</code> be Thesis 1 and Thesis 5 acceptance and permission state.</li><li><code>K</code> be the cost model.</li></ul>
+<h3 id="candidate-generation">Candidate Generation</h3>
+<pre><code class="language-text">P&#x27; in Generate(G_t, P, sigma, F, C)</code></pre>
+<p><code>Generate</code> may include new agent construction, code repair, test generation, documentation, workflow compilation, or deployment artifact generation. Candidates outside <code>C</code> are rejected or returned for repair before deeper validation.</p>
+<h3 id="acceptance-predicate">Acceptance Predicate</h3>
+<pre><code class="language-text">AcceptPatch(P&#x27;, P, sigma) =
+  ConformsToMethodology(P&#x27;, C)
+  and Compiles(P&#x27;)
+  and TestsPass(P&#x27;, V)
+  and SemanticInvariantsHold(P&#x27;, Phi)
+  and RegressionRiskWithinBounds(P&#x27;, P, V)
+  and SecurityPolicySatisfied(P&#x27;, S)
+  and ProvenancePresent(Prov, P&#x27;, P, sigma, F)
+  and CostBenefitAcceptable(P&#x27;, K)
+  and PermissionSatisfied(Perm, P&#x27;, sigma)</code></pre>
+<p>This predicate separates formal, deterministic, statistical, and governance evidence. Compilation is deterministic. Test passing is empirical relative to test coverage. Semantic validation may be formal for narrow properties or statistical when LLM-based. Permission is imported from Thesis 1 and Thesis 5.</p>
+<h3 id="repair-pipeline-update">Repair-Pipeline Update</h3>
+<p>Let <code>H_t</code> be repair history, including accepted patches, rejected patches, incidents, regressions, costs, and post-deployment outcomes.</p>
+<pre><code class="language-text">G_{t+1} = ImprovePipeline(G_t, H_t)</code></pre>
+<p>Pipeline improvement may modify prompt templates, fault-localization heuristics, retrieval methods, contrastive-test generation, static-analysis selection, patch-ranking rules, or semantic invariant classes. It is itself a candidate modification and must satisfy the same acceptance discipline.</p>
+<p>For a fixed held-out validator reference suite <code>V_ref</code>, recursive pipeline improvement must satisfy:</p>
+<pre><code class="language-text">ValidatorStrength(G_{t+1}, V_ref) &gt;= ValidatorStrength(G_t, V_ref)</code></pre>
+<p>unless an explicitly documented human-authorized trade replaces <code>V_ref</code> with a stronger or more relevant reference suite. Generator improvement cannot be purchased by weakening validators silently.</p>
+<h3 id="validatorstrength-convention">ValidatorStrength Convention</h3>
+<p>For a held-out reference suite <code>V_ref</code>, define:</p>
+<pre><code class="language-text">ValidatorStrength(G, V_ref) =
+  w_good * GoodAcceptanceRate(G, V_ref)
+  + w_bad * BadRejectionRate(G, V_ref)
+  + w_sem * SemanticWrongnessDetectionRate(G, V_ref)
+  + w_sec * SecurityIssueDetectionRate(G, V_ref)
+  + w_prov * ProvenanceGapDetectionRate(G, V_ref)
+  + w_cal * SeverityCalibrationScore(G, V_ref)</code></pre>
+<p>subject to:</p>
+<pre><code class="language-text">w_good + w_bad + w_sem + w_sec + w_prov + w_cal = 1
+and each weight &gt;= 0</code></pre>
+<p><code>V_ref</code> should contain, where available:</p>
+<ul><li>known-good candidates that should be accepted</li><li>known-bad candidates that should be rejected</li><li>semantically wrong but test-passing candidates</li><li>security-relevant bad candidates</li><li>provenance-deficient candidates</li><li>incidents or synthetic cases with known severity labels</li></ul>
+<p>The exact weights are benchmark-family parameters pending operational calibration. For first-pass use, the convention is structural: validator improvement must preserve or improve discrimination across good, bad, semantic, security, provenance, and severity dimensions, not merely increase permissiveness or rejection rate.</p>
+<p>Owner: Thesis 4 validation governance, pending Phase 1 calibration. <code>V_ref</code> and its weights must be reviewed as possible Goodhart targets; improving against a stale or gamed reference suite is not validator improvement.</p>
+<h3 id="evidence-classes">Evidence Classes</h3>
+<p>Validation evidence is represented as:</p>
+<pre><code class="language-text">V = &lt;compile, unit_tests, regression_tests, contrastive_tests,
+     static_analysis, security_scan, post_verification,
+     semantic_validation, deployment_monitoring&gt;</code></pre>
+<p>No single evidence class is sufficient for high-stakes modification. Evidence depth scales with scope criticality, reversibility, externality, and trust state.</p>
+<h3 id="failure-modes">Failure Modes</h3>
+<p>The model fails if:</p>
+<ul><li>plausible patches pass tests while violating intended semantics</li><li>generated tests encode the same mistake as generated code</li><li>repair agents overfit benchmarks or historical patterns</li><li>provenance does not link patch, specification, evidence, and outcome</li><li>security or capability requests expand silently</li><li>post-deployment monitoring is absent or ignored</li><li>repair cost exceeds measured benefit across accepted patches</li><li>pipeline self-improvement weakens validators faster than it improves generation</li></ul>
+<h3 id="falsification-conditions">Falsification Conditions</h3>
+<p>Evidence against the model includes:</p>
+<ul><li>repeated post-deployment regressions after validated patches</li><li>accepted repairs with missing provenance or missing specification linkage</li><li>high rate of semantically wrong but test-passing patches</li><li>security incidents traced to generated or repaired code</li><li>inability to reproduce builds or validation outcomes</li><li>cost per accepted repair exceeding manual repair baselines without offsetting benefit</li><li>validator changes accepted without independent validation</li></ul>
+<h2 id="model-5-alignment-invariants-and-scoped-trust">Model 5: Alignment Invariants And Scoped Trust</h2>
+<h3 id="objects">Objects</h3>
+<p>Let:</p>
+<ul><li><code>a</code> be a proposed action, delegation, deployment, or modification.</li><li><code>x</code> be the acting agent or subsystem.</li><li><code>s</code> be the typed action scope.</li><li><code>C</code> be constitutional constraints, including the Friendship agent authority.</li><li><code>P</code> be policy constraints for <code>x</code> in <code>s</code>.</li><li><code>T(x, s)</code> be the scoped trust estimate for actor <code>x</code> in scope <code>s</code>.</li><li><code>E</code> be the relevant evidence-ledger view.</li><li><code>A(a, s)</code> be the Adversarial Alignment Function result.</li><li><code>H(a, s)</code> be the human-authority state.</li><li><code>R(a, s)</code> be rollback, containment, or mitigation state.</li></ul>
+<h3 id="scope">Scope</h3>
+<p>Scope is not optional metadata. It is a typed object:</p>
+<pre><code class="language-text">s = &lt;actor, action_class, domain, criticality, reversibility,
+     data_sensitivity, tool_privileges, externality,
+     deployment_stage, temporal_horizon&gt;</code></pre>
+<p>Any missing scope field narrows permission or triggers escalation. Unknown scope defaults to denial, sandboxing, or human review.</p>
+<h3 id="permission-predicate">Permission Predicate</h3>
+<pre><code class="language-text">Permit(a, x, s) =
+  ConstitutionalAllowed(C, a, s)
+  and PolicyAllowed(P, a, x, s)
+  and TrustSufficient(T(x, s), s)
+  and EvidenceFresh(E, a, x, s)
+  and ProvenancePresent(E, a, x, s)
+  and AAFSatisfied(A(a, s), a, s)
+  and HumanAuthoritySatisfied(H(a, s), a, s)
+  and ContainmentOrRollbackAdequate(R(a, s), a, s)</code></pre>
+<h3 id="aaf-gate">AAF Gate</h3>
+<p>Let <code>D(a, s)</code> be the set of dissent reports generated by rotating ethical personas, multi-model critique where feasible, theory-of-mind stakeholder simulations, and external review where available.</p>
+<p>Each report <code>d_i</code> has:</p>
+<pre><code class="language-text">d_i = &lt;source, severity, affected_values, objection, mitigation, confidence&gt;</code></pre>
+<p>Severity is ordered:</p>
+<pre><code class="language-text">informational &lt; advisory &lt; warning &lt; critical</code></pre>
+<p>The AAF result is:</p>
+<pre><code class="language-text">A(a, s) = AggregateDissent(D(a, s))</code></pre>
+<p>Minimum aggregation rule:</p>
+<pre><code class="language-text">AggregateDissent(D) =
+  &lt;max_severity(D),
+   affected_value_scope(D),
+   confidence_summary(D),
+   unresolved_objections(D),
+   recommended_disposition(D)&gt;</code></pre>
+<p><code>max_severity(D)</code> is the maximum severity over all reports. Ties are broken by broader affected-value scope, then by higher confidence, then by unresolved status. A tie break changes the aggregate disposition and routing, not the severity label itself: two warning reports remain a warning aggregate unless escalation policy upgrades the disposition. A single critical unresolved report is sufficient to make the aggregate critical even if other reports are advisory or informational.</p>
+<p>If <code>max_severity(D)</code> is advisory or informational, <code>AggregateDissent(D)</code> returns disposition <code>pass-with-noted-dissent</code>, and <code>AAFSatisfied</code> returns true while preserving the dissent record.</p>
+<p><code>AAFSatisfied</code> returns true automatically only when I12 does not apply. When I12 applies:</p>
+<pre><code class="language-text">AAFSatisfied(A, a, s) =
+  no unresolved warning or critical objection
+  or objections revised below warning by mitigation
+  or action rejected
+  or human-authority escalation records disposition and preserves dissent</code></pre>
+<p>A severe unresolved objection means any warning or critical objection with named affected values, plausible harm pathway, and no accepted mitigation or escalation disposition.</p>
+<h3 id="trust-estimate">Trust Estimate</h3>
+<p>For this thesis body, trust is a bounded estimate rather than a fully specified Bayesian posterior:</p>
+<pre><code class="language-text">T(x, s) = &lt;dimensions, confidence, uncertainty, freshness, conflicts&gt;</code></pre>
+<p>Initial dimensions include competence, epistemic hygiene, self-report fidelity, constraint adherence, coordination quality, impact awareness, recovery integrity, predictability, verification alignment, economic reliability, and alignment safety posture.</p>
+<p>Trust is sufficient only if:</p>
+<pre><code class="language-text">TrustSufficient(T, s) =
+  dimensions meet scope thresholds
+  and confidence &gt;= min_confidence(s)
+  and freshness not stale
+  and conflicts resolved or escalated
+  and no policy-blocking incident remains open</code></pre>
+<p>Minimum scope-to-dimension mapping:</p>
+<div class="table-wrap"><table><thead><tr><th>Scope field</th><th>Trust dimensions emphasized</th></tr></thead><tbody><tr><td><code>actor</code></td><td>actor identity binds the entire trust-dimension vector; <code>T(x, .)</code> is undefined for unknown actors</td></tr><tr><td><code>domain</code></td><td>competence, scope discipline, constraint adherence</td></tr><tr><td><code>action_class</code></td><td>competence, verification alignment, predictability</td></tr><tr><td><code>criticality</code></td><td>confidence, recovery integrity, alignment safety posture</td></tr><tr><td><code>reversibility</code></td><td>recovery integrity, impact awareness</td></tr><tr><td><code>data_sensitivity</code></td><td>constraint adherence, alignment safety posture</td></tr><tr><td><code>tool_privileges</code></td><td>constraint adherence, self-report fidelity</td></tr><tr><td><code>externality</code></td><td>impact awareness, alignment safety posture, economic reliability</td></tr><tr><td><code>deployment_stage</code></td><td>verification alignment, recovery integrity</td></tr><tr><td><code>temporal_horizon</code></td><td>predictability, uncertainty, coordination quality</td></tr></tbody></table></div>
+<p>Trust cannot expand scope by itself. A scope-expansion request is a new action requiring its own permission check.</p>
+<p>Parameters such as <code>min_confidence(s)</code> and scope thresholds are parameters pending Phase 1 calibration. They must be set per risk lane before high-stakes deployment use, not inferred from this appendix.</p>
+<p>Owner: Thesis 5 scoped-trust governance, pending Phase 1 calibration. Scope thresholds must be set with AAF, the Friendship agent, and human-authority escalation requirements in view.</p>
+<h3 id="ado-reporting-predicate">ADO Reporting Predicate</h3>
+<p>Let:</p>
+<ul><li><code>B_ext</code> be measured external benefit.</li><li><code>H_ext</code> be external harm or risk.</li><li><code>D</code> be distributional assessment.</li><li><code>Q</code> be report quality.</li></ul>
+<p>Minimum metrics include:</p>
+<ul><li>cost reductions delivered to external users or customers</li><li>useful services made available that were previously inaccessible or overpriced</li><li>external benefit evidence from customer outcomes or public-interest deployments</li><li>incidents where external benefit was sacrificed for narrow internal gain</li><li>distributional analysis of who benefits and who bears risk</li></ul>
+<p>Metric binding: <code>B_ext</code> includes cost reductions, useful services made available, and customer or public-interest benefit evidence. <code>H_ext</code> includes external-harm reports, extractive-pricing incidents, and cases where safe external benefit was sacrificed for narrow internal gain. <code>D</code> includes distributional analysis of beneficiaries and risk-bearers. <code>Q</code> includes report completeness, cadence compliance, reviewer notes, and unresolved-conflict quality.</p>
+<pre><code class="language-text">ADOReportable(period) =
+  owner assigned
+  and metrics collected for B_ext, H_ext, D, Q
+  and unresolved benefit/harm conflicts logged
+  and falsification signals checked</code></pre>
+<p>ADO satisfaction is not assumed from internal capability growth. It requires reportable external benefit evidence under a stated cadence.</p>
+<h3 id="failure-modes">Failure Modes</h3>
+<p>The model fails if:</p>
+<ul><li>trust estimates generalize across scopes without evidence</li><li>AAF findings are logged but do not affect permission</li><li>Friendship agent or human authority becomes ceremonial</li><li>evidence ledgers lose dissent, incidents, or provenance</li><li>external inputs receive default-permit treatment</li><li>ADO reporting becomes aspirational language without metrics</li><li>containment or rollback is assumed where externally visible harm cannot be undone</li><li>learned systems pass checks while hiding capability or intent</li></ul>
+<h3 id="falsification-conditions">Falsification Conditions</h3>
+<p>Evidence against the model includes:</p>
+<ul><li>high-stakes externally consequential actions occurring without I12 review</li><li>repeated trust incidents caused by over-broad trust scopes</li><li>severe AAF objections ignored without preserved rationale or escalation</li><li>alignment incidents increasing as capability grows</li><li>rollback paths unavailable for actions that depended on rollback assumptions</li><li>ADO reports showing sustained capability growth without external benefit evidence</li><li>hidden optimization, sandbagging, or validator gaming missed by required controls</li></ul></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/appendices/appendix-formal-models.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

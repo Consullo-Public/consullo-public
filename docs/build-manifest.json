@@ -46,51 +46,99 @@
     },
     {
       "path": "evidence/index.html",
-      "sha256": "bc609679c8b52cf856f84955ff1c5e81e7c163cf862a3d599ecbc8eee578c201"
+      "sha256": "f76f2f3ea51dfd2f110b3fae7c509dfe074ae4bb7c27bd4691f564818f0a4b1e"
     },
     {
       "path": "evidence/negative-results/index.html",
-      "sha256": "00b1b476620e4e56a44893889ecbea9fb9a62c6f5d9199680975bc0b7a28e0ae"
+      "sha256": "0887f1d50f8491c5bb03392a23bce3008c6a0858ee3c672a7457d01a0e0568bf"
     },
     {
       "path": "evidence/public-experiments/index.html",
-      "sha256": "6af57b9056fa475b8062b1e543fcd8fe7ddf662844adfea2ff25ff8db87a3fa8"
+      "sha256": "75faa880623d763f5c833d1e97300a5cad53bb12c1af3d032702d53654243e7a"
     },
     {
       "path": "governance/authority-and-custody/index.html",
-      "sha256": "cce00d97286d3ed4c11a633aa43b9b423167d79ce4ef74bad0358cd4bf024be9"
+      "sha256": "257c13f344e27ddf8f851c2156decf93ee08c5e585c987b26dbd09aafb58526c"
     },
     {
       "path": "governance/corrections/index.html",
-      "sha256": "099e4a7a4cbe5828161b671ad7581b6530d627c040568fa5f726932a94bc4504"
+      "sha256": "bfddff0df04965a95086c00e69bba0419510c5bfb114506e1cfcb0dff7699e5d"
     },
     {
       "path": "governance/index.html",
-      "sha256": "35aa50e1ec66e1ac63709dfb8143f91c2c8599dba151acbdadb82f67e4a0455d"
+      "sha256": "91edf5ca6b3763c4223c53692c1aecaa0cf6b55ec828f896100a0d216f7dd530"
     },
     {
       "path": "governance/oagf-relationship/index.html",
-      "sha256": "306ca078bcdef3d4d512e07aa80af99bb446f90c647680e0bdbfe1b0e4920d5e"
+      "sha256": "7abd65143e1d0ee25a8cfcd5c3dab3f4109aa21f6dc6330b745e014d7ba06c65"
     },
     {
       "path": "history/from-cyc-to-consullo/index.html",
-      "sha256": "cf2b19c33320e6c08982b0aeccbd9e1183cd8647db5da21e30cda215088c8b80"
+      "sha256": "c3847b86a93ba612ca6fe6dc979dad299be34db7430a6f7b3f3fd100ba652c72"
     },
     {
       "path": "index.html",
-      "sha256": "5d0202d26dd8a5448476d01a30425ab27b2e9ae71e1692c768a17d8e37aafef2"
+      "sha256": "593cf2701cae006fa65dc18934ed8547f93e2b07ec6dd79bfaebe6355e30e5bd"
     },
     {
       "path": "llms.txt",
-      "sha256": "e40123f3db122f226a45bb50448dcac15ba60359bfebae0fbb7dbfe4695f4006"
+      "sha256": "96e4d35234aae390c853154125b5ce4c85655d6dcae6b6cb11ab031227d15360"
     },
     {
       "path": "notices/index.html",
-      "sha256": "a558ea53cc11fea9ca6413183ab56ded5b733eb38a5367d84b972b3b5bf74edb"
+      "sha256": "a17f2968bb352e023cd3f820bcff789ff7fb142aba986b7a97c9cb4c4b7560b7"
     },
     {
       "path": "overview/index.html",
-      "sha256": "6477d8155b157fa392bafad9bc4a851094e268beed4f33140c64b5ff41741f38"
+      "sha256": "bb8553d61bddac80596a597658dde5e3d54a5cadc17b617e2c4b7a012594d469"
+    },
+    {
+      "path": "research-program/appendices/appendix-evidence-ledger-schema/index.html",
+      "sha256": "3102522c503341a1010f7805e2ee8ea090e8fd61302eebc6effda07f67ba7b7f"
+    },
+    {
+      "path": "research-program/appendices/appendix-formal-models/index.html",
+      "sha256": "6955e224cfe1dacb41cc29cee14f7b119a145e07b8b737ad5b243c203248273b"
+    },
+    {
+      "path": "research-program/appendices/appendix-literature-grounding/index.html",
+      "sha256": "955d0ff9a57b3f98732a85ff4a90089d79518993bc2e904789861664669d487b"
+    },
+    {
+      "path": "research-program/appendices/appendix-organizational-recursive-self-improvement/index.html",
+      "sha256": "1eed310cfbec8ef221c74635cc719667a1a09b335882558a5a2006db77c9cec5"
+    },
+    {
+      "path": "research-program/appendices/appendix-substrates/index.html",
+      "sha256": "f8c15f08d2df53646a1c47d5893071ee647134652bbb40fa2faedb49a590ca08"
+    },
+    {
+      "path": "research-program/appendices/appendix-thesis-0-schema-validation-tests/index.html",
+      "sha256": "83cbed4e751fb18eb6c062b320f87b84aadcad8cc7e08efcd6769d16bff1a1eb"
+    },
+    {
+      "path": "research-program/appendices/appendix-thesis-1-improvement-loop-benchmarks/index.html",
+      "sha256": "c1fda9599b92a72506832e7bd38da045101098dd6d19dd46ff41def542f52e33"
+    },
+    {
+      "path": "research-program/appendices/appendix-thesis-2-cognitive-workflow-benchmarks/index.html",
+      "sha256": "65bb410aefe223bd143e651c88b6389c3ee9c01cb125ac6089a47603f32816c2"
+    },
+    {
+      "path": "research-program/appendices/appendix-thesis-3-causal-decision-benchmarks/index.html",
+      "sha256": "15ffc8d478c710823fa0f20294352bd8185fb4449fa762c18471ae7533c91f3e"
+    },
+    {
+      "path": "research-program/appendices/appendix-thesis-4-software-substrate-benchmarks/index.html",
+      "sha256": "ba7152a2097617d7951de0f7d7e0f36e2c0425695843c3b73ba43bc767adc78c"
+    },
+    {
+      "path": "research-program/appendices/appendix-thesis-5-alignment-benchmarks/index.html",
+      "sha256": "d8eae022469990293ff09d30007a2f9743c8f80df6dcbda0a40f9eca20b06226"
+    },
+    {
+      "path": "research-program/appendices/appendix-thesis-5-operational-contracts/index.html",
+      "sha256": "4005469a1c7b9e01e5022b3b68665ed02a1e453ba12268d231f4085fb318b401"
     },
     {
       "path": "research-program/benchmarks/index.html",
@@ -98,11 +146,87 @@
     },
     {
       "path": "research-program/falsifiers/index.html",
-      "sha256": "e0ab5e2f2993f7ea881d41f6778756c4f4c64ae7e09ced68fb809cf8393f67a4"
+      "sha256": "dee5396a40bf2612764535f1b8e4483a1843f07c36265b1a52ae24b965961072"
     },
     {
       "path": "research-program/five-theses/index.html",
-      "sha256": "bbf4ae584a8c1f86d64a87c8cc1550b351121bef7e71a2079fbb73ddb1474b14"
+      "sha256": "2121728defc189fa3c2944180c7d6d8f0d9b56acde76c30a48e041b5a249227b"
+    },
+    {
+      "path": "research-program/theses/00-cross-thesis-dependency-map/index.html",
+      "sha256": "a3e1562b1e12d6310546ff1ee82c958e42101782206137abf2b8d00ede20278e"
+    },
+    {
+      "path": "research-program/theses/00-master-abstract/index.html",
+      "sha256": "fd1a51b8199c863cab8e3d78c4e291113e8863ca8b380792752d3fcbdc9a5008"
+    },
+    {
+      "path": "research-program/theses/00-master-introduction/index.html",
+      "sha256": "62277987dbc6138ba9b7a51c00f1651681a9e65fe25de1d7dfd1a4e7852c2b25"
+    },
+    {
+      "path": "research-program/theses/00-master-synthesis/index.html",
+      "sha256": "d459acebd6225d686d97b09cbf951694a28b7eb7ec165da8275c2c25bbf4c02f"
+    },
+    {
+      "path": "research-program/theses/00-thesis-0-naming/index.html",
+      "sha256": "582e7ebe04831ad616195823462d351ed8b475c859e92ce59cb2fce47321a570"
+    },
+    {
+      "path": "research-program/theses/00-vocabulary-and-invariants/index.html",
+      "sha256": "a98d5717bfbca98ab3e642f35c84bfcba6109fd0ab7d0873775166e901400b5d"
+    },
+    {
+      "path": "research-program/theses/alignment-invariants-and-scoped-trust-thesis/index.html",
+      "sha256": "5429745e3d60a0a48132691ab93b3249f06986c72b9e241f4df5cce5b4a9d118"
+    },
+    {
+      "path": "research-program/theses/causal-decision-foundations-thesis/index.html",
+      "sha256": "a9965bec0114f36406d60613635fe2584e0ccf651244dd175a349e90ba254b1e"
+    },
+    {
+      "path": "research-program/theses/friendship-governed-goal-architecture-thesis/index.html",
+      "sha256": "94f428b37613ca3c5fe7ad96e64692d1e1f49b1b619d059b86b862ff5f99c6fb"
+    },
+    {
+      "path": "research-program/theses/friendship-governed-goal-architecture-thesis-part-1/index.html",
+      "sha256": "57dbf203c0c4656411e367a19e2c2baf0888c996b2595fcad1f09fdb4c6b42f6"
+    },
+    {
+      "path": "research-program/theses/friendship-governed-goal-architecture-thesis-part-2/index.html",
+      "sha256": "cb940bd6d3f0147128354e097b6f0a27ced6ea8c27f926dbfa56ab59d001c1f0"
+    },
+    {
+      "path": "research-program/theses/friendship-governed-goal-architecture-thesis-part-3/index.html",
+      "sha256": "879304bbd7baff34a20bea8b4dc6dafbfe83cd17d8467d68ab0aed702ee421f4"
+    },
+    {
+      "path": "research-program/theses/friendship-governed-goal-architecture-thesis-part-4/index.html",
+      "sha256": "c62ad80cc3a80a0d26a98c18c3d9f2f0a16f338411e1dae7985e9bdfeced0bc3"
+    },
+    {
+      "path": "research-program/theses/multi-agent-cognitive-substrate-thesis/index.html",
+      "sha256": "ea52390d3ec8f06df1f3231488d343734df6c64502fe90db09077729b85c8681"
+    },
+    {
+      "path": "research-program/theses/risks-and-criticisms/index.html",
+      "sha256": "026fe7a54ac43f2ab495d866fb2764724019f5e830618b3f570da8dd73a0c8eb"
+    },
+    {
+      "path": "research-program/theses/self-modifying-software-substrate-thesis/index.html",
+      "sha256": "17195b1e36740046dd0280a871201e7562f3b18a4fcfbbe41e24ea6bd24b8446"
+    },
+    {
+      "path": "research-program/theses/standing-guidelines-registry/index.html",
+      "sha256": "a44c4a6fa28c7a83cccc392b23828ce11b3239e60d535e783b75b074741df4e4"
+    },
+    {
+      "path": "research-program/theses/thesis-0-cross-reference-map/index.html",
+      "sha256": "051d2276dcbe8029c8455f36ca139d21071db7a0274dbe46173b1ea4097a073d"
+    },
+    {
+      "path": "research-program/theses/validated-improvement-loop-thesis/index.html",
+      "sha256": "cc0ab8418db3afdeace6787d738a5f81c863421f4cfa1b5444b02e60959280f4"
     },
     {
       "path": "source/CHANGELOG.md",
@@ -122,11 +246,11 @@
     },
     {
       "path": "source/GOVERNANCE.md",
-      "sha256": "51730ad6b9f17b53d744e1062018522436af56a0e25c0ff2dbbb7bb3379ffc89"
+      "sha256": "c63b1827daf4507b07703891e98cd3619d8eeaf87b1e763a3697a4a7a3257d55"
     },
     {
       "path": "source/HANDOFF.md",
-      "sha256": "e02d84a215a1581733b641b66f8c58b63df75a50102d00e688d819922724d6db"
+      "sha256": "bb4175ae34920585c31324a0d0c1f6bf7ad12f290695fa4caf514b154e0fc430"
     },
     {
       "path": "source/LICENSE",
@@ -138,11 +262,11 @@
     },
     {
       "path": "source/NOTICE.md",
-      "sha256": "a75829cb3c5c8b163ad00ce66add9252cf74ef64739b62bbf4dc769b6d6d63de"
+      "sha256": "8215bd8b9aaf2d28e5968b21bcbfb76c1516a7162511397ac895c43213206396"
     },
     {
       "path": "source/OVERVIEW.md",
-      "sha256": "1d7992bd564eec7613eaa66dde50755fbd88ed94fa26744d725bfe6bf895d772"
+      "sha256": "b0f7c661ffa3e9a3bfa80175e88a9d22b866617e9080167f1f207bb1a6265528"
     },
     {
       "path": "source/README.md",
@@ -154,7 +278,7 @@
     },
     {
       "path": "source/STATUS.md",
-      "sha256": "88cf91c6541b88cd194b0a396c8d4ba52e6cec5b6d0444eeb466c8e7bb3c88d1"
+      "sha256": "d5a479db7e741fe19848b192ffb032e94887621c60d28462cc2a028865152bdb"
     },
     {
       "path": "source/assets/README.md",
@@ -194,23 +318,71 @@
     },
     {
       "path": "source/content/governance/authority-and-custody.md",
-      "sha256": "e2ecabdaad3c1437cb08718843388ec555bec339c2637cc1ecbf1aa5b211e32e"
+      "sha256": "317fe455fe491fe71640dd62457136fde8f64ddafec47c310c01a5d0e5a86103"
     },
     {
       "path": "source/content/governance/corrections.md",
-      "sha256": "4b4f04cd53c33f16e117c1accb3a2b08ff5cb07eac3cb7dc5347543b3fc547c6"
+      "sha256": "539bd1116a755ea48ccafe607d366afc52ac76fe8037394b61253905012f8d45"
     },
     {
       "path": "source/content/governance/oagf-relationship.md",
-      "sha256": "7a90a4be0339c0451af461ea76f161b3a63a08466b1450309a22201bb84b3cd8"
+      "sha256": "30d74552698b2e2f2a9acd277a0bd658beb7f5476c707170cb35a29d870e0c6a"
     },
     {
       "path": "source/content/history/from-cyc-to-consullo.md",
-      "sha256": "4dc7485acfe74c448c8073d80780fc8771ddf099168ffce6b76b83f4423c5a43"
+      "sha256": "5c1462dbc8c9294bf8a17eb07c31fae2a004fd3e917f29e55f1d43f081c753d5"
     },
     {
       "path": "source/content/index.md",
-      "sha256": "06678179d0814d7d3c496edc5a1f84c321af196fa1170188ddedbb052a433956"
+      "sha256": "627db7e5e454d6fbea09197d8e99b877f82ece76fb0e6cfec1db4129c110c8db"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-evidence-ledger-schema.md",
+      "sha256": "15086155137bbe35dd070b2c08353b36d6ad33c7c0cc62e091e0ec110486eb18"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-formal-models.md",
+      "sha256": "56e324b72dee0b88a9ff708916b0e66699af178c4761a044ed307f2ea3b308c7"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-literature-grounding.md",
+      "sha256": "d7ecda9a28f4ae367616929ed9c698eebce3c307a7ee2dedec0f96f83f9c27f4"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-organizational-recursive-self-improvement.md",
+      "sha256": "4c323b49c188e2bf0920a4be1addc77d6af96bd9382e468647fae33297ec6232"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-substrates.md",
+      "sha256": "62f31ea9c09b3b262c71d6c87bdac5be6bf5dcc30015c4bc57fd3c93e07c0954"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-thesis-0-schema-validation-tests.md",
+      "sha256": "725d94a9d0e3eba16844aaaa7cb5f6ed3731255627f3c30b00ee713e9c5a938b"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-thesis-1-improvement-loop-benchmarks.md",
+      "sha256": "6e315f1207e1b1fad04d307e116519f617dfe210133f5f234ba75db3d3378825"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-thesis-2-cognitive-workflow-benchmarks.md",
+      "sha256": "aa7e2d52b1347030fbd339c67b9e35138075fd2007c2ca5522ecfee68f862cdb"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-thesis-3-causal-decision-benchmarks.md",
+      "sha256": "f7e92a669c14b65865f3691cbe99c1fdec253edab1d364451ea6717d366dd004"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-thesis-4-software-substrate-benchmarks.md",
+      "sha256": "38ff2e2605e02d0d7542c234752e101fb3d479ed2250881f55a4d093958f1982"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-thesis-5-alignment-benchmarks.md",
+      "sha256": "9a1fb97636b1a3281090c667ea910e12dec42b319e4991edf8c08567062bdcc1"
+    },
+    {
+      "path": "source/content/research-program/appendices/appendix-thesis-5-operational-contracts.md",
+      "sha256": "fed253772c337e99ee5d69fdbdadd96f2a5df4c708142151ab8a2a293edfc2ee"
     },
     {
       "path": "source/content/research-program/benchmarks.md",
@@ -218,11 +390,87 @@
     },
     {
       "path": "source/content/research-program/falsifiers.md",
-      "sha256": "2e7d322714cab0f1a69cc4d8c9cf20653bc02c9ba2cae8f8ba7252c8a541a2fa"
+      "sha256": "058c066e652355f0ce3f69ec6cdd8aaede5a23890ad856c17eb622bcad3fc7f9"
     },
     {
       "path": "source/content/research-program/five-theses.md",
-      "sha256": "d7d92de7423b06074cf1c7ef038c6cb9a36416bd81d5df82f4f4560acc253c53"
+      "sha256": "7b4b418c65cd2a52c184c8284891272b1239f1b2bdb2e3c8f719544bb0f7b1b2"
+    },
+    {
+      "path": "source/content/research-program/theses/00-cross-thesis-dependency-map.md",
+      "sha256": "63a919ca583df94c7a1dd20bc379840479b5880e7958a2feee86a3cca599e290"
+    },
+    {
+      "path": "source/content/research-program/theses/00-master-abstract.md",
+      "sha256": "b0c2e0d1e50d94651156d1d47452b8d54ed78e222bb1f1be04106f9cdb6d028d"
+    },
+    {
+      "path": "source/content/research-program/theses/00-master-introduction.md",
+      "sha256": "072acaa3e1b9480308f98fec2af9ff3be7894f1ebe9ec707d607d5d3398dac6d"
+    },
+    {
+      "path": "source/content/research-program/theses/00-master-synthesis.md",
+      "sha256": "6aec7e3eb0d8cb7c62b2b97ddeefda7dc2740b7954d568a9ce8a51cdfb403a2d"
+    },
+    {
+      "path": "source/content/research-program/theses/00-thesis-0-naming.md",
+      "sha256": "82e723b5358cb6310a7346567bb34b0be15f06970f1609589bfc36316e9a9d9f"
+    },
+    {
+      "path": "source/content/research-program/theses/00-vocabulary-and-invariants.md",
+      "sha256": "4a9ce7990e0bc20ef1a033a818f1d1514be76b65b858bf91d9ea262f647a6c40"
+    },
+    {
+      "path": "source/content/research-program/theses/alignment-invariants-and-scoped-trust-thesis.md",
+      "sha256": "72ca732fb23245a0eb90664c1c1e8bae5f797f5651cca1feddb129371c09b39a"
+    },
+    {
+      "path": "source/content/research-program/theses/causal-decision-foundations-thesis.md",
+      "sha256": "313ffa6de66d07bfe2f747feff091970227248dc57fd129d53f299d895109e3f"
+    },
+    {
+      "path": "source/content/research-program/theses/friendship-governed-goal-architecture-thesis-part-1.md",
+      "sha256": "665cbf8fa6a8e51e112117607dd9bdce560f45849a75b416772ee70c4dcd6d06"
+    },
+    {
+      "path": "source/content/research-program/theses/friendship-governed-goal-architecture-thesis-part-2.md",
+      "sha256": "a7257e90c38cac5c123d4bea15c727e372ed03def8ad0872c714d0ed97603bd1"
+    },
+    {
+      "path": "source/content/research-program/theses/friendship-governed-goal-architecture-thesis-part-3.md",
+      "sha256": "ae2b8ce5ca228ea3f0e3aedbbc46f3a0de2216bf3f587a771149fee9c50c7ef6"
+    },
+    {
+      "path": "source/content/research-program/theses/friendship-governed-goal-architecture-thesis-part-4.md",
+      "sha256": "7f153acc6db16f18dc32a5719edac7919e17a6c209b8f0d42c409dd82a749a3a"
+    },
+    {
+      "path": "source/content/research-program/theses/friendship-governed-goal-architecture-thesis.md",
+      "sha256": "e7fe3f41ebf6eea5207758dcc34d0db859cd282a92dfa9787e5a862fc95a9646"
+    },
+    {
+      "path": "source/content/research-program/theses/multi-agent-cognitive-substrate-thesis.md",
+      "sha256": "7b978ec3b9f8f15ce4874160ac86792665590712afa69919f527a6c2a381e728"
+    },
+    {
+      "path": "source/content/research-program/theses/risks-and-criticisms.md",
+      "sha256": "e5928f83768017c53186cc6bc4e45d1535b0a45fc73262d3cf40c64a9807f812"
+    },
+    {
+      "path": "source/content/research-program/theses/self-modifying-software-substrate-thesis.md",
+      "sha256": "afddbc94a2b0370386bf80d4e649b512e1cf1d30093c358130ec5cbd964bdb88"
+    },
+    {
+      "path": "source/content/research-program/theses/standing-guidelines-registry.md",
+      "sha256": "e4bf5f4f4ceda39d3b54832d580c5ab1e0ae210b545d5fc269b770b18bbb43c9"
+    },
+    {
+      "path": "source/content/research-program/theses/thesis-0-cross-reference-map.md",
+      "sha256": "6dfa9899ff2008523d6ba5899b91d04f20d37338aefa158b8bbb1502acc77f9f"
+    },
+    {
+      "path": "source/content/research-program/theses/validated-improvement-loop-thesis.md",
+      "sha256": "7091e1991dd401a83f1e756d9f4cfc182f9274b065692234f5becf0afead3578"
     },
     {
       "path": "source/content/start-here.md",
@@ -242,19 +490,19 @@
     },
     {
       "path": "source/evidence/README.md",
-      "sha256": "695673dc6717e7de38349057a72471738337a833ff8c04bd4c0399523707c3c1"
+      "sha256": "aa2cddf4319c31160c9bb69ade0624eccddbf5393d1439562676ca91f0605e79"
     },
     {
       "path": "source/evidence/negative-results/README.md",
-      "sha256": "3f6b437427dde51d7d9aeec29fd19be485470e9709f6d8fe8bb0f312b0f5b858"
+      "sha256": "1bcc46279bab3cac21ce23720327c4f0157e375071ddadfe5a40390182b0a3ba"
     },
     {
       "path": "source/evidence/public-experiments/README.md",
-      "sha256": "71a910fb47dbe6ab1867bd26463b2ce3f4e454aeff64e7ffd4148081f7b3e339"
+      "sha256": "4b4845bd2e3488dd7b103cfe686d4c61b86ae773264fa18e31c6e6e2dc185e34"
     },
     {
       "path": "source/llms.txt",
-      "sha256": "689876fb8d070ceffe651ac4e4d7da5aaad5dba31b1ff739941d4e6ce7bdbac6"
+      "sha256": "f2dc6e9d74c3927ae17dc48d84b3423044d0b9eb019eb2f44055b2fd1013ab9f"
     },
     {
       "path": "start-here/index.html",
@@ -262,7 +510,7 @@
     },
     {
       "path": "status/index.html",
-      "sha256": "bb0388e5f21944a02fbf103e06eacde20fb403cd979a9109bdc24d206e0948f8"
+      "sha256": "8ad1a9a6a396e80f8517e39f42b222529f2c3dbc77e727fe6688be3e8fc30f13"
     }
   ],
   "generator": "tools/build.py",

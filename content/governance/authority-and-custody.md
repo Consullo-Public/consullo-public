@@ -1,7 +1,7 @@
 ---
 title: Authority and custody
 summary: The human authority and publication-custody boundary for this repository.
-status: specified
+status: specified but not implemented
 provenance: repository-authored
 claim_ids: []
 last_reviewed: 2026-08-12

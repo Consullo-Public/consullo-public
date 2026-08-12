@@ -1,7 +1,7 @@
 ---
 title: Notices and attribution
 summary: Authorship, licensing, institutional separation, and excluded material.
-status: specified
+status: specified but not implemented
 provenance: repository-authored
 claim_ids: []
 last_reviewed: 2026-08-12

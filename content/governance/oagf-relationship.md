@@ -1,7 +1,7 @@
 ---
 title: Relationship to the Open ASI Governance Forum
 summary: Institutional separation, source-status preservation, and non-endorsement boundaries.
-status: specified
+status: specified but not implemented
 provenance: repository-authored
 claim_ids: []
 last_reviewed: 2026-08-12

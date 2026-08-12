@@ -18,6 +18,39 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "docs"
+DERIVED_RESEARCH_SOURCES = (
+    Path("content/research-program/theses/00-master-abstract.md"),
+    Path("content/research-program/theses/00-master-introduction.md"),
+    Path("content/research-program/theses/00-master-synthesis.md"),
+    Path("content/research-program/theses/00-vocabulary-and-invariants.md"),
+    Path("content/research-program/theses/00-cross-thesis-dependency-map.md"),
+    Path("content/research-program/theses/00-thesis-0-naming.md"),
+    Path("content/research-program/theses/friendship-governed-goal-architecture-thesis.md"),
+    Path("content/research-program/theses/friendship-governed-goal-architecture-thesis-part-1.md"),
+    Path("content/research-program/theses/friendship-governed-goal-architecture-thesis-part-2.md"),
+    Path("content/research-program/theses/friendship-governed-goal-architecture-thesis-part-3.md"),
+    Path("content/research-program/theses/friendship-governed-goal-architecture-thesis-part-4.md"),
+    Path("content/research-program/theses/validated-improvement-loop-thesis.md"),
+    Path("content/research-program/theses/multi-agent-cognitive-substrate-thesis.md"),
+    Path("content/research-program/theses/causal-decision-foundations-thesis.md"),
+    Path("content/research-program/theses/self-modifying-software-substrate-thesis.md"),
+    Path("content/research-program/theses/alignment-invariants-and-scoped-trust-thesis.md"),
+    Path("content/research-program/theses/risks-and-criticisms.md"),
+    Path("content/research-program/theses/standing-guidelines-registry.md"),
+    Path("content/research-program/theses/thesis-0-cross-reference-map.md"),
+    Path("content/research-program/appendices/appendix-formal-models.md"),
+    Path("content/research-program/appendices/appendix-evidence-ledger-schema.md"),
+    Path("content/research-program/appendices/appendix-literature-grounding.md"),
+    Path("content/research-program/appendices/appendix-substrates.md"),
+    Path("content/research-program/appendices/appendix-organizational-recursive-self-improvement.md"),
+    Path("content/research-program/appendices/appendix-thesis-0-schema-validation-tests.md"),
+    Path("content/research-program/appendices/appendix-thesis-1-improvement-loop-benchmarks.md"),
+    Path("content/research-program/appendices/appendix-thesis-2-cognitive-workflow-benchmarks.md"),
+    Path("content/research-program/appendices/appendix-thesis-3-causal-decision-benchmarks.md"),
+    Path("content/research-program/appendices/appendix-thesis-4-software-substrate-benchmarks.md"),
+    Path("content/research-program/appendices/appendix-thesis-5-alignment-benchmarks.md"),
+    Path("content/research-program/appendices/appendix-thesis-5-operational-contracts.md"),
+)
 PAGE_SOURCES = (
     Path("OVERVIEW.md"),
     Path("content/index.md"),
@@ -40,7 +73,7 @@ PAGE_SOURCES = (
     Path("evidence/README.md"),
     Path("evidence/public-experiments/README.md"),
     Path("evidence/negative-results/README.md"),
-)
+) + DERIVED_RESEARCH_SOURCES
 
 SOURCE_ATTACHMENTS = (
     Path("README.md"),
@@ -89,6 +122,10 @@ OUTPUTS = {
     Path("evidence/README.md"): Path("evidence/index.html"),
     Path("evidence/public-experiments/README.md"): Path("evidence/public-experiments/index.html"),
     Path("evidence/negative-results/README.md"): Path("evidence/negative-results/index.html"),
+    **{
+        source: source.relative_to("content").with_suffix("") / "index.html"
+        for source in DERIVED_RESEARCH_SOURCES
+    },
 }
 
 NAVIGATION = (

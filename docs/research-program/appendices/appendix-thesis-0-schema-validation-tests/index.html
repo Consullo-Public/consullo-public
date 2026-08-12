@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A proposed evaluation contract in the Consullo public research program: Appendix: Thesis 0 Schema Validation Tests.">
+  <meta name="color-scheme" content="light dark">
+  <title>Appendix: Thesis 0 Schema Validation Tests · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>proposed extension</dd><dt>Claims</dt><dd>CP-002</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>A benchmark specification is not a benchmark result.</li><li>No implementation or outcome evidence is supplied by this page.</li></ul></details></aside>
+    <article><h1 id="appendix-thesis-0-schema-validation-tests">Appendix: Thesis 0 Schema Validation Tests</h1>
+<p>Version: 0.1</p>
+<p>Status: pre-drafting validation plan. Evidence Status: Documented/Proposed.</p>
+<p>This appendix defines the minimum schema-validation checks required before the Friendship-Governed Goal Architecture thesis body treats its goal-governance artifacts as operational constraints.</p>
+<h2 id="validator">Validator</h2>
+<p>Use a JSON Schema 2020-12 validator. Acceptable validators include <code>python-jsonschema</code> with Draft 2020-12 support or <code>ajv</code> configured for draft 2020-12. Basic JSON syntax checks with <code>python -m json.tool</code> are necessary but not sufficient.</p>
+<p>Current validation command:</p>
+<pre><code class="language-bash">python the internal planning-cascade artifacts</code></pre>
+<h2 id="expected-pass-checks">Expected-Pass Checks</h2>
+<div class="table-wrap"><table><thead><tr><th>Instance</th><th>Schema</th><th>Expected result</th></tr></thead><tbody><tr><td><code>planning-cascade-execution/friendship-goal-registry.json</code></td><td><code>planning-cascade-execution/schemas/friendship_goal_registry.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/plans/seed-ai-organizational-rsi.thesis-goal-anchor.json</code></td><td><code>planning-cascade-execution/schemas/seed_ai_thesis_goal_anchor.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/tests/cases/valid_goal_stack_snapshot.json</code></td><td><code>planning-cascade-execution/schemas/goal_stack_snapshot.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/tests/cases/valid_goal_system.json</code></td><td><code>planning-cascade-execution/schemas/seed_ai_thesis_goal_anchor.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/tests/cases/valid_goal_strategic.json</code></td><td><code>planning-cascade-execution/schemas/seed_ai_thesis_goal_anchor.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/tests/cases/valid_goal_campaign.json</code></td><td><code>planning-cascade-execution/schemas/seed_ai_thesis_goal_anchor.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/tests/cases/valid_goal_operational.json</code></td><td><code>planning-cascade-execution/schemas/seed_ai_thesis_goal_anchor.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/tests/cases/valid_goal_mission.json</code></td><td><code>planning-cascade-execution/schemas/seed_ai_thesis_goal_anchor.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/tests/cases/valid_goal_task.json</code></td><td><code>planning-cascade-execution/schemas/seed_ai_thesis_goal_anchor.schema.json</code></td><td>pass</td></tr><tr><td><code>planning-cascade-execution/tests/cases/valid_goal_method.json</code></td><td><code>planning-cascade-execution/schemas/seed_ai_thesis_goal_anchor.schema.json</code></td><td>pass</td></tr></tbody></table></div>
+<h2 id="semantic-checks-beyond-json-schema">Semantic Checks Beyond JSON Schema</h2>
+<p>JSON Schema cannot enforce cross-document references. The validation pass must also check:</p>
+<ul><li>every <code>friendship_goal_node</code> exists in <code>friendship-goal-registry.json</code></li><li>every <code>friendship_root_path</code> entry exists in <code>friendship-goal-registry.json</code></li><li>every non-<code>thesis_anchor</code> goal has at least one parent goal and no cycle in the reachable goal DAG</li><li><code>friendship_root_path</code> is interpreted as a primary-first multi-root set, not as a strict tree path</li><li><code>goal_stack_snapshot.fingerprint</code> is the SHA-256 hash of the canonical serialization of required thin-pointer fields before live ledger use; fixtures may use <code>pending-owner-attested-hash</code></li><li><code>review_history_refs</code> is non-empty before an <code>owner_approved</code> goal with <code>independent_review_required: true</code> is treated as active</li><li>lower-horizon plans cannot aggregate below the <code>ThesisBackingRequired(plan)</code> threshold to avoid thesis backing</li></ul>
+<h2 id="expected-fail-fixtures-to-add">Expected-Fail Fixtures To Add</h2>
+<p>The validator now includes negative fixtures for:</p>
+<ul><li><code>invalid_goal_unregistered_friendship_node.json</code>: semantic failure for unregistered <code>friendship_goal_node</code>.</li><li><code>invalid_goal_nonroot_without_parent.json</code>: schema failure for non-root <code>goal_class</code> without <code>parent_goals</code>.</li><li><code>invalid_goal_owner_approved_missing_authority.json</code>: schema failure for <code>owner_approved</code> without <code>authority_matrix</code>.</li><li><code>invalid_goal_owner_approved_empty_review.json</code>: schema failure for <code>owner_approved</code> with <code>independent_review_required: true</code> and empty <code>review_history_refs</code>.</li><li><code>invalid_goal_stack_snapshot_bad_fingerprint.json</code>: semantic failure for snapshot fingerprint mismatch.</li><li><code>invalid_goal_stack_snapshot_computed_mismatch.json</code>: semantic failure for production-style computed snapshot fingerprint mismatch.</li><li><code>invalid_goal_benchmark_modification_without_owner_review.json</code>: semantic failure for benchmark modification without owner review.</li><li><code>invalid_goal_governance_self_weakening_single_lane_review.json</code>: semantic failure for protected goal-governance change reviewed only by the author lane.</li><li><code>invalid_goal_multi_parent_asymmetric_authority.json</code>: semantic failure for a multi-parent high-risk goal adopting only the weaker authority path.</li><li><code>invalid_goal_revision_missing_lineage.json</code>: semantic failure for a revised goal without <code>revision_lineage</code>.</li><li><code>invalid_goal_friendship_registry_mod_without_protection.json</code>: semantic failure for registry modification without protected-change record.</li><li><code>invalid_goal_dag_self_cycle.json</code>: semantic failure for direct goal-DAG self-cycle.</li><li><code>invalid_goal_aggregate_child_plan_backing_bypass.json</code>: semantic failure for aggregate child-plan decomposition that bypasses <code>ThesisBackingRequired(plan)</code>.</li><li><code>invalid_goal_stack_snapshot_expired_intention.json</code>: semantic failure for active intention continuation after plan expiry.</li><li><code>invalid_goal_stack_snapshot_stale_campaign_child_intention.json</code>: semantic failure for child intention continuation under a stale campaign.</li><li><code>invalid_strategic_thesis_backing_without_snapshot.json</code>: semantic failure for planner object claiming thesis backing without required <code>goal_stack_snapshot</code>.</li></ul>
+<h2 id="drafting-gate">Drafting Gate</h2>
+<p>Before <code>friendship-governed-goal-architecture-thesis.md</code> relies on a worked example as operational evidence, the example's JSON artifacts must either pass this validation plan or be explicitly marked as a prose-only example with a migration task.</p></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/appendices/appendix-thesis-0-schema-validation-tests.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

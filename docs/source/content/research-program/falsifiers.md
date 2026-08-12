@@ -1,26 +1,26 @@
 ---
 title: Falsifiers
-summary: The public falsification boundary for the research program.
-status: proposed
-provenance: repository-authored
+summary: Entry point to the published anti-thesis, falsification signals, and required responses.
+status: implemented
+provenance: repository-authored index to the owner-approved derived risk register
 claim_ids: [CP-002]
 last_reviewed: 2026-08-12
 receipt: none
 non_claims:
-  - No detailed thesis falsifiers have cleared release review.
-  - No current AGI or ASI claim is made.
+  - Publishing falsifiers does not establish that the program passes them.
+  - The implemented status describes this index and its published risk register, not a system capability.
 ---
 
 # Falsifiers
 
-The public program begins with one proposed question:
+The detailed falsification boundary is now public in
+[Risks and Criticisms](theses/risks-and-criticisms.md). Its central question is whether evidence
+would show that Consullo is not a viable scaffold for governed recursive capability amplification.
 
-> Can the program produce repeatable, independently inspectable capability improvements while its
-> stated governance constraints remain effective under recursive change?
+The register includes failure signals for validator gaming, narrow-benchmark overfitting,
+unfavorable cost-to-capability ratios, fragility, opacity, rollback failure, ignored adversarial
+objections, alignment incidents, coordination overhead, and ceremonial rather than operational
+human authority.
 
-No public evidence currently answers that question. Detailed thesis-level falsifiers, stopping
-conditions, and benchmark interpretations remain **awaiting declassification** and will not be
-reconstructed here from unreleased material.
-
-A result counts only within its recorded scope. A self-authored diagnostic may expose a failure or
-support iteration, but it cannot create independent evidence merely by passing.
+No public evidence currently establishes that the program survives those falsifiers. A result
+counts only within its recorded scope, and self-authored diagnostics are not independent evidence.

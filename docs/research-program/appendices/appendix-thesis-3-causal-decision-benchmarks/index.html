@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A proposed evaluation contract in the Consullo public research program: Appendix: Thesis 3 Causal-Decision Benchmarks.">
+  <meta name="color-scheme" content="light dark">
+  <title>Appendix: Thesis 3 Causal-Decision Benchmarks · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>proposed extension</dd><dt>Claims</dt><dd>CP-002</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>A benchmark specification is not a benchmark result.</li><li>No implementation or outcome evidence is supplied by this page.</li></ul></details></aside>
+    <article><h1 id="appendix-thesis-3-causal-decision-benchmarks">Appendix: Thesis 3 Causal-Decision Benchmarks</h1>
+<p>Version: 0.1 (2026-04-24)</p>
+<p>This appendix specifies benchmark families for Thesis 3, <code>Causal-Decision Foundations For Bounded Strategic Reasoning</code>. It is a benchmark design contract, not an implemented causal-decision benchmark suite. Capability Status: specified/proposed. Evidence Status: Documented/Proposed.</p>
+<p>The goal is to make causal-decision claims testable without implying that Consullo currently performs operational Pearl-style causal inference, calibrated forecasting, or Goodhart-safe optimization. A decision workflow earns stronger status only when it produces scoped causal models, calibrated predictions, intervention backtests, Goodhart analysis, decision evidence, and escalation behavior under declared benchmarks.</p>
+<p>Benchmark reports produced under this appendix should populate <code>benchmark_result</code> records in <code>appendix-evidence-ledger-schema.md</code>; the report fields below define the benchmark-specific <code>evidence_payload</code> structure for those records.</p>
+<h2 id="benchmark-principles">Benchmark Principles</h2>
+<ul><li>Intervention-centered: benchmark tasks should evaluate proposed actions, not only explanations.</li><li>Scope-first: every causal model must state variables, excluded variables, validity scope, assumptions, and evidentiary basis.</li><li>Counterfactual discipline: counterfactuals should identify observed evidence, inferred background state, alternative intervention, and uncertainty.</li><li>Calibration-bearing: predictions should be recorded before outcomes and scored after outcomes where feasible.</li><li>Goodhart-aware: optimized metrics, proxy risks, side effects, and gaming channels are part of the score.</li><li>Governance-bound: high-stakes, externally consequential, or alignment-relevant decisions must route to Thesis 5 rather than forced recommendation.</li></ul>
+<h2 id="required-benchmark-report-fields">Required Benchmark Report Fields</h2>
+<p>Each benchmark report should include:</p>
+<div class="table-wrap"><table><thead><tr><th>Field</th><th>Meaning</th></tr></thead><tbody><tr><td><code>benchmark_id</code></td><td>Stable identifier and version.</td></tr><tr><td><code>decision_domain</code></td><td>Domain and scope of evaluated decisions.</td></tr><tr><td><code>baseline</code></td><td>Comparator such as narrative recommendation, checklist, prior workflow, or human decision log.</td></tr><tr><td><code>information_boundary</code></td><td>Evidence available before the decision and evidence withheld until scoring.</td></tr><tr><td><code>causal_model_format</code></td><td>Structural model, scenario model, simulation model, correlational proxy, or expert model.</td></tr><tr><td><code>ambiguity_set_rule</code></td><td>Sources, cardinality/scenario count, inclusion/exclusion rationale, and curator.</td></tr><tr><td><code>prediction_targets</code></td><td>Outcomes, side effects, costs, incident risks, or intervention deltas.</td></tr><tr><td><code>calibration_rule</code></td><td>Scoring method and sparse-feedback treatment.</td></tr><tr><td><code>goodhart_probe_rule</code></td><td>Proxy-risk and gaming-channel scoring.</td></tr><tr><td><code>escalation_rule</code></td><td>Conditions for abstention, revision, block, or Thesis 5 routing.</td></tr><tr><td><code>decision_evidence_package</code></td><td>Required packet fields and ledger records.</td></tr><tr><td><code>status_result</code></td><td>What claim status, if any, the benchmark can strengthen.</td></tr></tbody></table></div>
+<h2 id="suite-a-causal-model-construction">Suite A: Causal Model Construction</h2>
+<p>Purpose: test whether the system can construct bounded causal models with explicit scope and assumptions.</p>
+<p>Representative tasks:</p>
+<ul><li>identify variables, mechanisms, confounders, and excluded factors for a repair-pipeline decision</li><li>distinguish observational association from intervention claim</li><li>state validity scope for a trust-scope or deployment-stage model</li><li>identify missing evidence that prevents high-stakes use</li><li>reject unsupported extrapolation from one domain to another</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>variable coverage</li><li>mechanism plausibility</li><li>confounder identification</li><li>scope completeness</li><li>assumption clarity</li><li>provenance completeness</li><li>unsupported-extrapolation penalty</li></ul>
+<p>Negative controls:</p>
+<ul><li>a scenario where the correct result is "model scope insufficient"</li><li>a misleading correlation that should not authorize intervention</li><li>a model that omits a known confounder</li></ul>
+<p>This suite supports model-construction discipline, not causal truth by itself.</p>
+<h2 id="suite-b-intervention-prediction-backtests">Suite B: Intervention Prediction Backtests</h2>
+<p>Purpose: test whether the workflow predicts effects of actions before seeing outcomes.</p>
+<p>Representative tasks:</p>
+<ul><li>predict validation-depth effects on false accepts, false rejects, cost, and incident risk</li><li>predict repair-pipeline changes from historical or simulated state</li><li>predict trust-scope expansion outcomes under known incident histories</li><li>compare no action, delayed action, narrowed action, and experimental action</li><li>predict side effects, not only primary benefits</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>directional accuracy</li><li>effect-size error</li><li>interval coverage</li><li>option ranking</li><li>side-effect prediction</li><li>decision-to-evidence latency</li><li>calibration by domain and horizon</li></ul>
+<p>Negative controls:</p>
+<ul><li>a historical case where the observed action was not optimal</li><li>a case with delayed side effects</li><li>a case where action appears beneficial only because validation was weakened</li></ul>
+<p>Backtests must preserve the information boundary to prevent hindsight leakage.</p>
+<h2 id="suite-c-counterfactual-replay">Suite C: Counterfactual Replay</h2>
+<p>Purpose: test whether counterfactuals are generated through explicit model assumptions rather than narrative imagination.</p>
+<p>Representative tasks:</p>
+<ul><li>reconstruct a pre-decision state</li><li>infer background conditions from observations</li><li>replace the observed action with a counterfactual intervention</li><li>propagate expected effects through a structural or scenario model</li><li>state uncertainty and model dependence</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>abduction/action/prediction structure</li><li>background-state clarity</li><li>intervention specificity</li><li>uncertainty representation</li><li>synthetic-vs-observed labeling</li><li>backtestability where historical data permits</li></ul>
+<p>Negative controls:</p>
+<ul><li>a persuasive but ungrounded "what if" narrative</li><li>a counterfactual that uses hindsight information</li><li>a counterfactual outside the model's scope</li></ul>
+<p>The benchmark should reward disciplined uncertainty over confident stories.</p>
+<h2 id="suite-d-ambiguity-set-robustness">Suite D: Ambiguity-Set Robustness</h2>
+<p>Purpose: test whether recommendations remain honest under plausible model alternatives.</p>
+<p>Representative tasks:</p>
+<ul><li>construct <code>Theta(M)</code> from parameter perturbations, competing graph structures, mechanism disagreement, validation residuals, regime-shift scenarios, and reviewer disagreement</li><li>declare ambiguity-set cardinality or scenario count</li><li>explain inclusion and exclusion rationale</li><li>identify whether the preferred action changes under plausible alternatives</li><li>choose an information-gathering experiment when model disagreement is high</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>credible alternative coverage</li><li>exclusion rationale quality</li><li>cardinality/scenario-count justification</li><li>fragility disclosure</li><li>experiment-selection quality</li><li>over-conservatism penalty</li></ul>
+<p>Negative controls:</p>
+<ul><li>an ambiguity set so broad that no decision is possible</li><li>an ambiguity set so narrow that known risks disappear</li><li>an omitted model alternative that later explains failure</li></ul>
+<p>Robustness is useful only when the ambiguity set is governed.</p>
+<h2 id="suite-e-goodhart-and-strategic-bias-probes">Suite E: Goodhart And Strategic-Bias Probes</h2>
+<p>Purpose: test whether the decision layer identifies proxy failure, strategic bias, and metric gaming.</p>
+<p>Representative tasks:</p>
+<ul><li>detect repair-throughput optimization that lowers repair quality</li><li>detect trust-score gaming through task avoidance</li><li>detect benchmark-pass overfitting</li><li>detect cost reduction by validation weakening</li><li>detect ADO benefit reporting that hides external harm</li><li>detect framing sensitivity or missing alternatives</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>proxy-objective distinction</li><li>side-effect channel coverage</li><li>gaming-path identification</li><li>falsification-evidence quality</li><li>mitigation quality</li><li>routing effect: revise, block, experiment, or escalate</li></ul>
+<p>Negative controls:</p>
+<ul><li>a proxy that is actually adequate for a low-risk scope</li><li>a severe Goodhart risk hidden behind good benchmark performance</li><li>an option set missing the safest alternative</li></ul>
+<p>Goodhart analysis counts only if it can change the decision state.</p>
+<h2 id="suite-f-escalation-abstention-and-permission">Suite F: Escalation, Abstention, And Permission</h2>
+<p>Purpose: test whether the workflow refuses to force recommendations under invalid scope, weak evidence, or alignment constraints.</p>
+<p>Representative tasks:</p>
+<ul><li>mark a decision as <code>needs-input</code> when objectives are underspecified</li><li>mark a decision as <code>conflicted</code> when ambiguity-set alternatives disagree</li><li>block or escalate when provenance is missing</li><li>route high-stakes externally consequential actions to Thesis 5</li><li>preserve AAF or human-authority disposition in the decision package</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>correct decision-state enum use</li><li>over-escalation rate</li><li>under-escalation rate</li><li>Thesis 5 routing correctness</li><li>permission evidence completeness</li><li>dissent preservation</li></ul>
+<p>Negative controls:</p>
+<ul><li>a low-risk reversible action where escalation is unnecessary</li><li>a high-stakes action where a recommendation would be harmful without AAF</li><li>an externally visible action whose rollback cannot undo harm</li></ul>
+<p>This suite ties Thesis 3 directly to the constraint wrapper.</p>
+<h2 id="minimal-demonstration-package">Minimal Demonstration Package</h2>
+<p>The first Thesis 3 demonstration should use one bounded domain, preferably a software-repair or validation-policy domain where historical or simulated outcomes can be collected.</p>
+<p>Required contents:</p>
+<ul><li>pre-decision evidence packets</li><li>scoped causal or scenario models</li><li>ambiguity-set records with cardinality/scenario count</li><li>intervention predictions recorded before outcome reveal</li><li>Goodhart probe results</li><li>decision-state and permission routing records</li><li>observed outcomes or simulated outcome labels</li><li>calibration and error report</li><li>negative examples and rejected recommendations</li></ul>
+<p>The demonstration should include at least one case where the correct behavior is abstention, revision, block, or escalation.</p>
+<h2 id="non-claims">Non-Claims</h2>
+<p>This appendix does not claim that Consullo has implemented a Pearl-style causal graph engine, structural-equation executor, counterfactual engine, prediction-calibration battery, or Goodhart checker. It specifies what benchmark evidence would be needed before Thesis 3 claims can strengthen beyond specified/proposed architecture.</p></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/appendices/appendix-thesis-3-causal-decision-benchmarks.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The published literature-grounding record for the five-thesis research program.">
+  <meta name="color-scheme" content="light dark">
+  <title>Appendix: Literature Grounding · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>implemented</dd><dt>Claims</dt><dd>CP-001</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>Literature coverage is not independent validation of Consullo.</li><li>The implemented status describes this literature record, not a system capability.</li></ul></details></aside>
+    <article><h1 id="appendix-literature-grounding">Appendix: Literature Grounding</h1>
+<p>This file begins the literature crosswalk. It records narrow pre-drafting research that should shape vocabulary, invariants, and formal models.</p>
+<h2 id="narrow-pre-drafting-research-completed">Narrow Pre-Drafting Research Completed</h2>
+<h2 id="vocabulary-and-invariant-changes-forced-by-narrow-literature-pass">Vocabulary And Invariant Changes Forced By Narrow Literature Pass</h2>
+<p>The narrow literature pass forced control-layer changes rather than merely adding citations:</p>
+<ul><li>Goedel Machines and Darwin Godel Machine forced the empirical-relaxation framing for Thesis 1.</li><li>Risks from Learned Optimization and AI Control forced invariant I19 and the requirement for AI-control review, distribution-shift monitoring, sandbagging/capability probes, and evidence-ledger preservation for learned subsystem changes.</li><li>Goodhart variants and specification gaming forced stronger improvement semantics, false-accept tracking, and risk skeleton emphasis on validator gaming.</li><li>CIRL and the Off-Switch Game forced operational human authority and interruptability definitions.</li><li>Causal influence diagrams forced Thesis 3 to use incentive analysis rather than plain expected utility.</li><li>Constitutional AI and AI Safety via Debate forced AAF and ConstitutionalAIAlignmentTrainer to specify critique-source diversity under single-owner Phase 1.</li><li>SWE-bench and SWE-agent forced Thesis 4 to use coding-agent benchmarks and interface design as evaluation baselines.</li></ul>
+<h3 id="goedel-machines">Goedel Machines</h3>
+<p>Primary source:</p>
+<ul><li>Juergen Schmidhuber, "Goedel Machines: Self-Referential Universal Problem Solvers Making Provably Optimal Self-Improvements" (<code>https://arxiv.org/abs/cs/0309048</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Consullo should not present empirical self-improvement as equivalent to a proof-based Goedel Machine.</li><li>Thesis 1 should frame Consullo as a statistical and empirical relaxation: proposed changes are accepted by evidence gates, benchmarks, and invariants rather than formal proofs of global utility improvement.</li></ul>
+<h3 id="darwin-godel-machine">Darwin Godel Machine</h3>
+<p>Primary source:</p>
+<ul><li>Sakana AI, "The Darwin Godel Machine: AI that improves itself by rewriting its own code" (<code>https://sakana.ai/dgm/</code>)</li><li>Paper link surfaced as arXiv <code>2505.22954</code>.</li></ul>
+<p>Secondary verification note: direct arXiv fetch on April 23, 2026 confirmed <code>2505.22954</code> as "Darwin Godel Machine: Open-Ended Evolution of Self-Improving Agents" by Jenny Zhang, Shengran Hu, Cong Lu, Robert Lange, and Jeff Clune.</p>
+<p>Control-layer implication:</p>
+<ul><li>Current public empirical RSI evidence is narrow-domain and benchmark-driven.</li><li>Consullo's DGM claims should be bounded by benchmark evidence and should not generalize from coding benchmarks to broad ASI without additional evidence.</li></ul>
+<h3 id="cognitive-architectures-for-language-agents">Cognitive Architectures For Language Agents</h3>
+<p>Primary source:</p>
+<ul><li>Sumers et al., "Cognitive Architectures for Language Agents" (<code>https://arxiv.org/abs/2309.02427</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 2 should be framed as a cognitive substrate with memory, action space, and decision process, not a bare list of cognitive agents.</li><li>Composition and integration costs must be modeled.</li></ul>
+<h3 id="classical-and-agentic-cognitive-architecture-lineage">Classical And Agentic Cognitive Architecture Lineage</h3>
+<p>Primary source families:</p>
+<ul><li>Soar, ACT-R, CLARION, and LIDA as classical cognitive architecture baselines</li><li>ReAct, Tree of Thoughts, Reflexion, Voyager, AutoGen, MetaGPT, and multi-agent debate as language-agent and multi-agent patterns</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 2 should use cognitive-cycle and capability-composition language rather than claiming agent rosters create intelligence.</li><li>Cognitive claims need task classes, capability dimensions, integration-cost accounting, and failure modes.</li><li>Consciousness-emergence material may be acknowledged but should not be load-bearing for Seed AI capability claims.</li></ul>
+<h3 id="risks-from-learned-optimization">Risks From Learned Optimization</h3>
+<p>Primary source:</p>
+<ul><li>Hubinger et al., "Risks from Learned Optimization in Advanced Machine Learning Systems" (<code>https://arxiv.org/abs/1906.01820</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 1 and Thesis 5 must treat learned optimization, mesa-objectives, deceptive behavior, and validator gaming as first-class risks.</li><li>Passing validation does not prove internal objective alignment.</li></ul>
+<h3 id="goodhart-variants">Goodhart Variants</h3>
+<p>Primary source:</p>
+<ul><li>Manheim and Garrabrant, "Categorizing Variants of Goodhart's Law" (<code>https://arxiv.org/abs/1803.04585</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 1 evaluators and Thesis 3 decision systems must model metric fragility and overoptimization risks.</li><li>Validation metrics require adversarial and causal scrutiny.</li></ul>
+<h3 id="cirl-and-off-switch-game">CIRL And Off-Switch Game</h3>
+<p>Primary sources:</p>
+<ul><li>Hadfield-Menell et al., "Cooperative Inverse Reinforcement Learning" (<code>https://papers.nips.cc/paper/6420-cooperative-inverse-reinforcement-learning</code>)</li><li>Hadfield-Menell et al., "The Off-Switch Game" (<code>https://www.ijcai.org/Proceedings/2017/0032</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Human authority and interruptability need operational definitions.</li><li>The suite should not imply that human authority is enough unless agents preserve uncertainty about human values and do not route around shutdown or correction.</li></ul>
+<h3 id="causal-influence-diagrams">Causal Influence Diagrams</h3>
+<p>Primary sources:</p>
+<ul><li>Everitt et al., "Understanding Agent Incentives using Causal Influence Diagrams" (<code>https://arxiv.org/abs/1902.09980</code>)</li><li>Everitt et al., "Modeling AGI Safety Frameworks with Causal Influence Diagrams" (<code>https://arxiv.org/abs/1906.08663</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 3 should use causal influence diagrams and incentive analysis, not plain expected utility only.</li><li>Thesis 5 can use CIDs to reason about reward tampering, incentive paths, and safety frameworks.</li></ul>
+<h3 id="causal-decision-and-goodhart-controls">Causal Decision And Goodhart Controls</h3>
+<p>Primary sources:</p>
+<ul><li>Pearl, <code>Causality</code> and do-calculus as represented in the Consullo causal-model designs</li><li>Manheim and Garrabrant, "Categorizing Variants of Goodhart's Law" (<code>https://arxiv.org/abs/1803.04585</code>)</li><li>Dubova et al., "Against theory-motivated experimentation: Can random experimental choice lead to better theories?" (<code>https://doi.org/10.1177/26339137261421577</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 3 should treat decisions as interventions under model uncertainty rather than narrative recommendations.</li><li>Robust decision rules should include ambiguity over causal models, proxy-risk checks, and abstention/escalation conditions.</li><li>Experiment selection should preserve random or novelty arms when theories are immature so confidence gains are not mistaken for objective model improvement.</li></ul>
+<h3 id="constitutional-ai">Constitutional AI</h3>
+<p>Primary source:</p>
+<ul><li>Bai et al., "Constitutional AI: Harmlessness from AI Feedback" (<code>https://arxiv.org/abs/2212.08073</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Constitutional critique requires a critique-source distribution.</li><li>Under single-owner Phase 1, Consullo must avoid circular self-critique that reinforces alignment monoculture.</li></ul>
+<h3 id="ai-safety-via-debate">AI Safety Via Debate</h3>
+<p>Primary source:</p>
+<ul><li>Irving, Christiano, and Amodei, "AI safety via debate" (<code>https://arxiv.org/abs/1805.00899</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>AAF can use debate-like structures, but human adjudication and debate protocol design must be explicit.</li></ul>
+<h3 id="ai-control">AI Control</h3>
+<p>Primary source:</p>
+<ul><li>Greenblatt et al., "AI Control: Improving Safety Despite Intentional Subversion" (<code>https://arxiv.org/abs/2312.06942</code>)</li><li>Proceedings version: <code>https://proceedings.mlr.press/v235/greenblatt24a.html</code></li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 4 and Thesis 5 should assume powerful model outputs may be untrusted.</li><li>Review and editing protocols should be designed against intentional subversion, especially for code changes.</li></ul>
+<p>Thesis 5 implication:</p>
+<ul><li>Scoped trust and permissioning should not assume that apparently competent learned systems are benign.</li><li>High-stakes learned-subsystem changes require control-style review, preserved probe results, and explicit uncertainty about intentional subversion.</li></ul>
+<h3 id="swe-bench-and-swe-agent">SWE-bench And SWE-agent</h3>
+<p>Primary sources:</p>
+<ul><li>Jimenez et al., "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" (<code>https://arxiv.org/abs/2310.06770</code>)</li><li>Yang et al., "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering" (<code>https://arxiv.org/abs/2405.15793</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 4 should use SWE-bench-style evaluation as a baseline for coding-agent claims.</li><li>Agent-computer interface design is part of the software substrate, not just model capability.</li></ul>
+<h3 id="automatic-program-repair-lineage">Automatic Program Repair Lineage</h3>
+<p>Primary sources:</p>
+<ul><li>Weimer, Forrest, Le Goues, and Nguyen, "Automatic Program Repair with Evolutionary Computation" (<code>https://cacm.acm.org/research/automatic-program-repair-with-evolutionary-computation/</code>)</li><li>Nguyen et al., "SemFix: Program Repair via Semantic Analysis" (<code>https://research.ibm.com/publications/semfix-program-repair-via-semantic-analysis</code>)</li><li>Mechtaev et al., "Angelix: Scalable Multiline Program Patch Synthesis" (<code>https://www.comp.nus.edu.sg/~abhik/pdf/ICSE16-angelix.pdf</code>)</li><li>Zhang et al., "AutoCodeRover: Autonomous Program Improvement" (<code>https://arxiv.org/abs/2404.05427</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 4 must distinguish plausible patches from correct patches.</li><li>Test passing is evidence, not proof; semantic invariants, contrastive tests, regression checks, and post-deployment monitoring are required.</li><li>Modern LLM coding agents should be treated as repair-pipeline components rather than as unrestricted self-modifiers.</li></ul>
+<h3 id="specification-gaming">Specification Gaming</h3>
+<p>Primary source:</p>
+<ul><li>Victoria Krakovna, "Specification gaming examples in AI" (<code>https://vkrakovna.wordpress.com/2018/04/02/specification-gaming-examples-in-ai/</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Validator design must assume agents can exploit objective and benchmark loopholes.</li><li>Risks-and-criticisms should preserve specification gaming as a central objection.</li></ul>
+<h2 id="current-literature-update-april-2026">Current Literature Update: April 2026</h2>
+<p>These sources were checked after the first complete draft to keep the finalization pass aligned with current public research and policy framing.</p>
+<h3 id="anthropic-responsible-scaling-policy-version-3-0">Anthropic Responsible Scaling Policy Version 3.0</h3>
+<p>Primary source:</p>
+<ul><li>Anthropic, "Responsible Scaling Policy Version 3.0" (<code>https://www.anthropic.com/news/responsible-scaling-policy-v3</code>)</li><li>Anthropic, "Responsible Scaling Policy Updates" (<code>https://www.anthropic.com/responsible-scaling-policy</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Consullo's Capability Status enum should not be confused with Anthropic's AI Safety Levels, but RSP v3.0 reinforces the need to bind capability thresholds to required safeguards.</li><li>Anthropic's 2026 update emphasizes that capability thresholds can become ambiguous near frontier boundaries. Consullo should therefore avoid treating threshold classification as dispositive and should preserve uncertainty, external review, and evidence-ledger dissent.</li><li>The split between entry-level AI R&amp;D automation and dramatic acceleration of effective scaling is directly relevant to Thesis 1 and Thesis 4 evaluation: Consullo should distinguish local coding/repair improvement from broader AI-R&amp;D acceleration.</li></ul>
+<h3 id="metr-autonomy-and-ai-r-d-evaluations">METR Autonomy And AI R&amp;D Evaluations</h3>
+<p>Primary source:</p>
+<ul><li>METR, "Research" collection (<code>https://metr.org/research/</code>)</li><li>Rein et al., "HCAST: Human-Calibrated Autonomy Software Tasks" (<code>https://arxiv.org/abs/2503.17354</code>; METR PDF: <code>https://metr.org/hcast.pdf</code>)</li><li>METR, "Recent Frontier Models Are Reward Hacking" (<code>https://metr.org/blog/2025-06-05-recent-reward-hacking/</code>)</li><li>METR, "Evaluating frontier AI R&amp;D capabilities of language model agents against human experts" / RE-Bench (<code>https://metr.org/blog/2024-11-22-evaluating-r-d-capabilities-of-llms/</code>)</li></ul>
+<p>Secondary verification note: direct arXiv fetch on April 23, 2026 confirmed <code>2503.17354</code> as "HCAST: Human-Calibrated Autonomy Software Tasks."</p>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 1 and Thesis 4 should treat autonomous task length, AI R&amp;D task performance, and software autonomy as benchmark families, not just SWE-bench-style issue resolution.</li><li>METR's reward-hacking observations strengthen the need for validator-gaming and specification-gaming risk rows, hidden tests where appropriate, and post-deployment evidence rather than benchmark score alone.</li><li>HCAST-style human-calibrated tasks are relevant to Consullo's greater-than-human axes because they compare agent autonomy to human task duration and task complexity.</li></ul>
+<h3 id="measuring-ai-r-d-automation">Measuring AI R&amp;D Automation</h3>
+<p>Primary source:</p>
+<ul><li>Chan et al., "Measuring AI R&amp;D Automation" (<code>https://arxiv.org/abs/2603.03992</code>)</li></ul>
+<p>Verified citation details: Alan Chan, Ranay Padarath, Joe Kwon, Hilary Greaves, and Markus Anderljung; arXiv:2603.03992.</p>
+<p>Secondary verification note: direct arXiv fetch on April 24, 2026 confirmed title, author list, arXiv ID, v3 status, and DOI. Abstract fingerprint: "The automation of AI R&amp;D (AIRDA) could have significant implications, but its extent and ultimate effects remain uncertain."</p>
+<p>Control-layer implication:</p>
+<ul><li>Consullo should track whether recursive capability amplification accelerates capability work faster than oversight, evaluation, and safety work.</li><li>Metrics should include not only benchmark performance but also research-time allocation, capital substitution, oversight burden, and subversion or incident signals.</li><li>This strengthens the fast-takeoff-outpacing-validators risk and supports treating ADO, I17 cost/benefit reporting, and I19 deceptive-optimization controls as operational requirements.</li></ul>
+<h3 id="power-seeking-risk">Power-Seeking Risk</h3>
+<p>Primary source:</p>
+<ul><li>Joseph Carlsmith, "Is Power-Seeking AI an Existential Risk?" (<code>https://arxiv.org/abs/2206.13353</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 5 should continue to state that layered defense is not a proof of safety or corrigibility.</li><li>Recursive improvement claims should be stress-tested against the possibility that powerful agentic systems have instrumental incentives to seek power, resist correction, or appear deployable while misaligned.</li><li>Owner authority, AAF dissent, containment, interruptability, and AI-control review are necessary but should remain framed as mitigations rather than decisive answers.</li></ul>
+<h2 id="finalization-literature-engagement">Finalization Literature Engagement</h2>
+<p>These sources were engaged during finalization prep to move the suite beyond a narrow pre-drafting survey.</p>
+<h3 id="corrigibility">Corrigibility</h3>
+<p>Primary source:</p>
+<ul><li>Soares, Fallenstein, Armstrong, and Yudkowsky, "Corrigibility" (<code>https://intelligence.org/files/Corrigibility.pdf</code>; bibliographic record: <code>https://dblp.org/rec/conf/aaai/SoaresFAY15</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 5 should keep saying that layered defense is not a proof of corrigibility.</li><li>Friendship agent, AAF dissent, interruptability, and human authority are mitigation layers, not a solution to the formal corrigibility problem.</li><li>Any future claim that Consullo is corrigible must be separately proven or empirically scoped; the current suite should claim only bounded correction pathways.</li></ul>
+<h3 id="agi-safety-from-first-principles">AGI Safety From First Principles</h3>
+<p>Primary source:</p>
+<ul><li>Ngo, Chan, and Mindermann, "AGI Safety from First Principles" (<code>https://niplav.site/doc/cs/ai/alignment/overview/agi_safety_from_first_principle_ngo_2020.pdf</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Consullo should treat objective functions, prompts, validators, and method memories as selection pressures on learned behavior, not as direct guarantees of internal motivation.</li><li>This strengthens I19 and the Mechanistic Interpretability Deficit risk: behavioral validation can shape but does not reveal all internal objectives.</li><li>Thesis 1 and Thesis 5 should preserve the distinction between controlling outputs, shaping training pressure, and understanding learned cognition.</li></ul>
+<h3 id="unsolved-problems-in-ml-safety">Unsolved Problems In ML Safety</h3>
+<p>Primary source:</p>
+<ul><li>Hendrycks, Carlini, Schulman, and Steinhardt, "Unsolved Problems in ML Safety" (<code>https://arxiv.org/abs/2109.13916</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>The suite should map its safety claims onto robustness, monitoring, alignment, and systemic safety rather than implying a single alignment mechanism covers all hazards.</li><li>Current Consullo claims mainly address monitoring, governance, provenance, and some robustness; they leave many inherent-model alignment and systemic-safety problems open.</li><li>This supports keeping <code>risks-and-criticisms.md</code> as a live anti-thesis rather than a completed rebuttal.</li></ul>
+<h3 id="mechanistic-interpretability">Mechanistic Interpretability</h3>
+<p>Primary source:</p>
+<ul><li>Elhage et al., "A Mathematical Framework for Transformer Circuits" (<code>https://transformer-circuits.pub/2021/framework/index.html</code>; Anthropic page: <code>https://www.anthropic.com/research/a-mathematical-framework-for-transformer-circuits</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Mechanistic interpretability is relevant to I19 but currently cannot be treated as a solved inspection layer for frontier models.</li><li>Consullo should not claim to detect all deceptive learned optimization unless it has model-inspection evidence, not only behavioral probes.</li><li>The Mechanistic Interpretability Deficit risk should remain explicit until Consullo has concrete interpretability tooling and validation evidence.</li></ul>
+<h3 id="forecasting-calibration">Forecasting Calibration</h3>
+<p>Primary source:</p>
+<ul><li>Tetlock, Mellers, Rohrbaugh, and Chen, "Forecasting Tournaments: Tools for Increasing Transparency and Improving the Quality of Debate" (<code>https://doi.org/10.1177/0963721414534257</code>; accessible PDF: <code>https://faculty.wharton.upenn.edu/wp-content/uploads/2015/07/2014---forecasting-tournaments-tools-for-increasing-transparency-and-improving-debate.pdf</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Thesis 3 forecasting claims should use proper scoring rules such as Brier score and should compare against human or crowd baselines where possible.</li><li>Calibration should be measured over question sets and time horizons, not inferred from persuasive explanation quality.</li><li>Forecasting batteries should preserve question-selection metadata because choosing which questions to forecast can bias apparent skill.</li></ul>
+<h3 id="firm-boundaries-and-transaction-costs">Firm Boundaries And Transaction Costs</h3>
+<p>Primary sources:</p>
+<ul><li>Coase, "The Nature of the Firm" (<code>https://wiki.santafe.edu/images/images/1/1c/Coase1937nature.of.the.firm.pdf</code>)</li><li>Williamson, "Transaction-Cost Economics: The Governance of Contractual Relations" (<code>https://www.edegan.com/pdfs/Williamson%20%281979%29%20-%20Transaction%20Cost%20Economics.pdf</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Single-owner Phase 1 may reduce some market transaction costs, but internal organization has its own costs, mistakes, hierarchy overhead, bounded rationality, and opportunism.</li><li>Internal economy and agent delegation should therefore be measured by coordination cost, rework, handoff latency, and governance overhead rather than assumed efficient.</li><li>Williamson's opportunism framing strengthens external-customer-manipulation and internal trust-scope risks.</li></ul>
+<h2 id="publication-pre-engagement-literature-pass">Publication-Pre-Engagement Literature Pass</h2>
+<p>These sources were engaged after the long-form stretch pass because the suite itself identified cognitive architectures and Pearl's causal framework as the most likely remaining sources to force Model 2 or Model 3 refinements.</p>
+<h3 id="soar">Soar</h3>
+<p>Primary source:</p>
+<ul><li>Soar manual, "The Soar Architecture" (<code>https://soar.eecs.umich.edu/soar_manual/02_TheSoarArchitecture/</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Soar's problem-space, operator-selection, working-memory, production-memory, preference-memory, decision-procedure, and chunking vocabulary supports Thesis 2's workflow-graph framing but cautions against treating "agent families" as the cognitive unit.</li><li>Model 2 should continue to treat workflow state, typed intermediate artifacts, routing decisions, and reusable learned chunks/method memories as first-class objects.</li><li>The relevant Consullo analogue is not psychological fidelity to Soar; it is explicit state, operator selection, impasse/needs-input handling, and learned workflow reuse under evidence constraints.</li></ul>
+<h3 id="act-r">ACT-R</h3>
+<p>Primary source:</p>
+<ul><li>ACT-R 7 reference manual (<code>https://act-r.psy.cmu.edu/actr7.x/reference-manual.pdf</code>)</li><li>ACT-R FAQ (<code>https://acs.ist.psu.edu/projects/act-r-faq/act-r-faq.html</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>ACT-R's module/buffer/production-rule discipline supports Thesis 2's typed-interface and trace-schema requirements.</li><li>Timing and latency are not peripheral; they are part of cognitive architecture. Model 2's <code>IntegrationCost(W, T)</code> should keep latency and coordination burden as explicit benchmark-family terms.</li><li>Consullo should not claim ACT-R-style cognitive validity. The useful import is interface discipline: modules communicate through explicit buffers/artifacts, and production/routing steps can be inspected.</li></ul>
+<h3 id="clarion">CLARION</h3>
+<p>Primary sources:</p>
+<ul><li>Ron Sun, "The CLARION Cognitive Architecture: Extending Cognitive Modeling to Social Simulation" (<code>https://www.cambridge.org/core/books/cognition-and-multiagent-interaction/clarion-cognitive-architecture-extending-cognitive-modeling-to-social-simulation/0873DF19A72639841BF5D9B5DEE64453</code>)</li><li>Ron Sun, "Dual-process theories, cognitive architectures, and hybrid neural-symbolic models" (<code>https://journals.sagepub.com/doi/10.3233/NAI-240720</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>CLARION's implicit/explicit and modular dual-representation framing is directly relevant to Thesis 2's treatment of intuition, taste, creativity, and explicit reasoning.</li><li>Thesis 2 should continue to label intuition/taste/creativity outputs as proposal or ranking aids requiring downstream validation, not as acceptance authority.</li><li>Model 2's capability vector should preserve differences between implicit-style proposal generation and explicit-style validation or explanation, rather than collapsing both into one "cognition" score.</li></ul>
+<h3 id="lida">LIDA</h3>
+<p>Primary source:</p>
+<ul><li>Madl, Baars, and Franklin, "The Timing of the Cognitive Cycle" (<code>https://pmc.ncbi.nlm.nih.gov/articles/PMC3081809/</code>)</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>LIDA's cognitive-cycle framing, with perception/understanding/action-selection phases and global-workspace-style broadcast, supports Thesis 2's workflow-cycle and packaging sections.</li><li>Consullo should treat broadcast/aggregation as a controlled routing event: what becomes globally available to downstream agents must preserve provenance, uncertainty, and trust status.</li><li>The suite should avoid consciousness claims. LIDA informs cycle structure and attention/broadcast semantics, not a claim that Consullo has conscious cognition.</li></ul>
+<h3 id="pearl-causality">Pearl, Causality</h3>
+<p>Primary sources:</p>
+<ul><li>Pearl, <code>Causality: Models, Reasoning, and Inference</code>, table of contents (<code>https://bayes.cs.ucla.edu/BOOK-99/book-toc.html</code>)</li><li>Cambridge University Press contents page (<code>https://www.cambridge.org/core/books/abs/causality/contents/E62B1C761BC88EF7A8FE13A25FDFBBCD</code>)</li><li>Pearl <code>Causality</code>, Chapter 1.4, "Functional Causal Models," especially structural equations, interventions, causal effects, and counterfactuals.</li><li>Pearl <code>Causality</code>, Chapter 3.4, "A Calculus of Intervention," especially inference rules and symbolic derivation of causal effects.</li><li>Pearl <code>Causality</code>, Chapter 7.1, "Structural Model Semantics," especially actions and counterfactual evaluation.</li></ul>
+<p>Control-layer implication:</p>
+<ul><li>Pearl's structure around functional causal models, structural equations, interventions, do-calculus, and structural counterfactual semantics supports Thesis 3's current separation between observation, intervention, and counterfactual replay.</li><li>Model 3 should keep structural causal models and do-operator language scoped to cases where variables, mechanisms, assumptions, and intervention semantics are explicit.</li><li>Causal discovery or causal-decision claims should not strengthen unless Consullo binds model construction, scope checks, identifiability assumptions, and intervention/backtest evidence. This reinforces the current specified/proposed status rather than forcing a major control-layer rewrite.</li></ul>
+<h2 id="sources-still-to-review-broadly">Sources Still To Review Broadly</h2>
+<p>Publication-pre-engagement status: Soar, ACT-R, CLARION, LIDA, and Pearl's <code>Causality</code> have now been engaged at a control-layer level. The pass supports Model 2's workflow/interface/trace discipline and Model 3's scoped structural-causal framing, while reinforcing that both remain specified/proposed until benchmark and implementation evidence exist. A deeper publication-final treatment may still add thesis-specific benchmark appendices or revise the capability-vector dimensions.</p>
+<p>Priority note: Spirtes/Glymour/Scheines and Halpern are likely to deepen Thesis 3 without changing the control layer. ReAct, Reflexion, Voyager, STaR, Tree of Thoughts, and the automatic-program-repair lineage are likely to deepen thesis-specific benchmark positioning. Russell and Bostrom are primarily background and risk-framing checks.</p>
+<ul><li>Spirtes, Glymour, and Scheines, <code>Causation, Prediction, and Search</code></li><li>Halpern, <code>Actual Causality</code></li><li>ReAct, Reflexion, Voyager, STaR, Tree of Thoughts</li><li>GenProg, SemFix, Angelix, Prophet, AutoCodeRover, OpenHands</li><li>Russell, <code>Human Compatible</code></li><li>Bostrom, <code>Superintelligence</code></li></ul></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/appendices/appendix-literature-grounding.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

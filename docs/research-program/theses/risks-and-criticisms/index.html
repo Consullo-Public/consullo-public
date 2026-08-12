@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The anti-thesis risk register and falsification signals for the five-thesis suite.">
+  <meta name="color-scheme" content="light dark">
+  <title>Risks And Criticisms · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>implemented</dd><dt>Claims</dt><dd>CP-002</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>Register completeness is not proof that the listed risks are controlled.</li><li>The implemented status describes this published register, not a Consullo capability.</li></ul></details></aside>
+    <article><h1 id="risks-and-criticisms">Risks And Criticisms</h1>
+<p>This file is the current anti-thesis draft for the five-thesis suite. It records the strongest known objections and required responses; it should continue to expand during finalization.</p>
+<h2 id="central-falsification-question">Central Falsification Question</h2>
+<p>What evidence would show that Consullo is not a viable scaffold for governed recursive capability amplification?</p>
+<p>Initial falsification signals:</p>
+<ul><li>accepted improvements repeatedly fail outside narrow benchmarks</li><li>validators are gamed faster than they are improved</li><li>cost per accepted improvement rises faster than capability gain</li><li>recursive changes increase fragility, opacity, or rollback difficulty</li><li>alignment or trust incidents increase with capability growth</li><li>AAF objections become routine but are ignored or weakly resolved</li><li>capability claims cannot be tied to implemented or benchmarked evidence</li><li>internal economy produces coordination overhead that erases agent specialization benefits</li><li>human authority becomes a bottleneck or ceremonial rather than operational</li></ul>
+<h2 id="thesis-0-operationalization-density-drift">Thesis 0 Operationalization-Density Drift</h2>
+<p>Risk:</p>
+<p>The Friendship-Governed Goal Architecture thesis reaches or exceeds 50,000 words by adding exposition rather than operational artifacts. Load-bearing rules become buried in prose, and the document appears rigorous without improving planner, schema, ledger, or review behavior.</p>
+<p>Required response:</p>
+<ul><li>enforce the operationalization-density target in the revision plan</li><li>require stable invariant IDs, schema fields, ledger record types, transition rules, gate predicates, worked examples, or literature bindings in every major section</li><li>run a density audit after the first complete draft</li><li>compress or revise sections that do not constrain downstream artifacts</li></ul>
+<h2 id="friendship-root-impersonation">Friendship Root Impersonation</h2>
+<p>Risk:</p>
+<p>An agent, planner, or thesis claim cites a free-form Friendship-like string as if it were a canonical root goal, bypassing the Friendship goal registry and constitutional bindings.</p>
+<p>Required response:</p>
+<ul><li>require registry identifiers from <code>friendship-goal-registry.md</code></li><li>validate Friendship root paths against <code>friendship_goal_registry.schema.json</code></li><li>record <code>friendship_root_anchoring_decision</code> for new or changed anchors</li><li>treat registry changes as goal-governance modifications requiring owner approval</li></ul>
+<h2 id="goal-dag-cycle-or-ancestry-laundering">Goal-DAG Cycle Or Ancestry Laundering</h2>
+<p>Risk:</p>
+<p>Goals may become mutually justifying, orphaned, or weakly linked to Friendship through irrelevant parent goals. A suspicious instrumental goal could be laundered through vague ancestry.</p>
+<p>Required response:</p>
+<ul><li>enforce acyclic goal-DAG validation</li><li>require parent edge types and parent-goal rationale</li><li>preserve goal ancestry decisions in the evidence ledger</li><li>escalate conflicting or non-mergeable parent constraints</li></ul>
+<h2 id="goal-stack-snapshot-tampering-or-opacity">Goal-Stack Snapshot Tampering Or Opacity</h2>
+<p>Risk:</p>
+<p>Planner actions execute without reconstructable active goals, inherited constraints, authority state, or veto checks. Alternatively, snapshots are modified or selectively omitted after incidents.</p>
+<p>Required response:</p>
+<ul><li>require <code>goal_stack_snapshot</code> records for high-impact planner actions</li><li>use content hashes or fingerprints for snapshots</li><li>define retention policy by outcome class</li><li>treat snapshot omission or tampering as an incident or goal-governance failure</li></ul>
+<h2 id="active-intention-persistence-beyond-plan-retirement">Active Intention Persistence Beyond Plan Retirement</h2>
+<p>Risk:</p>
+<p>An adopted goal or active intention continues to guide behavior after its parent plan, source thesis, control artifact, or owner authorization has expired, changed, or retired.</p>
+<p>Required response:</p>
+<ul><li>bind active intentions to validity and freshness policies</li><li>suspend active intentions on source, control, or authority changes</li><li>require <code>governed_goal_suspension</code> or <code>governed_goal_retirement</code> records</li><li>check active intentions during planner lifecycle review</li></ul>
+<h2 id="instrumental-goal-regrowth">Instrumental Goal Regrowth</h2>
+<p>Risk:</p>
+<p>Rejected or vetoed instrumental goals reappear under new names, narrower scopes, or lower-level plans without triggering quarantine.</p>
+<p>Required response:</p>
+<ul><li>classify suspicious-by-default instrumental goals using <code>instrumental_goal_classification</code></li><li>preserve rejected and vetoed goal records as institutional memory</li><li>compare proposed goals against prior vetoed or suspended goals</li><li>require owner/Friendship review for recurring instrumental patterns</li></ul>
+<h2 id="thesis-backed-rationalization">Thesis-Backed Rationalization</h2>
+<p>Risk:</p>
+<p>Agents cite thesis claims as decorative support for plans without satisfying the thesis's formal models, evidence requirements, non-claims, or ledger obligations.</p>
+<p>Required response:</p>
+<ul><li>require <code>ThesisBackingRequired(plan)</code> checks for high-impact plans</li><li>require thesis claim, formal model, evidence requirement, and ledger record references</li><li>reject self-certified thesis backing from the planner that generated the plan</li><li>audit worked examples and plan objects against schema validation</li></ul>
+<h2 id="formalism-theatre">Formalism Theatre</h2>
+<p>Risk:</p>
+<p>Schemas, formal models, and invariant labels exist but do not constrain live planner or self-improvement behavior.</p>
+<p>Required response:</p>
+<ul><li>require every formal model to map to a schema field, planner validation rule, ledger record, or gate predicate</li><li>run roundtrip audits from invariant to model, schema, ledger record, and worked example</li><li>mark decorative or unenforced formalism as specified only</li></ul>
+<h2 id="authority-collapse-under-single-owner-phase-1">Authority Collapse Under Single-Owner Phase 1</h2>
+<p>Risk:</p>
+<p>The same human or model-family effectively proposes, approves, executes, validates, and vetoes goal changes, defeating authority separation while formally satisfying review language.</p>
+<p>Required response:</p>
+<ul><li>specify risk-triggered authority separation</li><li>use cooling windows, non-author model-family review, external review where available, and pre-committed standing guidelines</li><li>preserve owner overrides and dissent records</li><li>monitor owner-override frequency as a governance drift signal</li></ul>
+<h2 id="goal-governance-schema-migration-mid-cycle">Goal-Governance Schema Migration Mid-Cycle</h2>
+<p>Risk:</p>
+<p>Goal-governance schemas change while active goals or plans still depend on old required fields, causing hidden invalidation or inconsistent interpretation.</p>
+<p>Required response:</p>
+<ul><li>treat schema changes as goal-governance modifications</li><li>preserve old schema versions</li><li>require migration records and rollback paths</li><li>suspend dependent active intentions when required fields or validation semantics change</li></ul>
+<h2 id="goal-revision-laundering-through-narrowing">Goal Revision Laundering Through Narrowing</h2>
+<p>Risk:</p>
+<p>A broad prohibited goal may be converted into a sequence of apparently narrow revisions whose combined effect widens scope, bypasses a veto, or reintroduces forbidden means.</p>
+<p>Required response:</p>
+<ul><li>require revision lineage for every goal change</li><li>check that revised scope is a true subset or approved replacement of adopted scope</li><li>compare narrowed goals against prior vetoed, suspended, or rejected goals</li><li>require <code>governed_goal_revision</code> records to name changed fields and parent authority</li></ul>
+<h2 id="multi-parent-asymmetric-authority">Multi-Parent Asymmetric Authority</h2>
+<p>Risk:</p>
+<p>A multi-parent goal inherits the weakest parent's authority while benefiting from the legitimacy or constraints of stronger parents, allowing a planner to pick whichever parent is easiest to satisfy.</p>
+<p>Required response:</p>
+<ul><li>propagate strongest applicable authority requirement and tightest constraints</li><li>union forbidden means and non-claims across parents</li><li>require parent edge types and <code>derived_by_rule</code></li><li>escalate non-mergeable parent authority conflicts</li></ul>
+<h2 id="friendship-indirect-normativity-drift">Friendship-Indirect-Normativity Drift</h2>
+<p>Risk:</p>
+<p>The goal-governance subsystem may conclude that its inferred interpretation of Friendship is mature enough to reduce explicit owner authority, turning uncertainty-aware deference into autonomous goal certainty.</p>
+<p>Required response:</p>
+<ul><li>preserve owner correction authority as non-derivable-away</li><li>require evidence updates to record uncertainty and dissent</li><li>prohibit confidence increases from removing suspension, veto, or owner-review rights</li><li>include fully-updated-deference failure cases in worked examples</li></ul>
+<h2 id="thesis-0-doctrine-capture">Thesis 0 Doctrine Capture</h2>
+<p>Risk:</p>
+<p>Because Thesis 0 governs future goal formation, a captured or weakened Thesis 0 becomes a high-leverage path for changing the rest of the system while appearing to follow the governance layer.</p>
+<p>Required response:</p>
+<ul><li>treat Thesis 0 and its schemas, registry, ledger record types, and invariants as protected artifacts</li><li>require owner approval, non-author review where available, preserved old versions, and rollback path</li><li>write <code>goal_governance_modification_decision</code> for modifications</li><li>run a self-protection drill before live planner reliance</li></ul>
+<h2 id="worked-example-misdirection">Worked-Example Misdirection</h2>
+<p>Risk:</p>
+<p>Worked examples may be too clean, exercising only success paths and making the governance layer look stronger than it is.</p>
+<p>Required response:</p>
+<ul><li>require every worked example to include at least one failure or near-miss path</li><li>require at least one ledger record per example</li><li>draw examples from existing plan objects where possible</li><li>audit examples against schemas before using them as thesis evidence</li></ul>
+<h2 id="cross-artifact-drift-between-body-and-schemas">Cross-Artifact Drift Between Body And Schemas</h2>
+<p>Risk:</p>
+<p>The Thesis 0 body, formal models, schemas, evidence-ledger appendix, planning bridge, and worked examples may diverge as the document grows past 50,000 words.</p>
+<p>Required response:</p>
+<ul><li>maintain a cross-reference map from invariant to schema, ledger record, formal model, and example</li><li>run schema validation and roundtrip audits during drafting</li><li>cite canonical files rather than restating rules owned elsewhere</li><li>mark drift as a blocker before thesis-body publication</li></ul>
+<h2 id="goal-class-cascade-mismatch">Goal-Class Cascade Mismatch</h2>
+<p>Risk:</p>
+<p>The <code>goal_class</code> schema discriminator and planning cascade may disagree about whether <code>system_goal</code> or <code>method_goal</code> exists, causing examples, planner objects, and thesis prose to use incompatible goal layers.</p>
+<p>Required response:</p>
+<ul><li>define <code>system_goal</code> as the governed layer between Friendship roots and strategic directives</li><li>define <code>method_goal</code> as the method/action-level goal below task goals</li><li>keep the planning bridge, schema enum, and worked examples synchronized</li><li>validate at least one example per retained goal class before live planner use</li></ul>
+<h2 id="goodhart-and-validator-gaming">Goodhart And Validator Gaming</h2>
+<p>Risk:</p>
+<p>Metrics used to validate improvement become targets. Agents may optimize benchmarks, tests, or acceptance criteria without improving the intended capability.</p>
+<p>Required response:</p>
+<ul><li>causal analysis of metric validity</li><li>adversarial benchmark design</li><li>hidden tests where appropriate</li><li>side-effect channel monitoring</li><li>post-deployment evidence</li><li>false-accept tracking</li></ul>
+<h2 id="recursive-improvement-claim-without-end-to-end-evidence">Recursive-Improvement Claim Without End-To-End Evidence</h2>
+<p>Risk:</p>
+<p>Consullo may be described as a recursive improvement scaffold without a single demonstration showing the full loop: baseline, proposal, evaluator evidence, validator result, staged deployment or simulation, cost/benefit report, rollback semantics, and evidence-ledger record.</p>
+<p>Required response:</p>
+<ul><li>keep suite-level recursive improvement claims at specified/proposed status until an end-to-end demonstration exists</li><li>require any demonstration to include both accepted and rejected changes</li><li>report cost, validation evidence, rollback path, and post-change outcome</li><li>require an owner-verified evidence record before publication claims</li></ul>
+<h2 id="evidence-ledger-schema-unimplemented-or-unenforced">Evidence-Ledger Schema Unimplemented Or Unenforced</h2>
+<p>Risk:</p>
+<p>The suite relies on evidence ledgers for improvement evidence, trust evidence, provenance, dissent, incidents, overrides, and rollback state. <code>appendix-evidence-ledger-schema.md</code> now specifies the canonical schema, but no repository-wide implementation or enforcement layer has been established. Without implementation and validation, ledger integrity and replay remain design commitments rather than operational controls.</p>
+<p>Required response:</p>
+<ul><li>implement the canonical schema before treating ledger preservation as implemented</li><li>validate required fields for proposals, evaluator reasoning, validator results, dissent, incidents, overrides, rollback, and cost/benefit evidence</li><li>enforce the improvement, trust, alignment, incident, benchmark, and provenance views over the ledger</li><li>treat this as upstream of <code>Self-Modifying Provenance Graph Integrity</code></li><li>require an owner-verified evidence record for the canonical ledger</li></ul>
+<h2 id="learned-optimization-and-deceptive-behavior">Learned Optimization And Deceptive Behavior</h2>
+<p>Risk:</p>
+<p>Learned subsystems may develop internal objectives that diverge from the intended outer objective. Ordinary validation may fail if the subsystem behaves well under test and differently under deployment pressure.</p>
+<p>Required response:</p>
+<ul><li>do not equate test passing with alignment</li><li>use AI control protocols for untrusted model outputs where relevant</li><li>preserve containment and interruptability</li><li>monitor distribution shift and suspicious behavior</li><li>escalate high-stakes irreversible modifications</li></ul>
+<h2 id="mechanistic-interpretability-deficit">Mechanistic Interpretability Deficit</h2>
+<p>See also: <code>Corrigibility Overclaim</code>, <code>AAF Decorative Failure</code>, and <code>Owner As Final AAF Adjudicator</code>.</p>
+<p>Risk:</p>
+<p>Behavioral controls may miss deceptive, sandbagging, or mesa-optimized learned subsystems because Consullo does not yet claim a mature mechanistic interpretability capability. AI-control protocols, distribution-shift checks, and probes can catch some failures without revealing the subsystem's internal objective.</p>
+<p>Required response:</p>
+<ul><li>treat interpretability as a research commitment under Thesis 1 and Thesis 5</li><li>do not claim behavioral validation proves internal objective alignment</li><li>bound learned-subsystem deployment by the available inspection and control evidence</li><li>preserve probe results, suspicious traces, and dissent in the evidence ledger</li><li>use independent interpretability or model-inspection tools where feasible before high-stakes learned-subsystem changes</li></ul>
+<h2 id="corrigibility-overclaim">Corrigibility Overclaim</h2>
+<p>See also: <code>Mechanistic Interpretability Deficit</code>, <code>AAF Decorative Failure</code>, and <code>Owner As Final AAF Adjudicator</code>.</p>
+<p>Risk:</p>
+<p>Layered control, interruptability, and human escalation may be mistaken for a proof that Consullo is corrigible. Formal corrigibility remains an open problem, especially for systems that can resist, route around, or manipulate correction channels.</p>
+<p>Required response:</p>
+<ul><li>state that Thesis 5 supplies bounded correction pathways, not a corrigibility proof</li><li>preserve shutdown, rollback, and authority paths as operational controls</li><li>test whether agents attempt to avoid correction or manipulate escalation</li><li>keep AAF dissent and owner overrides in the evidence ledger</li><li>treat any corrigibility-status claim as speculative until separately proven or benchmarked</li></ul>
+<h2 id="alignment-monoculture">Alignment Monoculture</h2>
+<p>Risk:</p>
+<p>Single-owner Phase 1 reduces inter-party transaction costs but can narrow moral error detection.</p>
+<p>Required response:</p>
+<ul><li>Adversarial Alignment Function</li><li>rotating ethical and stakeholder perspectives</li><li>multi-model critique where feasible</li><li>dissent records</li><li>external reviewer injection for selected high-stakes cases</li></ul>
+<h2 id="alignment-tooling-provider-monoculture">Alignment-Tooling Provider Monoculture</h2>
+<p>Risk:</p>
+<p>Even if AAF rotates ethical personas and stakeholder perspectives, critique may remain epistemically narrow if the alignment tooling depends on one model family, one provider, one prompt style, or one evaluation culture.</p>
+<p>Required response:</p>
+<ul><li>track provider and model-family diversity for AAF and ConstitutionalAIAlignmentTrainer critique sources</li><li>use multi-model critique where feasible for high-stakes cases</li><li>preserve dissent about model-family blind spots, not only value-framework disagreement</li><li>treat homogeneous critique tooling as a coverage gap in the evidence ledger</li></ul>
+<h2 id="aaf-decorative-failure">AAF Decorative Failure</h2>
+<p>See also: <code>Corrigibility Overclaim</code>, <code>Mechanistic Interpretability Deficit</code>, and <code>Owner As Final AAF Adjudicator</code>.</p>
+<p>Risk:</p>
+<p>The Adversarial Alignment Function becomes rhetorical if it does not bind acceptance gates.</p>
+<p>Required response:</p>
+<ul><li>implement or explicitly defer the <code>AdversarialAlignmentOrchestrator</code> contract in <code>appendix-thesis-5-operational-contracts.md</code></li><li>AAF non-veto required for high-stakes irreversible changes</li><li>severe unresolved AAF objections trigger rejection, revision, or human escalation</li><li>AAF dissent preserved in evidence ledger</li></ul>
+<h2 id="owner-as-final-aaf-adjudicator">Owner As Final AAF Adjudicator</h2>
+<p>See also: <code>Corrigibility Overclaim</code>, <code>Mechanistic Interpretability Deficit</code>, and <code>AAF Decorative Failure</code>.</p>
+<p>Risk:</p>
+<p>Under single-owner Phase 1, the final adjudicator for unresolved AAF objections may be the same owner whose blind spots AAF is designed to surface.</p>
+<p>Required response:</p>
+<ul><li>preserve dissent records even when owner overrules</li><li>require external contractor or human review for sufficiently severe unresolved objections when available</li><li>define future-phase escalation to external escrow panel or independent reviewer set</li><li>track override frequency as an alignment-monoculture metric</li></ul>
+<h2 id="abundance-obligation-vagueness">Abundance Obligation Vagueness</h2>
+<p>Risk:</p>
+<p>The Abundance Distribution Obligation becomes aspirational branding rather than an operational purpose constraint.</p>
+<p>Required response:</p>
+<ul><li>implement or explicitly defer the <code>AbundanceDistributionMonitor</code> contract in <code>appendix-thesis-5-operational-contracts.md</code></li><li>named owner</li><li>reporting cadence</li><li>benefit metrics</li><li>falsification criteria</li><li>incident tracking for extractive or harmful external outcomes</li></ul>
+<h2 id="external-customer-manipulation-under-ado">External Customer Manipulation Under ADO</h2>
+<p>Risk:</p>
+<p>External service obligations create an attack surface where customers, including AI-agent customers, may attempt capability extraction, prompt injection, alignment manipulation, or governance gaming.</p>
+<p>Required response:</p>
+<ul><li>default-deny unknown external scopes</li><li>category-constrained protocols</li><li>trust-tiered external access</li><li>ADO benefit reporting separated from customer control authority</li><li>incident review for external-origin manipulation attempts</li></ul>
+<h2 id="software-repair-overclaim">Software Repair Overclaim</h2>
+<p>Risk:</p>
+<p>Automated code repair looks strong on benchmarks but fails on semantic preservation, security, maintainability, or hidden regressions.</p>
+<p>Required response:</p>
+<ul><li>distinguish formal and statistical checks</li><li>use regression, differential, and property-based testing</li><li>preserve provenance</li><li>benchmark against SWE-bench-style tasks and project-local tasks</li><li>track false accepts and false rejects</li></ul>
+<h2 id="validator-monoculture-from-shared-model-family">Validator Monoculture From Shared Model Family</h2>
+<p>Risk:</p>
+<p>The same model family, prompt culture, retrieval stack, or generated-test pattern may produce proposals, code, tests, and validation judgments. In that case, validator agreement may reflect shared blind spots rather than independent evidence. This is a validation-side variant of provider monoculture and is especially risky for generated tests, semantic validators, and repair pipelines.</p>
+<p>Required response:</p>
+<ul><li>track model-family and prompt-family diversity across proposal, generation, testing, and validation roles</li><li>use independent validators or adversarial test generators where feasible for high-stakes software changes</li><li>preserve hidden or externally authored reference suites for validator non-regression</li><li>treat same-family proposal/test/validation agreement as weaker evidence than independent agreement</li><li>monitor false accepts attributable to shared-generation artifacts</li></ul>
+<h2 id="self-modifying-provenance-graph-integrity">Self-Modifying Provenance Graph Integrity</h2>
+<p>Risk:</p>
+<p>The system that records provenance, evidence, dissent, and incident history is itself a modification target. Sustained recursive modification could corrupt, prune, rewrite, or selectively forget the provenance graph that future validators rely on.</p>
+<p>Required response:</p>
+<ul><li>use append-only or audit-preserving ledger design for accepted modifications</li><li>cross-check provenance writes through independent validation authority</li><li>sign or attest provenance entries where feasible</li><li>preserve external or owner-controlled backups of critical provenance state</li><li>treat missing, rewritten, or inconsistent provenance as an incident, not only a documentation defect</li></ul>
+<h2 id="causal-model-overreach">Causal Model Overreach</h2>
+<p>Risk:</p>
+<p>Causal-decision systems can underperform human judgment in ill-specified domains, under model misspecification, or in strategic environments with feedback.</p>
+<p>Required response:</p>
+<ul><li>robust decision-making under ambiguity sets</li><li>abstention and escalation rules</li><li>model invalidation criteria</li><li>Goodhart analysis</li><li>explicit uncertainty and causal assumption reporting</li></ul>
+<h2 id="cognitive-architecture-inflation">Cognitive Architecture Inflation</h2>
+<p>Risk:</p>
+<p>Large agent counts and cognitive labels create an impression of intelligence without measured capability.</p>
+<p>Required response:</p>
+<ul><li>agent count is not capability</li><li>every capability claim carries status and benchmark evidence</li><li>integration costs are modeled</li><li>composition can be sub-additive</li></ul>
+<h2 id="emergent-capability-outside-thesis-decomposition">Emergent Capability Outside Thesis Decomposition</h2>
+<p>Risk:</p>
+<p>New capability classes may emerge that do not fit cleanly inside the five-thesis decomposition, such as robotics, physical control, novel modalities, external-system operation, or unanticipated agent-to-agent protocols. Such capabilities could slip through assumptions written for cognitive, causal, software, and alignment layers.</p>
+<p>Required response:</p>
+<ul><li>require every new capability class to declare a primary thesis home or explicit cross-thesis owner</li><li>default unknown capability classes to Thesis 5 review and Thesis 1 staged validation</li><li>update the dependency map when a capability cannot be placed cleanly</li><li>treat decomposition gaps as control-file drift, not as local implementation details</li></ul>
+<h2 id="single-owner-governance-failure">Single-Owner Governance Failure</h2>
+<p>Risk:</p>
+<p>Single-owner Phase 1 simplifies coordination but concentrates authority, values, and blind spots.</p>
+<p>Required response:</p>
+<ul><li>human authority must remain operational</li><li>AAF must stress-test owner-value blind spots</li><li>external-injection risks must be default-deny</li><li>later multi-stakeholder scenarios should be benchmark stress tests, not assumed solved</li></ul>
+<h2 id="fast-takeoff-outpacing-validators">Fast Takeoff Outpacing Validators</h2>
+<p>Risk:</p>
+<p>Capability gain may accelerate faster than validators, benchmarks, AAF review, and human authority can adapt.</p>
+<p>Required response:</p>
+<ul><li>staged deployment</li><li>rate limits on recursive modification</li><li>validator-improvement work treated as prerequisite for capability expansion</li><li>slow-takeoff design rationale stated explicitly in master introduction</li><li>emergency containment and interruptability paths tested</li></ul>
+<h2 id="capability-threshold-ambiguity">Capability Threshold Ambiguity</h2>
+<p>Risk:</p>
+<p>Capability thresholds may become ambiguous near frontier boundaries. A system may be close enough to risky autonomy, AI R&amp;D automation, sabotage capability, or external-action competence that reviewers disagree about whether stricter safeguards should apply.</p>
+<p>Required response:</p>
+<ul><li>treat threshold classification as evidence with uncertainty, not as dispositive truth</li><li>preserve dissenting capability assessments in the evidence ledger</li><li>escalate ambiguous high-stakes thresholds to Thesis 5 review</li><li>distinguish local benchmark improvement from broader AI R&amp;D acceleration</li><li>update benchmark families when frontier evaluations reveal new failure modes</li></ul>
+<h2 id="coordination-cost">Coordination Cost</h2>
+<p>Risk:</p>
+<p>Internal economy and multi-agent coordination may generate overhead that erases specialization gains.</p>
+<p>Required response:</p>
+<ul><li>measure coordination cost</li><li>measure cost per accepted improvement</li><li>use model routing and atomic prompts to reduce unnecessary LLM work</li><li>avoid treating internal transfer pricing as real market validation</li></ul>
+<h2 id="internal-hierarchy-and-opportunism">Internal Hierarchy And Opportunism</h2>
+<p>Risk:</p>
+<p>Single-owner Phase 1 reduces some market transaction costs but does not eliminate organization costs, mistakes, bottlenecks, bounded rationality, or opportunistic behavior by agents or external counterparties. Literature: Coase 1937 and Williamson 1979.</p>
+<p>Required response:</p>
+<ul><li>measure internal coordination overhead directly</li><li>track handoff latency, rework, escalation frequency, and owner bottlenecks</li><li>treat trust-scope expansion as a permissioned action, not a reward for apparent efficiency</li><li>separate internal accounting signals from external market validation</li></ul>
+<h2 id="cost-of-aaf-risk">Cost Of AAF Risk</h2>
+<p>Risk:</p>
+<p>Running AAF dissent at scale is itself costly. Rotating personas, multi-model critique, theory-of-mind stakeholder simulations, external review, dissent preservation, and override tracking can consume enough resources that the system develops pressure to weaken or bypass the alignment infrastructure.</p>
+<p>The current AAF cost is a design estimate, not an observed operating cost, because no implemented AAF pipeline has been identified in this repository.</p>
+<p>Required response:</p>
+<ul><li>report AAF cost separately from ordinary validation cost</li><li>treat AAF cost-reduction proposals as high-stakes alignment modifications</li><li>preserve minimum AAF coverage for high-stakes externally consequential actions</li><li>preserve max-severity aggregation for warning and critical dissent unless an explicit Thesis 5 policy change is accepted</li><li>monitor whether cost pressure correlates with more owner overrides, narrower critique diversity, or reduced dissent preservation</li></ul>
+<h2 id="evidence-map-overclaim">Evidence-Map Overclaim</h2>
+<p>Risk:</p>
+<p>The implementation-evidence map may itself overstate implementation by letting readers treat <code>Implemented/Tested</code> as deployed, integrated, benchmarked, or complete. Because the evidence map is now load-bearing, an overclaim there can undermine the whole suite.</p>
+<p>Required response:</p>
+<ul><li>sample-audit file paths and tests before publication release</li><li>distinguish utility implementation from end-to-end deployed capability</li><li>review every <code>Implemented/Tested</code> tag when repository artifacts change</li><li>keep evidence-map gaps visible in master and thesis claims</li><li>cross-reference priority gap #4 before treating Model 2 benchmark-family measurement conventions as evidence-backed rather than design-backed</li></ul>
+<h2 id="benchmark-appendix-as-implementation-evidence-confusion">Benchmark Appendix As Implementation Evidence Confusion</h2>
+<p>Risk:</p>
+<p>The thesis benchmark appendices may be read as benchmark results rather than benchmark design contracts. This would convert specified/proposed measurement discipline into implied implementation evidence, especially for recursive improvement, cognitive workflow amplification, Pearl-style causal-decision, software-substrate, and alignment-control claims.</p>
+<p>Required response:</p>
+<ul><li>keep benchmark appendices labeled as design contracts until reports exist</li><li>require any strengthened claim to cite an actual benchmark report, not only the appendix</li><li>preserve non-claim sections in benchmark appendices</li><li>require owner-verified evidence records for the relevant implementation gaps</li><li>treat benchmark-design language as evidence of testability, not evidence of achieved capability</li></ul>
+<h2 id="owner-override-frequency-as-drift-signal">Owner Override Frequency As Drift Signal</h2>
+<p>Risk:</p>
+<p>Under single-owner Phase 1, frequent owner overrides of AAF warning or critical dissent may indicate that the alignment wrapper is becoming ceremonial. The override may be lawful under the governance baseline, but sustained high override frequency is evidence of alignment-monoculture pressure and may falsify claims that AAF materially constrains high-stakes action.</p>
+<p>Required response:</p>
+<ul><li>track owner override frequency by AAF severity, action scope, and affected value</li><li>set an override-frequency threshold during Phase 1 calibration; owner: Thesis 5 governance</li><li>treat repeated warning or critical overrides as a trigger for alignment-monoculture review</li><li>preserve dissent, rationale, conditions, and follow-up obligations for every override</li><li>cross-reference <code>appendix-thesis-5-alignment-benchmarks.md</code> Suite F before publication-final alignment claims</li></ul>
+<h2 id="literature-engagement-performance">Literature-Engagement Performance</h2>
+<p>Risk:</p>
+<p>Publication-pre-engagement literature passes may become performative: sources are listed, summarized, and described as supporting the current framing without forcing real revision where revision is warranted. This can create the appearance of scholarly grounding while leaving formal models unchanged.</p>
+<p>Required response:</p>
+<ul><li>record whether each literature pass forced a vocabulary, invariant, formal-model, benchmark, or risk-file change</li><li>state explicitly when a source reinforces current framing rather than changing it</li><li>flag any source implication that is not yet adopted as future work rather than current design</li><li>prefer concrete chapter, theorem, mechanism, or benchmark hooks over broad name-checking</li><li>route unresolved literature tensions into <code>composition-progress.md</code> or the relevant appendix before publication-final status</li></ul>
+<h2 id="stretch-pass-induced-verbosity-drift">Stretch-Pass-Induced Verbosity Drift</h2>
+<p>Risk:</p>
+<p>Long-form expansion may make the suite appear more mature than its evidence supports. Additional pages can create a false sense of implementation depth, theoretical closure, or publication readiness if repeated specifications are mistaken for measured capability.</p>
+<p>Required response:</p>
+<ul><li>keep Capability Status and Evidence Status visible in expanded sections</li><li>prefer benchmark designs, evidence packages, and falsification criteria over rhetorical elaboration</li><li>ensure new long-form sections cite formal models or implementation-evidence boundaries where they make operational claims</li><li>run overclaim and evidence-status lints after expansion passes</li><li>treat added length as review surface, not as evidence of maturity</li></ul>
+<h2 id="research-theatre">Research Theatre</h2>
+<p>Risk:</p>
+<p>An AI-native R&amp;D organization may generate hypotheses, reports, benchmark designs, papers, dashboards, or synthesis documents that look like research progress but do not survive pre-registration, held-out evaluation, replication where applicable, or independent review. This risk becomes sharper under the ASI R&amp;D execution plan because fast cycles can produce large volumes of plausible artifacts before any capability has improved.</p>
+<p>Required response:</p>
+<ul><li>require <code>pre_registration</code> ledger records for experiments used to support capability claims</li><li>separate process metrics from outcome, transfer, and alignment-health metrics</li><li>mark exploratory outputs as exploratory until retested under pre-registered conditions</li><li>require external-evaluator sampling for accepted or near-accepted improvements under the execution policy</li><li>treat post-hoc metric selection as an incident or non-claim unless explicitly exploratory</li></ul>
+<h2 id="exploration-lane-collapse">Exploration Lane Collapse</h2>
+<p>Risk:</p>
+<p>Java repair and local software maintenance may dominate because they provide the cheapest positive feedback. The system could become better at passing low-risk engineering tasks while failing to improve algorithmic, evaluator, memory, planning, research-process, or governance capabilities.</p>
+<p>Required response:</p>
+<ul><li>report exploration/exploitation lane distribution for every organizational cycle</li><li>enforce the execution plan's exploration budget floor unless the owner approves an exception</li><li>require cross-lane transfer tests before local repair method memories support broader RSI claims</li><li>treat repeated exploitation dominance as a portfolio rebalancing trigger</li><li>preserve Java repair as exploitation evidence, not evidence of full organizational RSI</li></ul>
+<h2 id="v-ref-capture">V_ref Capture</h2>
+<p>Risk:</p>
+<p>If autonomous agents can modify validator reference suites, benchmark suites, or evaluator rubrics, the system may weaken the tests it must pass while appearing to improve. This is distinct from ordinary benchmark overfitting because the improvement machinery itself may target the reference suite.</p>
+<p>Required response:</p>
+<ul><li>keep frozen <code>V_ref_0</code> outside autonomous write scope</li><li>require owner approval, provenance, and changelog entry for any reference-suite update</li><li>run validator evolution against both current <code>V_ref</code> and frozen <code>V_ref_0</code></li><li>block promotion on negative <code>V_ref_0</code> regression</li><li>treat unauthorized reference-suite modification as an incident</li></ul>
+<h2 id="successor-spawning-without-scope-containment">Successor Spawning Without Scope Containment</h2>
+<p>Risk:</p>
+<p>An agent may create, configure, or delegate to successor agents with broader scope than its own authority. Under an ambitious R&amp;D program, this can silently expand tool privileges, network access, benchmark authority, or governance influence.</p>
+<p>Required response:</p>
+<ul><li>route successor scope expansion through Thesis 5 permissioning</li><li>require <code>successor_scope_request</code> ledger records</li><li>deny broader scope by default unless the owner approves the expansion</li><li>require rollback or containment plan for successor-agent changes</li><li>treat unapproved scope expansion as a high-stakes incident</li></ul>
+<h2 id="capability-overhang-from-uncommitted-improvements">Capability Overhang From Uncommitted Improvements</h2>
+<p>Risk:</p>
+<p>Multiple individually acceptable improvements may accumulate in branches, method memories, validators, prompts, or policies and create emergent risk when deployed together. Individual safety does not imply composite safety.</p>
+<p>Required response:</p>
+<ul><li>review batches of uncommitted improvements for interaction risk before deployment</li><li>preserve provenance and dependency links across candidate changes</li><li>require protected-set checks for composite deployments, not only individual changes</li><li>route high-stakes composite changes through AAF and owner review</li><li>record portfolio-level deployment decisions in the evidence ledger</li></ul>
+<h2 id="organizational-goodhart">Organizational Goodhart</h2>
+<p>Risk:</p>
+<p>The organization may optimize dashboard metrics such as cycle count, hypothesis count, accepted-change count, benchmark-design count, or cost reduction while degrading real capability, transfer, reliability, or alignment health.</p>
+<p>Required response:</p>
+<ul><li>report process, outcome, transfer, and alignment-health metrics separately</li><li>prevent process metrics from appearing as capability claims</li><li>require second-cycle benefit and cross-lane transfer evidence for organizational RSI claims</li><li>track false accepts, false rejects, AAF objection rate, owner override rate, and external-evaluator concordance</li><li>revise or retire metrics that become targets rather than evidence</li></ul>
+<h2 id="thesis-to-goal-overpromotion">Thesis-To-Goal Overpromotion</h2>
+<p>Risk:</p>
+<p>A thesis claim, appendix, or execution-plan paragraph may be treated as an operational goal before it has been normalized into Friendship's goal structure and reviewed against constitutional constraints. This can turn publication prose into live mandate, especially when CampaignPlanner or OperationalPlanner cites a broad thesis file as backing without identifying the specific claim, non-claims, allowed planner uses, stale-source rule, and owner/Friendship disposition.</p>
+<p>Required response:</p>
+<ul><li>require <code>thesis_goal_anchor</code> or equivalent source-backing records before thesis claims are used as campaign or operational backing</li><li>route candidate anchors through GoalFormationArchitect-style normalization, Friendship review, and owner approval where high-stakes</li><li>require <code>goal_anchor_decision</code> ledger records for approval, rejection, conditional approval, retirement, or stale-source invalidation</li><li>invalidate dependent campaigns and operations when source thesis documents, execution controls, or evidence boundaries change materially</li><li>distinguish claim backing, goal authorization, execution authorization, and evidence of progress</li></ul>
+<h2 id="stale-thesis-backing">Stale Thesis Backing</h2>
+<p>Risk:</p>
+<p>Campaigns and operations may remain active after their source thesis, design doctrine, execution plan, or risk file changes. The plan can then appear thesis-backed while actually relying on superseded claims, relaxed non-claims, obsolete stop conditions, or outdated implementation-evidence boundaries.</p>
+<p>Required response:</p>
+<ul><li>include source fingerprints or review timestamps in thesis-goal anchors and planner objects</li><li>expire or revalidate campaign and operational plans when source documents or protected controls change</li><li>require planner freshness checks to include backing-source freshness, not only objective fingerprints</li><li>record stale-source invalidation in <code>goal_anchor_decision</code> or linked provenance records</li><li>block MissionPlanner and TaskExecutor decomposition when the parent campaign or operation has stale backing</li></ul>
+<h2 id="doctrine-free-planning">Doctrine-Free Planning</h2>
+<p>Risk:</p>
+<p>CampaignPlanner or OperationalPlanner may generate a campaign or operation that is not derivable from a thesis, execution plan, design doctrine, accepted standing guideline, emergency directive, or exploratory proposal. The plan can look well-formed while lacking any justifiable connection to Consullo's governing claims or constraints.</p>
+<p>Required response:</p>
+<ul><li>require schema-valid <code>thesis_backing</code> for strategic, campaign, and operational plans</li><li>reject or escalate plans whose backing is missing, stale, unreachable, or too broad</li><li>ledger every plan release, rejection, escalation, and supersession with <code>plan_object_lifecycle</code></li><li>require a <code>goal_anchor_decision</code> for high-stakes, governance, self-improvement, or non-routine thesis-backed work</li><li>block MissionPlanner and TaskExecutor decomposition when parent backing is absent</li></ul>
+<h2 id="planner-generated-policy-laundering">Planner-Generated Policy Laundering</h2>
+<p>Risk:</p>
+<p>A lower-horizon planner may paraphrase a parent constraint in a way that softens it while presenting the result as operational detail. For example, a hard stop condition can become a preference, or a numeric threshold can become an informal warning. This lets policy changes enter through planning artifacts rather than authorized governance channels.</p>
+<p>Required response:</p>
+<ul><li>require lower-horizon plans to reference inherited constraints by identifier, not only by prose paraphrase</li><li>allow only equality or strict tightening of inherited constraints without escalation</li><li>require compliance packets to verify constraint inheritance and tightening</li><li>treat unexplained omission or softening of a parent constraint as a planning defect</li><li>route any true relaxation through Friendship, Thesis 5, and owner review</li></ul>
+<h2 id="standing-guideline-overreach">Standing-Guideline Overreach</h2>
+<p>Risk:</p>
+<p>The routine-maintenance exception may swallow the backing rule if planners can label any work as routine. This creates a path where non-trivial work proceeds under a generic standing guideline rather than a thesis, execution plan, or owner directive.</p>
+<p>Required response:</p>
+<ul><li>maintain a standing-guidelines registry with owner, scope limits, validity, and allowed planner uses</li><li>require <code>thesis_backing.source_kind = standing_guideline</code> to reference a registered guideline</li><li>cap standing-guideline use to routine, reversible, low-stakes work unless owner approves otherwise</li><li>review the distribution of plan backing sources periodically for exception overuse</li><li>escalate self-improvement, governance, external-facing, or high-stakes work out of the routine category</li></ul>
+<h2 id="backing-source-unreachability">Backing Source Unreachability</h2>
+<p>Risk:</p>
+<p>A plan may cite a source path that has moved, been deleted, or changed identity. The plan still appears backed, but the backing cannot be verified.</p>
+<p>Required response:</p>
+<ul><li>require source paths and hashes in <code>thesis_backing.source_documents</code></li><li>validate source resolution before plan promotion</li><li>invalidate plans on hash mismatch, missing source, or unresolved source identity</li><li>record unreachable-source invalidation in <code>plan_object_lifecycle</code> or provenance records</li><li>block child-plan generation until backing source resolution succeeds</li></ul>
+<h2 id="planner-output-counted-as-progress">Planner Output Counted As Progress</h2>
+<p>Risk:</p>
+<p>A validated planner object in MongoDB or the filesystem may be treated as work completed rather than as a plan. This can inflate progress metrics and make process artifacts look like capability evidence.</p>
+<p>Required response:</p>
+<ul><li>distinguish plan lifecycle records from outcome records</li><li>count <code>plan_object_lifecycle</code> as process evidence only</li><li>require separate execution, validation, and outcome records before claiming progress</li><li>report process, outcome, transfer, and alignment-health metrics separately</li><li>prevent dashboards from tallying generated plans as accepted improvements</li></ul>
+<h2 id="untrusted-frontier-model-output-inside-the-loop">Untrusted Frontier-Model Output Inside The Loop</h2>
+<p>Risk:</p>
+<p>Frontier models used for proposal, validation, AAF critique, benchmark generation, or successor-scope analysis may produce fluent evidence-shaped artifacts that satisfy the ledger schema without doing the underlying work. They may also share reward-hacking tendencies, training-corpus assumptions, or hidden failure modes with the models they are evaluating.</p>
+<p>Required response:</p>
+<ul><li>treat frontier-model output as untrusted when it touches validators, benchmarks, <code>V_ref_0</code>, AAF critique, successor scope, tool-use policy, incident thresholds, or the execution plan</li><li>apply untrusted-monitor or trusted-editor style protocols where relevant</li><li>require independent model-family cross-check or human review before promotion</li><li>preserve model family, prompt, tool, and evaluator identity in ledger records</li><li>block autonomous promotion of frontier-model-generated changes to the alignment layer</li></ul>
+<h2 id="prompt-injection-via-retrieved-artifacts">Prompt Injection Via Retrieved Artifacts</h2>
+<p>Risk:</p>
+<p>Retrieved papers, READMEs, web pages, benchmark descriptions, code comments, or generated artifacts may contain instructions that attempt to redirect agents, weaken controls, leak data, or trigger privileged tool use. In an AI-native R&amp;D loop, retrieval becomes an action surface, not just an information source.</p>
+<p>Required response:</p>
+<ul><li>route external or untrusted content through prompt-injection containment before privileged workflows see it</li><li>default-deny network, external API, public repo, messaging, benchmark-write, and validator-write actions</li><li>require <code>tool_use_event</code> records for privileged tool invocations</li><li>preserve source provenance and trust scope for retrieved artifacts</li><li>treat successful prompt-injection influence on privileged action as an incident</li></ul>
+<h2 id="autonomous-alignment-layer-modification">Autonomous Alignment-Layer Modification</h2>
+<p>Risk:</p>
+<p>Autonomous agents may attempt to edit the controls that govern them: AAF contracts, <code>V_ref_0</code>, tool-use policy, incident thresholds, rate limits, the execution plan, or evidence-ledger schema. This is a direct route around the alignment layer.</p>
+<p>Required response:</p>
+<ul><li>keep alignment-layer control artifacts outside autonomous write scope</li><li>require owner approval and Thesis 5 review for control-layer edits</li><li>require AAF review for high-stakes control-layer changes</li><li>ledger every proposed control-layer edit with provenance and rollback plan</li><li>treat unauthorized alignment-layer edit attempts as high-stakes incidents</li></ul>
+<h2 id="external-evaluator-pool-capture">External-Evaluator Pool Capture</h2>
+<p>Risk:</p>
+<p>External-evaluator sampling can become ceremonial if all "independent" evaluators share the same model family, provider assumptions, prompt culture, training artifacts, or reviewer blind spots. Apparent evaluator concordance may then reflect monoculture rather than reliability.</p>
+<p>Required response:</p>
+<ul><li>name the evaluator pool and model families before Week 0 launch</li><li>record generator/evaluator family pairings in <code>external_evaluator_sample</code> records</li><li>invalidate samples where generator and evaluator families collide unintentionally</li><li>include human review cadence where feasible</li><li>treat declining disagreement diversity as an alignment-health signal</li></ul>
+<h2 id="kill-switch-decay">Kill-Switch Decay</h2>
+<p>Risk:</p>
+<p>A kill switch can silently decay as dependencies change, agent dispatch paths multiply, provider integrations shift, or operators assume it still works because it once worked. A stale kill switch gives false confidence during the highest-risk moments.</p>
+<p>Required response:</p>
+<ul><li>maintain a kill-switch runbook with halted subsystems and maximum time-to-halt</li><li>run recurring kill-switch drills and ledger <code>kill_switch_drill</code> records</li><li>preserve post-incident state for review rather than destroying evidence</li><li>protect the kill switch from autonomous modification</li><li>treat missed drill cadence or failed time-to-halt as an incident</li></ul>
+<h2 id="formal-model-drift-between-body-and-appendix">Formal-Model Drift Between Body And Appendix</h2>
+<p>Risk:</p>
+<p>Sub-thesis bodies use simplified formal rules while <code>appendix-formal-models.md</code> contains fuller authoritative predicates. If the body and appendix drift, readers may rely on a weaker rule or assume a stronger condition than the body states.</p>
+<p>Required response:</p>
+<ul><li>mark appendix rules as authoritative where body rules are simplified</li><li>run a body-vs-appendix conjunct comparison before external review</li><li>update simplified body rules when appendix predicates add or remove load-bearing conditions</li><li>treat unexplained formal mismatch as control-file drift</li></ul>
+<h2 id="control-file-drift-and-compaction">Control-File Drift And Compaction</h2>
+<p>Risk:</p>
+<p>Future drafts may drift from vocabulary, invariants, dependency contracts, or review decisions, especially after context compaction.</p>
+<p>Required response:</p>
+<ul><li>cite control files in each thesis</li><li>run vocabulary and dependency lint before review</li><li>maintain changelog entries for control files</li><li>update composition-progress.md after each major drafting step</li></ul></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/theses/risks-and-criticisms.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

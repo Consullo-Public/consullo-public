@@ -249,3 +249,63 @@ removed. Body comparison is exact instead of whitespace-stripped.
 - No connected browser was available. Structural theme/path verification passes at multiple source
   and generated depths, and both theme assets have identical geometry, but no screenshot-based
   light/dark visual verdict is claimed.
+
+## 2026-08-12 derived-corpus placement
+
+### Placement and public map
+
+- Fourteen framing/thesis source documents were placed under
+  `content/research-program/theses/`, alongside a stable Thesis 0 index and four pagination parts.
+  Together those five Thesis 0 files preserve the single approved source document in source order.
+- Twelve supporting documents were placed under `content/research-program/appendices/`.
+- The 93-word research-history shell was replaced at
+  `content/history/from-cyc-to-consullo.md` with the approved tranche-1 source. Its shorter public
+  basename was added explicitly to the existing hostname-waiver set because the seven commemorative
+  host names are the subject of the essay.
+- `content/research-program/five-theses.md` is now the suite index, and
+  `content/research-program/falsifiers.md` points to the complete published risk register.
+- `tools/build.py` now maps every derived page explicitly, `OVERVIEW.md` lists every page and public
+  record, and `llms.txt` carries a mechanically verified estimate for all 52 rendered pages.
+- The implementation-evidence appendix remains absent. References that formerly relied on it were
+  narrowed so it supplies no public component grading; both indexes state why it is withheld, and
+  the verifier now fails if that withheld basename appears anywhere in the repository.
+
+### Status assignments
+
+- **Specified but not implemented:** the vocabulary, dependency map, Thesis 0 and the five
+  capability-thesis bodies, the evidence-ledger schema, substrate context, and Thesis 5 operational
+  contracts. These pages specify architecture or contracts without public implementation evidence.
+- **Proposed extension:** the master framing documents, Thesis 0 naming and cross-reference material,
+  standing guidelines, formal models, schema-test plan, and all five benchmark designs. These extend
+  the research program or define future evaluations; a protocol is not a result.
+- **Speculative research target:** the organizational recursive-self-improvement appendix, because
+  it describes the long-horizon composition of the five theses and no such operating capability is
+  represented.
+- **Implemented:** the published risk register, literature-grounding record, research history, and
+  the two replacement index pages. Their non-claims make explicit that `implemented` describes the
+  completed public artifact, not a Consullo system capability.
+- Existing public pages using the old short `specified` or `proposed` values were migrated to the
+  canonical forms. The content-addressed constitutional edition retains `status: specified` because
+  changing it would invalidate DDR-0005; the verifier permits that one legacy value while continuing
+  to verify the receipt hash. Honest unreleased shells retain `awaiting declassification`.
+
+All newly placed derived pages use `receipt: none` because no artifact-specific receipts exist.
+Their provenance says so directly, and their explicit non-claims separate publication from
+implementation and evidence.
+
+### Thesis 0 size and verification
+
+The 52,258-word Thesis 0 is paginated at section boundaries into four parts. Current character-based
+estimates are approximately 28,588, 23,429, 28,880, and 16,472 tokens. The verifier now enforces a
+32,000-estimated-token maximum for every indexed page and requires `llms.txt` to state that bound.
+The original thesis filename is a stable landing page, so incoming references do not break.
+
+`python3 tools/build.py` generates 52 pages. `python3 tools/verify_public.py` passes, including two
+byte-identical clean builds, the comprehensive-index check, token estimates and ceiling, all internal
+links, front-door-only document logos, DDR-0005 hash verification, custom-domain emission, and the
+existing negative controls.
+
+Review hardest before publication: the semantic fidelity of the four Thesis 0 split boundaries;
+the deliberate use of artifact-level `implemented` on non-capability records; and the narrowed
+sentences in thesis bodies that previously treated the now-withheld implementation-evidence map as
+support for component gradings.

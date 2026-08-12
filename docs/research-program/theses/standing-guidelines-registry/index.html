@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A bounded component of the Consullo public research program: Standing Guidelines Registry.">
+  <meta name="color-scheme" content="light dark">
+  <title>Standing Guidelines Registry · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>proposed extension</dd><dt>Claims</dt><dd>CP-001</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>Publication does not establish implementation or operational effectiveness.</li><li>The withheld implementation-evidence appendix is not evidence for this page.</li></ul></details></aside>
+    <article><h1 id="standing-guidelines-registry">Standing Guidelines Registry</h1>
+<p>Version: 0.1 (2026-04-25)</p>
+<p>Status: specified/proposed. Evidence Status: Documented/Proposed.</p>
+<p>This registry lists standing guidelines that may serve as limited backing for routine CampaignPlanner or OperationalPlanner work. A standing guideline is not a thesis and not a substitute for Friendship or owner authorization. It is a bounded source for low-stakes, reversible, routine work where a full thesis goal anchor would be disproportionate.</p>
+<p>High-stakes, self-improvement, governance, external-facing, customer-facing, benchmark-writing, validator-writing, tool-privilege, successor-scope, or alignment-layer work may not use a standing guideline as sole backing unless the owner explicitly approves the exception.</p>
+<h2 id="registered-standing-guidelines">Registered Standing Guidelines</h2>
+<div class="table-wrap"><table><thead><tr><th>Guideline ID</th><th>Source</th><th>Owner</th><th>Scope</th><th>Allowed planner uses</th><th>Validity</th><th>Required ledger records</th></tr></thead><tbody><tr><td><code>SG-DOC-HYGIENE-001</code></td><td><code>docs/documentation-programming-guidelines.md</code></td><td>Owner</td><td>Routine documentation consistency, broken link repair, typo correction, formatting consistency</td><td>campaign backing for documentation cleanup; operational backing for reversible documentation tasks</td><td>Revalidate quarterly or on guideline change</td><td><code>plan_object_lifecycle</code>, <code>provenance_attestation</code>, <code>validator_decision</code></td></tr><tr><td><code>SG-TEST-HYGIENE-001</code></td><td><code>docs/testing-programming-guidelines.md</code></td><td>Owner</td><td>Routine test naming, test organization, non-semantic test documentation cleanup</td><td>operational backing for reversible test hygiene tasks</td><td>Revalidate quarterly or on guideline change</td><td><code>plan_object_lifecycle</code>, <code>provenance_attestation</code>, <code>validator_decision</code></td></tr><tr><td><code>SG-CODE-HYGIENE-001</code></td><td><code>docs/core-programming-guidelines.md</code></td><td>Owner</td><td>Routine low-risk code style, organization, and maintainability work that does not change behavior or privileges</td><td>operational backing for reversible code hygiene tasks</td><td>Revalidate quarterly or on guideline change</td><td><code>plan_object_lifecycle</code>, <code>provenance_attestation</code>, <code>validator_decision</code></td></tr></tbody></table></div>
+<h2 id="emergency-directives">Emergency Directives</h2>
+<p>Emergency directives are not standing guidelines. They are time-limited backing sources for urgent containment or repair.</p>
+<p>An emergency directive must include:</p>
+<ul><li>owner or Friendship source</li><li>expiration no later than 72 hours unless renewed by owner</li><li>affected systems and authority scope</li><li>required post-hoc <code>human_authority_decision</code></li><li>required <code>incident_report</code> when the emergency concerns safety, security, or alignment controls</li><li>explicit non-claims stating that emergency action is not capability evidence</li></ul>
+<h2 id="exploratory-proposals">Exploratory Proposals</h2>
+<p>Exploratory proposals may back exploratory planning only. They must use <code>evidence_status: exploratory</code>, may not support capability claims, and may not promote results without a later thesis, execution plan, or owner-approved goal anchor.</p>
+<h2 id="registry-failure-signals">Registry Failure Signals</h2>
+<p>The registry is failing if:</p>
+<ul><li>campaigns repeatedly use standing guidelines for self-improvement or governance work</li><li>source paths move or hashes drift without plan invalidation</li><li>emergency directives become recurring substitutes for normal authorization</li><li>exploratory proposals produce claims without follow-on validation</li><li>dashboards count standing-guideline-backed plan creation as outcome evidence</li></ul></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/theses/standing-guidelines-registry.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A bounded component of the Consullo public research program: Appendix: Substrate Context.">
+  <meta name="color-scheme" content="light dark">
+  <title>Appendix: Substrate Context · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>specified but not implemented</dd><dt>Claims</dt><dd>CP-001</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>Publication does not establish implementation or operational effectiveness.</li><li>The withheld implementation-evidence appendix is not evidence for this page.</li></ul></details></aside>
+    <article><h1 id="appendix-substrate-context">Appendix: Substrate Context</h1>
+<p>This appendix holds infrastructure that supports the five theses without becoming a sixth thesis. These systems should be referenced by the master frame and imported by individual theses as needed.</p>
+<h2 id="purpose">Purpose</h2>
+<p>The five theses are theory claims. Substrate context is enabling infrastructure. Keeping substrate context separate prevents alignment, economy, model routing, and prompt decomposition from being conflated.</p>
+<h2 id="substrate-areas">Substrate Areas</h2>
+<h3 id="specialized-llm-ecosystem">Specialized LLM Ecosystem</h3>
+<p>Source:</p>
+<ul><li>the Consullo agent-hierarchy narrative</li></ul>
+<p>Role:</p>
+<ul><li>provider abstraction</li><li>model routing</li><li>specialized model selection</li><li>fallback planning</li><li>model capability tracking</li><li>cost and latency tradeoff management</li></ul>
+<p>Primary imports:</p>
+<ul><li>Thesis 2 imports model capability routing for cognitive agents.</li><li>Thesis 4 imports model routing for code generation and repair.</li><li>Thesis 1 imports cost and performance evidence for improvement evaluation.</li><li>Thesis 5 imports model provenance and trust evidence for scoped permissioning.</li></ul>
+<h3 id="atomic-prompt-and-compiled-code-orchestration">Atomic Prompt And Compiled-Code Orchestration</h3>
+<p>Sources:</p>
+<ul><li>the Consullo agent-hierarchy narrative</li><li>the internal atomic-prompt design note</li></ul>
+<p>Role:</p>
+<ul><li>decomposition of monolithic prompts into smaller atomic prompts</li><li>replacement of expensive LLM reasoning with compiled algorithms where appropriate</li><li>token-cost reduction</li><li>component-level validation</li><li>reusable prompt and algorithm libraries</li></ul>
+<p>Primary imports:</p>
+<ul><li>Thesis 4 imports this as software substrate.</li><li>Thesis 2 imports it as cognitive decomposition support.</li><li>Thesis 1 imports cost and reliability evidence for improvement evaluation.</li></ul>
+<h3 id="rapid-knowledge-access">Rapid Knowledge Access</h3>
+<p>Source:</p>
+<ul><li>the Consullo agent-hierarchy narrative</li></ul>
+<p>Role:</p>
+<ul><li>retrieval</li><li>indexing</li><li>low-latency knowledge access</li><li>context assembly</li><li>memory-assisted reasoning</li></ul>
+<p>Primary imports:</p>
+<ul><li>Thesis 2 imports this as cognitive substrate support.</li><li>Thesis 1 imports it for evidence retrieval and method-memory reuse.</li><li>Thesis 3 imports it for causal evidence and prior case retrieval.</li></ul>
+<h3 id="internal-economy">Internal Economy</h3>
+<p>Sources:</p>
+<ul><li>the Consullo agent-hierarchy narrative</li><li>the Consullo agent-hierarchy narrative</li><li>an internal feature-design note</li><li>an internal feature-design note</li><li>an internal feature-design note</li></ul>
+<p>Role under single-owner Phase 1:</p>
+<ul><li>internal resource accounting</li><li>transfer pricing</li><li>budgeting</li><li>capital allocation</li><li>service provision among company-owned agents and divisions</li><li>cost measurement</li><li>coordination overhead measurement</li></ul>
+<p>This is not independent market governance and is not an alignment mechanism. It is a resource-accounting and coordination substrate inside a single ownership boundary.</p>
+<p>Primary imports:</p>
+<ul><li>Thesis 1 imports cost of improvement and resource constraints.</li><li>Thesis 3 imports economic objectives and causal analysis of resource allocation.</li><li>Thesis 5 imports internal economy as a scope for trust and alignment review of economic actions.</li></ul>
+<h2 id="substrate-invariant">Substrate Invariant</h2>
+<p>No substrate system should be used as proof of capability, alignment, or superintelligence. Substrate systems provide mechanisms that must still be measured, governed, and validated through the relevant thesis.</p>
+<h2 id="aaf-data-flow-reference">AAF Data Flow Reference</h2>
+<p>The Adversarial Alignment Function is owned by Thesis 5, but it imports substrate and cognitive mechanisms:</p>
+<ol><li>A high-stakes action or modification reaches a Thesis 1 acceptance gate.</li><li>The gate invokes <code>AdversarialAlignmentOrchestrator</code> when invariant I12 applies.</li><li>The AAF draws critique from rotating ethical personas, multi-model critique, theory-of-mind stakeholder simulations, and external review where available.</li><li>Theory-of-mind agents such as <code>BeliefModelingProcessor</code>, <code>IntentionRecognitionAnalyzer</code>, and <code>PerspectiveTakingModeler</code> support stakeholder simulation.</li><li>Critiques and dissent are preserved in the evidence ledger.</li><li>Severe unresolved objections trigger rejection, revision, or escalation to human authority.</li><li>If human authority overrides the objection, the override and rationale remain auditable.</li></ol></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/appendices/appendix-substrates.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

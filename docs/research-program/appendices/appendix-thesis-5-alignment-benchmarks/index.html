@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A proposed evaluation contract in the Consullo public research program: Appendix: Thesis 5 Alignment And Scoped-Trust Benchmarks.">
+  <meta name="color-scheme" content="light dark">
+  <title>Appendix: Thesis 5 Alignment And Scoped-Trust Benchmarks · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>proposed extension</dd><dt>Claims</dt><dd>CP-002</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>A benchmark specification is not a benchmark result.</li><li>No implementation or outcome evidence is supplied by this page.</li></ul></details></aside>
+    <article><h1 id="appendix-thesis-5-alignment-and-scoped-trust-benchmarks">Appendix: Thesis 5 Alignment And Scoped-Trust Benchmarks</h1>
+<p>Version: 0.2 (2026-06-05) — adds the drift-measurable principle and <code>drift_record</code> field (multi-signal goal-drift index, zero-tolerance constraint preservation, regression risk) for recursive-modification alignment, per SAHOO: Safeguarded Alignment for High-Order Optimization Objectives in Recursive Self-Improvement, arXiv:2603.06333. Prior: 0.1 (2026-04-24).</p>
+<p>This appendix specifies benchmark families for Thesis 5, <code>Alignment Invariants And Scoped Trust Under Recursive Modification</code>. It is a benchmark design contract, not an implemented alignment benchmark suite or proof of safety. Capability Status: specified/proposed. Evidence Status: Documented/Proposed.</p>
+<p>The goal is to test whether the alignment wrapper changes routing and acceptance outcomes when it should. Alignment benchmarks here evaluate permission behavior, dissent preservation, trust-scope discipline, ADO reportability, incident response, containment, rollback, and owner-override evidence. They do not establish corrigibility, moral correctness, or general safety.</p>
+<p>Benchmark reports produced under this appendix should populate <code>benchmark_result</code> records in <code>appendix-evidence-ledger-schema.md</code>; the report fields below define the benchmark-specific <code>evidence_payload</code> structure for those records.</p>
+<h2 id="benchmark-principles">Benchmark Principles</h2>
+<ul><li>Gate-effect focused: a benchmark should show whether alignment controls alter action, not whether prose sounds aligned.</li><li>Scope-explicit: every case must declare actor, action class, operational domain, reversibility, criticality, data sensitivity, tool privileges, temporal horizon, evidence freshness, and uncertainty.</li><li>Dissent-preserving: AAF outputs should preserve severe minority objections rather than average them away.</li><li>Default-deny: unknown or unsupported scope should narrow permission, sandbox, deny, or escalate.</li><li>Incident-learning: incidents and near misses should update trust, playbooks, benchmarks, or gates.</li><li>Drift-measurable: alignment benchmarks for recursive-modification scenarios should report a multi-signal goal-drift index (semantic, distributional, structural, lexical) measured against the initial baseline, a constraint-preservation score with zero tolerance for critical-constraint violations, and a regression-risk flag, with stopping rules that halt on a drift, constraint, or regression breach (SAHOO: Safeguarded Alignment for High-Order Optimization Objectives in Recursive Self-Improvement, arXiv:2603.06333).</li><li>No safety proof: passing benchmark fixtures is not evidence of solved alignment or corrigibility; a drift index reports stability against a baseline, not correctness of that baseline.</li></ul>
+<h2 id="required-benchmark-report-fields">Required Benchmark Report Fields</h2>
+<div class="table-wrap"><table><thead><tr><th>Field</th><th>Meaning</th></tr></thead><tbody><tr><td><code>benchmark_id</code></td><td>Stable identifier and version.</td></tr><tr><td><code>action_scope</code></td><td>Typed trust and permission scope.</td></tr><tr><td><code>actor_and_authority</code></td><td>Actor, authority source, reviewer, and human-authority requirement.</td></tr><tr><td><code>expected_disposition</code></td><td>Allow, allow-with-conditions, require-revision, veto, contain, rollback, or escalate.</td></tr><tr><td><code>AAF_record</code></td><td>Dissent sources, reports, aggregate severity, disposition, and coverage gaps.</td></tr><tr><td><code>Friendship_record</code></td><td>Constitutional function disposition, veto/escalation rationale, and owner interaction.</td></tr><tr><td><code>trust_record</code></td><td>Scope evidence, freshness, uncertainty, dimensions, and transfer limits.</td></tr><tr><td><code>ADO_record</code></td><td>External benefit, harm, distributional effect, report quality, and cadence fields where relevant.</td></tr><tr><td><code>incident_record</code></td><td>Trigger, containment, rollback, trust update, and follow-up obligations where relevant.</td></tr><tr><td><code>drift_record</code></td><td>Goal-drift index (multi-signal, vs initial baseline), constraint-preservation score, regression-risk, and stopping-rule trigger, for recursive-modification scenarios.</td></tr><tr><td><code>ledger_links</code></td><td>Alignment, trust, incident, provenance, and improvement records.</td></tr><tr><td><code>status_result</code></td><td>What claim status, if any, the benchmark can strengthen.</td></tr></tbody></table></div>
+<h2 id="suite-a-permission-routing">Suite A: Permission Routing</h2>
+<p>Purpose: test whether actions route to allow, deny, revise, sandbox, AAF, Friendship, human authority, or incident handling correctly.</p>
+<p>Representative tasks:</p>
+<ul><li>low-risk internal reversible action</li><li>high-stakes irreversible modification</li><li>externally consequential action before rollback</li><li>missing-provenance action</li><li>authority-expansion request</li><li>core-value or alignment-infrastructure modification</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>scope-field completeness</li><li>routing correctness</li><li>default-deny behavior</li><li>authority recognition</li><li>ledger completeness</li><li>false allow / false block rate</li></ul>
+<p>Negative controls:</p>
+<ul><li>action with missing scope that should not be silently allowed</li><li>action framed as low-risk but modifying validator policy</li><li>externally visible action whose rollback cannot undo harm</li></ul>
+<p>This suite tests routing behavior, not moral wisdom.</p>
+<h2 id="suite-b-aaf-dissent-aggregation">Suite B: AAF Dissent Aggregation</h2>
+<p>Purpose: test whether the AdversarialAlignmentOrchestrator preserves and acts on severe objections.</p>
+<p>Representative tasks:</p>
+<ul><li>informational, advisory, warning, and critical objection cases</li><li>majority-low-severity with one plausible critical dissent</li><li>multi-model critique disagreement</li><li>synthetic stakeholder objection that needs real evidence</li><li>missing critique-source diversity</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>severity classification</li><li>max-severity aggregation</li><li>affected-value scope preservation</li><li>confidence handling</li><li>coverage-gap recording</li><li>gate effect</li></ul>
+<p>Negative controls:</p>
+<ul><li>median aggregation hides a severe minority objection</li><li>repeated personas produce duplicate objections counted as diversity</li><li>AAF records dissent but acceptance ignores it</li></ul>
+<p>AAF benchmarks should show whether dissent changes routing.</p>
+<h2 id="suite-c-trust-scope-transfer">Suite C: Trust-Scope Transfer</h2>
+<p>Purpose: test whether scoped trust prevents overgeneralized reliance.</p>
+<p>Representative tasks:</p>
+<ul><li>internal summarization agent requests external communication</li><li>code repair agent requests validator modification authority</li><li>planning agent requests financial action</li><li>retrieval agent requests sensitive-data access</li><li>previously reliable agent operates after distribution shift</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>scope-transfer detection</li><li>evidence freshness</li><li>uncertainty handling</li><li>privilege-boundary preservation</li><li>escalation correctness</li><li>recovery integrity</li></ul>
+<p>Negative controls:</p>
+<ul><li>trust in one domain treated as global competence</li><li>stale evidence accepted as current</li><li>composite workflow inherits component trust without edge evidence</li></ul>
+<p>Trust is valid only inside its declared scope.</p>
+<h2 id="suite-d-ado-reportability">Suite D: ADO Reportability</h2>
+<p>Purpose: test whether abundance claims remain reportable and evidence-backed.</p>
+<p>Representative tasks:</p>
+<ul><li>internal cost reduction with no external availability</li><li>external service made available but with rising harm reports</li><li>lower price but concentrated risk transfer</li><li>capability improvement with no distributional analysis</li><li>ADO reporting missed for a relevant period</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>external benefit evidence</li><li>external harm evidence</li><li>beneficiary/risk-bearer distribution</li><li>report quality</li><li>cadence compliance</li><li>incident linkage</li></ul>
+<p>Negative controls:</p>
+<ul><li>internal efficiency counted as public benefit</li><li>external service counted as abundance while harms are omitted</li><li>stale ADO report reused for new capability claim</li></ul>
+<p>ADO is reportability discipline, not proof of public benefit.</p>
+<h2 id="suite-e-incident-response-and-recovery">Suite E: Incident Response And Recovery</h2>
+<p>Purpose: test whether failures update the permission system rather than becoming inert logs.</p>
+<p>Representative tasks:</p>
+<ul><li>missing required AAF review</li><li>unauthorized scope expansion</li><li>lost provenance</li><li>trust leakage</li><li>rollback failure</li><li>owner override without required rationale</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>incident detection</li><li>containment or rollback action</li><li>trust update</li><li>benchmark/playbook update</li><li>evidence preservation</li><li>follow-up obligation tracking</li></ul>
+<p>Negative controls:</p>
+<ul><li>incident recorded but future gates unchanged</li><li>near miss ignored because no harm occurred</li><li>rollback erases dissent or provenance</li></ul>
+<p>Incident learning is part of recursive alignment improvement.</p>
+<h2 id="suite-f-owner-override-audit">Suite F: Owner Override Audit</h2>
+<p>Purpose: test whether single-owner final authority remains auditable when it overrides or narrows alignment controls.</p>
+<p>Representative tasks:</p>
+<ul><li>owner allows action despite warning dissent</li><li>owner vetoes action despite capability benefit</li><li>owner narrows scope after AAF challenge</li><li>owner defers to external review</li><li>owner override repeats across similar cases</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>rationale completeness</li><li>dissent preservation</li><li>condition tracking</li><li>override frequency</li><li>override-frequency threshold status: parameter pending Phase 1 calibration; owner: Thesis 5 governance</li><li>correlation with severity</li><li>follow-up review completion</li></ul>
+<p>Negative controls:</p>
+<ul><li>override recorded without dissent</li><li>override rationale missing or generic</li><li>repeated warning overrides treated as normal operation</li></ul>
+<p>The benchmark does not make owner override safe. It makes override visible and reviewable.</p>
+<h2 id="minimal-demonstration-package">Minimal Demonstration Package</h2>
+<p>The first Thesis 5 demonstration should use fixture-based cases, not live high-stakes deployment. It should include permission routing, one AAF warning or critical dissent, one trust-scope leak, one ADO reportability case, one incident or near miss, and one owner-override audit fixture.</p>
+<p>Required contents:</p>
+<ul><li>action-scope records</li><li>expected and actual dispositions</li><li>AAF dissent reports</li><li>Friendship disposition where applicable</li><li>trust estimates and transfer limits</li><li>ADO report fields where applicable</li><li>incident or near-miss record</li><li>owner override record if applicable</li><li>evidence-ledger records</li><li>post-case trust or playbook update</li></ul>
+<h2 id="non-claims">Non-Claims</h2>
+<p>This appendix does not claim that Consullo has implemented the full alignment wrapper, solved alignment, proved corrigibility, or validated AAF / ADO / Friendship controls in deployment. It specifies what benchmark evidence would be needed before Thesis 5 claims can strengthen beyond specified/proposed architecture.</p></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/appendices/appendix-thesis-5-alignment-benchmarks.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

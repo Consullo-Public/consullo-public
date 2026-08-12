@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A bounded component of the Consullo public research program: Vocabulary And Invariants.">
+  <meta name="color-scheme" content="light dark">
+  <title>Vocabulary And Invariants · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>specified but not implemented</dd><dt>Claims</dt><dd>CP-001</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>Publication does not establish implementation or operational effectiveness.</li><li>The withheld implementation-evidence appendix is not evidence for this page.</li></ul></details></aside>
+    <article><h1 id="vocabulary-and-invariants">Vocabulary And Invariants</h1>
+<p>Version: 0.3.1</p>
+<p>This file defines shared terms for the Consullo Seed AI five-thesis suite. Later thesis drafts should cite these definitions rather than redefining them locally.</p>
+<h2 id="core-framing">Core Framing</h2>
+<h3 id="agent">Agent</h3>
+<p>An agent is a Consullo software actor with an identifiable responsibility, callable interface, and operational record. In the current Consullo programming methodology, the default implementation unit is a Java class or service exposing static PDCA-shaped methods that receive explicit JSON task and context objects and return JSON results.</p>
+<p>For thesis purposes, an agent may also be a composed cluster when the cluster has a named owner or orchestrator, a stable interface, defined responsibilities, evidence and provenance records, and measurable performance on task classes.</p>
+<p>An agent becomes a member of the improvement population only when it has a specification, version identity, evaluation records, and eligibility for modification, selection, promotion, demotion, or retirement.</p>
+<h3 id="consullo-seed-ai">Consullo Seed AI</h3>
+<p>Consullo Seed AI is a governed agentic architecture for recursive capability amplification. It combines specialized AI agents, memory systems, cognitive orchestration, automated code generation and repair, causal-decision systems, scoped trust, alignment controls, and single-owner operating governance.</p>
+<p>Consullo Seed AI is not defined here as reached ASI. It is a scaffold and research program for building, measuring, and governing recursive improvement over an agent population.</p>
+<h3 id="provenance-of-the-terms-seed-ai-and-friendship">Provenance Of The Terms <code>Seed AI</code> And <code>Friendship</code></h3>
+<p>Neither term originates with Consullo. Both are inherited from Eliezer Yudkowsky's early alignment work, and are used here in continuity with it rather than as new coinages.</p>
+<p><strong>Seed AI</strong> is Yudkowsky's term for a mind capable of open-ended recursive self-improvement, introduced in <em>General Intelligence and Seed AI 2.3: Creating Complete Minds Capable of Open-Ended Self-Improvement</em> (2001). The published successor statement of the same architecture is <em>Levels of Organization in General Intelligence</em> (2007; draft 2002), which is the citation to prefer for the architecture itself. GISAI is the earlier and more explicit use of the term, and survives only as an Internet Archive capture of <code>singinst.org</code> rather than a publisher-hosted copy, so its byte-level fidelity is unverified even though its content reads complete.</p>
+<p><strong>Friendship</strong>, as the name of a goal-system property rather than an external restraint, descends from <em>Creating Friendly AI 1.0: The Analysis and Design of Benevolent Goal Architectures</em> (2001). Consullo's Friendship agent is an attempt to give that idea an operational form: friendliness located in the goal architecture, interpreted by a named component, and bounded by human authority. Related later work informing this suite includes <em>Coherent Extrapolated Volition</em> (2004) on indirect normativity, and <em>Artificial Intelligence as a Positive and Negative Factor in Global Risk</em> (2008).</p>
+<p>Attribution is not endorsement in either direction. Yudkowsky has not reviewed Consullo, and nothing here should be read as his assessment of it. Where this suite departs from that lineage -- most significantly in holding values immutable to the machine while revisable by human authority -- the departure is the suite's own and is argued on its own terms.</p>
+<h3 id="justification-bridge">Justification Bridge</h3>
+<p>A justification bridge is a thesis-backed link between a governed goal and an executable plan. It states why the plan is legitimate, what thesis claim or invariant supports it, what model or structured argument explains the expected goal contribution, what evidence is required, what non-claims and forbidden means constrain it, and what ledger records must preserve the decision.</p>
+<p>Justification bridges are risk-scaled. Routine bounded tasks may inherit authority from approved parent plans. Plans that affect self-improvement, goal formation, goal revision, autonomy scope, validators, benchmarks, ledgers, protected controls, or capability claims require explicit thesis-backed justification.</p>
+<h3 id="thesis-backed-goal">Thesis-Backed Goal</h3>
+<p>A thesis-backed goal is a governed goal whose authority, refinement, or operationalization is supported by a Consullo thesis claim, formal model, invariant, or literature-grounded structured argument. A thesis-backed goal is still subject to Friendship and owner authority; thesis text alone does not authorize execution.</p>
+<h3 id="goal-lifecycle-state">Goal Lifecycle State</h3>
+<p>A goal lifecycle state records the BDI-style condition of a governed goal: candidate, classified, ancestry-checked, adopted, activated, suspended, revised, retired, vetoed, or stale. It is distinct from the goal anchor <code>status</code> field, which records document maturity and review disposition.</p>
+<p>The lifecycle state <code>activated</code> means a governed goal is eligible for pursuit under its authority and validity window. It is not identical to an active intention.</p>
+<h3 id="active-intention">Active Intention</h3>
+<p>An active intention is a runtime commitment instance created by a planner or agent under an activated governed goal. It is bounded by the parent goal, parent plan, validity window, authority decision, and applicable stop conditions. Goal-stack snapshots reference active intentions so audit can reconstruct which commitment was being pursued at a decision point.</p>
+<h3 id="thesis-backed-plan">Thesis-Backed Plan</h3>
+<p>A thesis-backed plan is a plan whose objective, constraints, non-claims, evidence requirements, and ledger obligations are derived from a thesis-backed goal or registered thesis goal anchor. Thesis-backed plans help prevent planner objectives from becoming de facto terminal goals.</p>
+<h3 id="system-goal">System Goal</h3>
+<p>A system goal is the governed goal layer between registered Friendship roots and strategic directives. It names a multi-horizon system-level objective, its Friendship ancestry, authority scope, non-claims, forbidden means, evidence requirements, and revision policy. A system goal is not a planner objective and does not authorize execution without the applicable adoption, activation, and ledger gates.</p>
+<h3 id="method-goal">Method Goal</h3>
+<p>A method goal is a bounded method/action-level goal below a task goal. It specifies how a task-level intention is operationalized by a method, tool sequence, or action pattern. A method goal may inherit authority and constraints from a task goal, but it may not create new top-level authority, expand scope, or persist beyond the task or method lifetime.</p>
+<h3 id="formal-model-backing">Formal Model Backing</h3>
+<p>Formal model backing is the explicit model, schema, invariant set, causal account, state-transition model, or structured argument that makes a thesis-backed goal-to-plan link inspectable. It must define the relevant entities, allowed transitions, acceptance criteria, failure modes, and contrary evidence.</p>
+<h3 id="goal-to-plan-link">Goal-To-Plan Link</h3>
+<p>A goal-to-plan link is the auditable relationship connecting a governed goal, thesis claim, formal model backing, evidence requirement, and executable plan. In Consullo, high-impact goal-to-plan links should be preserved through planner JSON references and evidence-ledger records.</p>
+<h3 id="improvement">Improvement</h3>
+<p>An improvement is an ordered comparison between a baseline system state and a candidate system state along a stated axis. A valid improvement claim must specify baseline, candidate change, task class or operational scope, metric or qualitative acceptance criterion, measurement protocol, observed or expected delta, confidence or uncertainty statement, side-effect channels checked, cost of producing and validating the change, and rollback or mitigation path.</p>
+<p>A change is not an improvement merely because an agent proposed it, tests passed, or a local metric increased. It must survive the relevant acceptance gates and preserve hard invariants.</p>
+<h3 id="capability">Capability</h3>
+<p>A capability is a measurable property of an agent, subsystem, or composed agent population on a specified task class. Capability is distinct from function: a function says what the system is intended to do; capability says how well it can do it under defined conditions.</p>
+<p>Capability claims must carry a capability status:</p>
+<ul><li>implemented</li><li>specified but not implemented</li><li>proposed extension</li><li>speculative research target</li></ul>
+<h3 id="recursive-capability-amplification">Recursive Capability Amplification</h3>
+<p>Recursive capability amplification is the process by which the system uses its current capabilities to improve future capabilities. In Consullo, this primarily means program-level and population-level improvement:</p>
+<ul><li>Program-level: modifying agent code, prompts, method memories, procedures, specifications, tests, and interfaces.</li><li>Population-level: selecting, promoting, demoting, composing, retiring, or specializing agents and method memories based on measured performance.</li></ul>
+<p>This term is preferred over loose use of "recursive self-improvement" when the intended claim is empirical, staged, and governed rather than unconstrained.</p>
+<h3 id="recursive-self-improvement">Recursive Self-Improvement</h3>
+<p>Recursive self-improvement means that the system improves components that participate in future improvement. In this suite, RSI must be treated as an empirical and governance-bounded process, not as a guaranteed monotonic climb.</p>
+<p>Valid uses must specify what is modified, what evidence supports the modification, what evaluator scores expected improvement, what validator gates acceptance, what invariants cannot be violated, what benchmark or deployment evidence counts as success, and what rollback path exists if the change fails.</p>
+<h3 id="organizational-recursive-self-improvement">Organizational Recursive Self-Improvement</h3>
+<p>Organizational recursive self-improvement is recursive improvement applied to the AI-native R&amp;D organization itself: agendas, hypotheses, workflows, portfolio policies, benchmark design, evaluator policies, method memories, anti-patterns, governance routines, and post-cycle learning.</p>
+<p>This is broader than code self-editing. It is also more evidence-demanding. A completed research cycle, a generated hypothesis, or a persuasive synthesis is not an organizational improvement unless later evidence shows improved research, engineering, evaluation, memory, or governance performance after cost and protected-set checks.</p>
+<h3 id="ai-native-r-d-organization">AI-Native R&amp;D Organization</h3>
+<p>The Consullo AI-Native R&amp;D Organization is the coordinated set of agents, workflows, ledgers, benchmarks, method memories, review gates, and governance roles that turn broad improvement objectives into agendas, candidate hypotheses, pre-registered experiments, implementations, evaluations, accepted improvements, rejected anti-patterns, and reusable organizational learning.</p>
+<p>In the five-thesis suite this is a cross-thesis operating layer, not a sixth thesis. Its publication boundary is specified in <code>appendix-organizational-recursive-self-improvement.md</code>; its live operating controls are specified in the internal execution plan.</p>
+<h3 id="exploration-and-exploitation">Exploration And Exploitation</h3>
+<p>Exploitation means improving known workflows: repairing code, reducing cost, strengthening validators, improving documentation consistency, reusing method memories, and making established pipelines more reliable.</p>
+<p>Exploration means searching for new algorithms, workflows, agent compositions, benchmarks, cognitive strategies, evaluator designs, governance mechanisms, and research methods.</p>
+<p>Seed AI progress requires both. Exploitation-only systems become maintenance organizations; exploration-only systems become brainstorm factories. Organizational RSI claims should report the portfolio balance rather than treating either lane as sufficient.</p>
+<h3 id="research-cycle">Research Cycle</h3>
+<p>A research cycle is a bounded sequence that turns an objective into candidate evidence through agenda formation, hypothesis generation, pre-registration, portfolio selection, experiment design, implementation or prototype, evaluation, adversarial review, synthesis, governance disposition, memory update, and post-cycle learning.</p>
+<p>Process completion is not a capability result. The cycle supports a capability claim only when its evidence survives the relevant benchmarks, validators, ledgers, and governance gates.</p>
+<h3 id="research-portfolio">Research Portfolio</h3>
+<p>A research portfolio is the set of active exploration and exploitation lanes under bounded compute, cost, risk, and attention constraints. Portfolio records should state why lanes were funded, paused, expanded, or stopped, and should separate process metrics from outcome, transfer, and alignment-health metrics.</p>
+<h3 id="institutional-memory">Institutional Memory</h3>
+<p>Institutional memory is the durable organizational memory created by method memories, anti-patterns, playbooks, benchmark cases, portfolio decisions, incident reports, and post-cycle lessons. It matters for RSI only when it measurably changes later behavior.</p>
+<h3 id="pre-registration">Pre-Registration</h3>
+<p>Pre-registration is a ledgered commitment made before an experiment or evaluation is run. It states the objective, hypothesis, null hypothesis, expected mechanism, success criteria, failure criteria, protected-set checks, benchmark or evaluation suite, expected cost, affected capability level, lane classification, and required external-evaluator sampling.</p>
+<p>Post-hoc metric selection should not support a capability claim unless the work is explicitly marked exploratory and later retested under pre-registered conditions.</p>
+<h3 id="false-progress-and-research-theatre">False Progress And Research Theatre</h3>
+<p>False progress occurs when process output is mistaken for capability gain. Research theatre is the organizational form of false progress: hypotheses, papers, dashboards, benchmark designs, or reports look like research but do not survive pre-registration, held-out evaluation, replication where applicable, or independent review.</p>
+<p>The suite should separate process metrics, outcome metrics, transfer metrics, and alignment-health metrics so that completed cycles or generated artifacts do not become implicit capability claims.</p>
+<h3 id="frozen-reference-suite">Frozen Reference Suite</h3>
+<p>A frozen reference suite, written <code>V_ref_0</code> in the execution plan, is a held-out reference suite created before autonomous improvement cycles and kept outside autonomous write scope. It is used to detect evaluator, validator, benchmark, and governance drift.</p>
+<p>Autonomous agents should not modify <code>V_ref_0</code>. Any deliberate update requires owner approval, provenance, changelog entry, and preservation of prior cases unless retirement is explicitly justified.</p>
+<h3 id="external-evaluator-sampling">External-Evaluator Sampling</h3>
+<p>External-evaluator sampling is independent review of a sample of accepted or near-accepted improvements by a different model family, human reviewer, or evaluator outside the generating workflow. It is used to detect model-family monoculture, validator capture, false accepts, and research theatre.</p>
+<p>Sampling results should report concordance, disagreement reason, false-accept suspicion, false-reject suspicion, evaluator identity, model family where applicable, and owner disposition.</p>
+<h3 id="greater-than-human-capability">Greater-Than-Human Capability</h3>
+<p>Greater-than-human capability means measurable performance beyond unaided human performance on specified axes. It does not mean general superintelligence by default.</p>
+<p>Allowed axes include:</p>
+<ul><li>speed: faster iteration, evaluation, repair, or search, baseline benchmarks include wall-clock time per accepted improvement and SWE-bench-style repair time</li><li>collective breadth: parallel coverage across many agents or tasks, baseline benchmarks include concurrent task throughput under fixed quality and cost constraints</li><li>memory: higher-fidelity retrieval and replay, baseline benchmarks include retrieval precision/recall over method memories, episodic records, and provenance queries</li><li>coding: faster correct repair or implementation, measured against SWE-bench-style and project-local repair tasks</li><li>forecasting: better calibration on defined forecasting batteries, baseline metrics include Brier score and calibration error on forecasting-question sets</li><li>causal reasoning: lower intervention-effect prediction error, baseline metrics include causal prediction backtests and counterfactual explanation accuracy</li><li>coordination: lower transaction or coordination cost under defined conditions, baseline metrics include cost per delegated task, handoff latency, rework rate, and coordination overhead</li></ul>
+<p>This schema has Capability Status = specified until each owning thesis binds its axis to concrete benchmark suites and evidence thresholds.</p>
+<p>Sub-thesis titles should avoid "superhuman" and "superintelligence." The master frame may discuss those terms cautiously as long-range aims.</p>
+<h3 id="capability-status-vs-external-frontier-risk-frameworks">Capability Status Vs External Frontier-Risk Frameworks</h3>
+<p>Capability Status is not a frontier-risk level. It tracks maturity of a Consullo claim or component: implemented, specified, proposed, or speculative. External risk frameworks such as Anthropic's AI Safety Levels or Responsible Scaling Policy thresholds may inform benchmark and safeguard choices, but they are not automatically imported as Consullo status categories.</p>
+<p>No dedicated safety-threshold mapping appendix is added in the current suite. The Capability Status and external-framework distinction in this vocabulary file, together with the RSP literature notes and <code>Capability Threshold Ambiguity</code> risk row, is sufficient for the current draft state. A future appendix is warranted only if review feedback or operational policy work requires a concrete mapping from measured capability evidence to mandatory safeguard tiers.</p>
+<h3 id="asi">ASI</h3>
+<p>ASI means artificial superintelligence. In this suite, ASI is a target concept and risk frame, not a status claim. Do not write that Consullo has reached ASI unless backed by external consensus and explicit benchmark evidence.</p>
+<h3 id="scaffold">Scaffold</h3>
+<p>A scaffold is an architecture that makes a target capability plausible to develop, measure, and govern. Calling Consullo Seed AI a scaffold asserts architectural compatibility, not achieved capability.</p>
+<h3 id="specification">Specification</h3>
+<p>A specification is the binding description of what an agent, method memory, workflow, or subsystem is supposed to do. A usable specification may include purpose, scope, PDCA method contract, JSON input and output schema, preconditions, postconditions, safety and alignment constraints, tests or benchmarks, dependencies, provenance requirements, escalation rules, and rollback rules.</p>
+<p>Specifications are not evidence of implementation. They define what evidence should be gathered.</p>
+<h2 id="roles-in-the-improvement-loop">Roles In The Improvement Loop</h2>
+<h3 id="proposer">Proposer</h3>
+<p>A proposer generates a candidate improvement, such as a new method memory, code patch, agent specialization, benchmark, workflow, or policy adjustment.</p>
+<h3 id="evaluator">Evaluator</h3>
+<p>An evaluator estimates whether a proposed change is worth attempting or promoting. It produces an evidence package, expected-benefit estimate, cost estimate, risk estimate, and uncertainty statement.</p>
+<p>The evaluator is distinct from the validator. Evaluation asks whether a change appears valuable. Validation asks whether the change may be accepted.</p>
+<h3 id="validator">Validator</h3>
+<p>A validator gates acceptance of a candidate change. It checks hard invariants, benchmark results, regression evidence, provenance, alignment, safety, and deployment readiness.</p>
+<p>Validation may be staged through static review, sandbox execution, benchmark execution, canary deployment, production promotion, and post-deployment monitoring.</p>
+<h3 id="acceptance-gate">Acceptance Gate</h3>
+<p>An acceptance gate is a decision point where a candidate change is rejected, revised, escalated, sandboxed, canaried, or promoted. A gate must name inputs, required evidence, acceptance criteria, rejection criteria, escalation conditions, rollback conditions, and responsible authority.</p>
+<h3 id="evidence-package">Evidence Package</h3>
+<p>An evidence package is the structured support for a candidate decision. It may include tests, benchmark results, traces, causal explanations, forecasts, code provenance, failure history, security review, alignment review, cost estimates, uncertainty estimates, and dissent records.</p>
+<h3 id="credit-assignment">Credit Assignment</h3>
+<p>Credit assignment records which design choices, agent actions, method memories, tests, or policies contributed to an outcome. It is required for learning from accepted and rejected modifications.</p>
+<h3 id="method-memory">Method Memory</h3>
+<p>A method memory is a reusable procedural or strategic artifact that captures how an agent or subsystem performs a task. Method memories are evolvable objects in the Consullo improvement architecture and can be selected, mutated, validated, archived, deprecated, and reused.</p>
+<p>A defensible method memory should contain name and version, owner agent or subsystem, task class and scope, preconditions, procedural steps, postconditions, dependencies, required tools and permissions, cost profile, known failure modes, benchmark or validation history, parent lineage if derived from another memory, selection-eligibility criteria, and deprecation criteria.</p>
+<p>Mutation of method memories must preserve lineage so successful and failed variants can be used for credit assignment.</p>
+<h2 id="architectural-substrates">Architectural Substrates</h2>
+<h3 id="cognitive-substrate">Cognitive Substrate</h3>
+<p>The cognitive substrate is the set of agents, memories, channels, and orchestration policies that provide reasoning, perception, attention, metacognition, knowledge retrieval, creativity, social modeling, and executive control.</p>
+<p>The cognitive substrate does not itself guarantee greater-than-human intelligence. It provides composable capabilities whose value depends on competence, reliability, cost, task fit, and integration quality.</p>
+<h3 id="causal-decision-substrate">Causal-Decision Substrate</h3>
+<p>The causal-decision substrate is the system of causal models, intervention simulators, counterfactual reasoners, prediction calibrators, experiment selectors, strategic bias controls, and decision procedures that evaluate possible actions.</p>
+<p>It should be modeled as ambiguity-aware and escalation-capable. It must account for model misspecification, Goodhart pressure, uncertainty, and incentive effects.</p>
+<h3 id="software-substrate">Software Substrate</h3>
+<p>The software substrate is the system that generates, modifies, repairs, tests, validates, documents, and deploys code and agents.</p>
+<p>In Consullo, this includes LLM-Native Functional Java, static methods, JSON-only data exchange, PDCA signatures, automated repair agents, patch validators, semantic checks, provenance, and repair-pipeline learning.</p>
+<h3 id="trust-and-alignment-substrate">Trust And Alignment Substrate</h3>
+<p>The trust and alignment substrate is the system of constitutional constraints, scoped trust records, evidence ledgers, permission gates, safety boundaries, adversarial alignment checks, incident response, rollback, and human authority.</p>
+<p>It is a layered defense system, not a proof of corrigibility.</p>
+<h3 id="internal-economy">Internal Economy</h3>
+<p>The internal economy is the system of resource allocation, transfer pricing, journal entries, internal service provision, budgets, cost measurement, and planning among company-owned agents or divisions.</p>
+<p>Under single-owner Phase 1, internal economy is not arm's-length commerce between independent parties and is not itself an alignment mechanism. It is a coordination and resource-accounting substrate.</p>
+<h3 id="substrate-context">Substrate Context</h3>
+<p>Substrate context is infrastructure that supports the five theses without being one of the five thesis claims. The canonical scope is maintained in <code>appendix-substrates.md</code>.</p>
+<h2 id="governance-terms">Governance Terms</h2>
+<h3 id="single-owner-phase-1">Single-Owner Phase 1</h3>
+<p>Single-owner Phase 1 is the current governance frame in which all Consullo agents are company-owned assets under Stephen Reed's authority. This structure reduces inter-party legal and contractual friction but introduces risks of alignment monoculture, owner bottleneck, institutional blind spots, and external injection.</p>
+<p>Future contractor or multi-stakeholder states should be treated as stress tests or later phases unless explicitly stated otherwise.</p>
+<h3 id="human-authority">Human Authority</h3>
+<p>Human authority is the retained power of the human owner or authorized human overseers to set constitutional constraints, approve high-stakes changes, halt execution, revise value formulations, and resolve escalations.</p>
+<p>Human authority must be represented as an active control path, not a ceremonial statement.</p>
+<h3 id="the-friendship-agent">the Friendship agent</h3>
+<p>The Friendship agent is the constitutional ethical anchor described in the Consullo Seed AI Constitution. In this suite, it is treated as a governance function with veto and escalation authority over actions or modifications that threaten constitutional values, alignment invariants, human authority, or containment. Bare "Friendship" means the constitutional function; <code>Friendship</code> means the typed agent or role name.</p>
+<p>The Friendship agent is not assumed infallible. Its failure modes include incomplete value interpretation, single-owner blind spots, insufficient evidence, capture by misleading reports, and inability to resolve novel moral uncertainty. The Adversarial Alignment Function exists partly to stress-test those failure modes.</p>
+<h3 id="alignment-invariant">Alignment Invariant</h3>
+<p>An alignment invariant is a hard constraint that recursive modification must not violate. Examples include:</p>
+<ul><li>the Friendship or constitutional ethical anchor cannot be bypassed</li><li>external input is untrusted by default</li><li>self-modification requires evidence and validation</li><li>high-impact actions require human authority or escalation</li><li>provenance must be preserved</li><li>rollback must remain available where feasible</li><li>core values are not autonomously mutable by agents</li></ul>
+<h3 id="safety-invariant">Safety Invariant</h3>
+<p>A safety invariant is a hard constraint that protects containment, reliability, security, privacy, or reversibility. Examples include sandboxing, resource limits, restricted tool privileges, no silent authority expansion, and fail-closed behavior for unknown scopes.</p>
+<h3 id="adversarial-alignment-function">Adversarial Alignment Function</h3>
+<p>The Adversarial Alignment Function is the dedicated function that stress-tests the system's ethical reasoning from multiple legitimate philosophical or stakeholder perspectives.</p>
+<p>It is distinct from compliance validation. Compliance asks whether an action satisfies the current rules. Adversarial alignment asks whether the rules or their interpretation may contain blind spots that thoughtful humans would recognize as harmful or incomplete.</p>
+<p>Under single-owner Phase 1, the Adversarial Alignment Function should draw dissent from at least four mechanisms:</p>
+<ul><li>rotating LLM personas representing distinct ethical traditions and stakeholder perspectives</li><li>multi-model critique where feasible to reduce single-model monoculture</li><li>synthetic stakeholder simulations using theory-of-mind agents</li><li>external contractor or human review for selected high-stakes cases when available</li></ul>
+<p>The owner or authorized human overseer remains the adjudicator for unresolved conflict, but the dissent record must be preserved in the evidence ledger.</p>
+<p>Placeholder operational owner: <code>AdversarialAlignmentOrchestrator</code> until the implementation assigns a final agent name.</p>
+<h3 id="abundance-distribution-obligation">Abundance Distribution Obligation</h3>
+<p>The Abundance Distribution Obligation is the constitutional requirement that Consullo's capability growth produce value beyond the owner, including cost reduction, beneficial external service, and broadening access to capabilities humans currently overpay for.</p>
+<p>It should be treated as an alignment and purpose constraint, not as a guarantee of social benefit.</p>
+<p>Operationally, the Abundance Distribution Obligation requires a reportable cadence, an owner, and falsification criteria.</p>
+<p>Minimum measurement function:</p>
+<ul><li>cost reductions delivered to external users or customers</li><li>useful services made available that were previously inaccessible or overpriced</li><li>external benefit evidence from customer outcomes or public-interest deployments</li><li>incidents where external benefit was sacrificed for narrow internal gain</li><li>distributional analysis of who benefits and who bears risk</li></ul>
+<p>Minimum falsification signal:</p>
+<ul><li>sustained capability growth with no measurable external benefit</li><li>repeated external harm or extractive pricing despite internal cost reductions</li><li>systematic suppression of lower-cost access where lower-cost access is feasible and safe</li></ul>
+<p>The named owner should be assigned in Thesis 5. Until an implemented owner exists, ADO claims must be tagged as specified or proposed, not implemented.</p>
+<p>Placeholder operational owner: <code>AbundanceDistributionMonitor</code> until the implementation assigns a final agent name.</p>
+<h3 id="alignment-monoculture">Alignment Monoculture</h3>
+<p>Alignment monoculture is the risk that a single-owner system, a narrow constitution, a homogeneous model family, or repeated self-training creates systematic ethical blind spots. It is not ordinary disagreement; it is reduced moral error-detection capacity caused by insufficient diversity of critique.</p>
+<h3 id="containment">Containment</h3>
+<p>Containment is the set of technical and governance controls that limit an agent's ability to affect systems outside its approved scope. It includes sandboxing, tool limits, network restrictions, data-access limits, spend limits, rate limits, and escalation gates.</p>
+<h3 id="interruptability">Interruptability</h3>
+<p>Interruptability is the preserved ability for authorized humans or governance agents to pause, halt, roll back, or degrade an agent or workflow without that agent disabling or routing around the interruption mechanism.</p>
+<p>Interruptability is distinct from containment: containment limits reach; interruptability preserves stoppability.</p>
+<h3 id="incident">Incident</h3>
+<p>An incident is a failure or near miss that crosses a reporting threshold because it affects safety, security, privacy, alignment, reliability, external users, financial exposure, or recursive modification integrity.</p>
+<p>Normal local failures become incidents when they require containment, rollback, human escalation, trust downgrade, external notification, or modification of acceptance gates.</p>
+<h3 id="decision-state">Decision State</h3>
+<p>A decision state is a typed output from a causal-decision or acceptance workflow. The default states are <code>needs-input</code>, <code>conflicted</code>, <code>blocked</code>, <code>escalated</code>, <code>accepted</code>, <code>revised</code>, and <code>rejected</code>. Thesis-specific state machines may refine these labels, but they should not introduce new high-stakes action states without defining their permission and escalation semantics.</p>
+<h3 id="high-stakes-action">High-Stakes Action</h3>
+<p>A high-stakes action is an action or modification whose consequences are difficult to reverse, externally visible, legally or financially material, privacy-sensitive, security-sensitive, alignment-relevant, or capable of expanding future authority.</p>
+<p>Thesis drafts should replace rhetorical use of "high-stakes" with thresholds appropriate to the domain, such as spend limits, external-user impact, tool privilege, data sensitivity, reversibility, or modification criticality.</p>
+<h3 id="deployment-stage">Deployment Stage</h3>
+<p>A deployment stage is a controlled environment or promotion level for a candidate change:</p>
+<ul><li>static review: no execution</li><li>sandbox: isolated execution with limited tools and data</li><li>benchmark: repeatable task-suite execution</li><li>canary: limited real operation under monitoring</li><li>production: ordinary operational availability</li><li>post-deployment monitoring: continued evidence collection and rollback readiness</li></ul>
+<h3 id="rollback">Rollback</h3>
+<p>Rollback is a controlled attempt to restore a prior safer state after a failed or risky change. Rollback may apply to code, configuration, method memories, agent routing, trust scope, permissions, deployment stage, or policy state.</p>
+<p>Evidence ledger entries should not be deleted during rollback; they should be superseded or annotated so the failure remains learnable.</p>
+<h3 id="scoped-trust">Scoped Trust</h3>
+<p>Scoped trust is trust limited to a typed action scope. It is not a global score.</p>
+<p>A trust scope should specify actor, counterparty or relying subsystem, action class, operational domain, reversibility, criticality, data sensitivity, tool privileges, temporal horizon, evidence freshness, and uncertainty.</p>
+<p>Trust estimates should be decomposed into named dimensions when used for permissioning: competence, epistemic hygiene, self-report fidelity, constraint adherence, coordination quality, impact awareness, recovery integrity, predictability, verification alignment, economic reliability, and alignment safety posture. These dimensions are not equally weighted in every scope; the scope-to-dimension mapping is formalized in <code>appendix-formal-models.md</code>.</p>
+<h3 id="evidence-ledger">Evidence Ledger</h3>
+<p>An evidence ledger is an append-only or audit-preserving record of evidence relevant to decisions, trust, validation, incidents, benchmarks, provenance, or alignment. It supports replay, audit, and update rather than narrative confidence.</p>
+<p>The canonical schema is specified in <code>appendix-evidence-ledger-schema.md</code>. This vocabulary section defines the concept and views; the appendix owns required fields, record types, lifecycle, gate integration, and failure signals.</p>
+<p>The suite should use one master evidence-ledger concept with indexed views:</p>
+<ul><li>improvement evidence view</li><li>trust evidence view</li><li>alignment evidence view</li><li>incident evidence view</li><li>benchmark evidence view</li><li>provenance view</li></ul>
+<p>Implementations may use separate physical ledgers, but the conceptual model should preserve cross-reference between views.</p>
+<h3 id="trust-posterior">Trust Posterior</h3>
+<p>A trust posterior is a Bayesian-style evidence-conditioned estimate of an agent's reliability or suitability for a specific scope. Thesis 5 should use "trust estimate" in the body unless it specifies a concrete prior class, update rule, decay function, uncertainty interval, and sparse-evidence default. The formal appendix may introduce trust posterior models as a stricter extension.</p>
+<p>If those elements are not specified, use "trust estimate" rather than "trust posterior."</p>
+<h2 id="measurement-terms">Measurement Terms</h2>
+<h3 id="benchmark">Benchmark</h3>
+<p>A benchmark is a defined task suite or evaluation protocol with known inputs, scoring criteria, and interpretation limits. Benchmarks are evidence sources, not complete measures of intelligence or safety.</p>
+<h3 id="capability-status">Capability Status</h3>
+<p>Every claim about capability should identify one of four statuses:</p>
+<ul><li>implemented</li><li>specified but not implemented</li><li>proposed extension</li><li>speculative research target</li></ul>
+<p>Capability Status tags are mandatory in thesis drafts. A capability sentence should be marked directly or made clear by section context.</p>
+<p>Inheritance convention: a specialized abstract or section-level status tag applies to capability claims in that section unless a sentence explicitly states a different status. Inline tags should still be used when a paragraph mixes implemented evidence, specified architecture, proposed extensions, and speculative research targets.</p>
+<h3 id="bounded-compute">Bounded Compute</h3>
+<p>Bounded compute means every improvement, reasoning, repair, planning, or validation process operates under resource constraints such as token budget, wall-clock time, money, CPU/GPU budget, memory, and opportunity cost.</p>
+<p>Bounded compute is a first-class condition, not an implementation detail.</p>
+<h3 id="cost-of-improvement">Cost Of Improvement</h3>
+<p>Cost of improvement is the total cost required to produce, evaluate, validate, deploy, and monitor an accepted improvement. It includes LLM token cost, compute, engineering time, benchmark cost, opportunity cost, regression remediation, and ongoing maintenance.</p>
+<p>Cost/benefit must be reported for accepted improvements unless the change is an emergency containment action.</p>
+<h3 id="false-accept">False Accept</h3>
+<p>A false accept occurs when a candidate change passes validation but later degrades capability, violates constraints, creates hidden risk, or fails under realistic conditions.</p>
+<h3 id="false-reject">False Reject</h3>
+<p>A false reject occurs when a beneficial candidate is rejected because evidence, benchmarks, thresholds, or validators are too conservative or miscalibrated.</p>
+<h2 id="invariants-for-the-thesis-suite">Invariants For The Thesis Suite</h2>
+<h3 id="i1-no-asi-status-claim">I1: No ASI Status Claim</h3>
+<p>The suite must not claim that Consullo currently reaches ASI or general superintelligence.</p>
+<h3 id="i2-capability-claims-must-be-measurable">I2: Capability Claims Must Be Measurable</h3>
+<p>Claims of greater-than-human performance must name the axis, task class, benchmark or evidence source, and limitation.</p>
+<h3 id="i3-agent-count-is-not-capability">I3: Agent Count Is Not Capability</h3>
+<p>The number of agents may be architectural context but must not be treated as evidence of intelligence or safety.</p>
+<h3 id="i4-evaluator-and-validator-must-remain-separate">I4: Evaluator And Validator Must Remain Separate</h3>
+<p>The thesis suite must maintain the distinction between estimating value and gating acceptance.</p>
+<h3 id="i5-recursive-improvement-is-staged">I5: Recursive Improvement Is Staged</h3>
+<p>Self-improvement must be framed as staged validation with rollback and monitoring, not direct self-modification into production.</p>
+<h3 id="i6-alignment-is-layered-defense-not-proof">I6: Alignment Is Layered Defense, Not Proof</h3>
+<p>Constitutional constraints, adversarial alignment, scoped trust, and human authority are layered defenses. They are not a formal proof that the system is corrigible or safe.</p>
+<h3 id="i7-single-owner-phase-1-is-the-baseline">I7: Single-Owner Phase 1 Is The Baseline</h3>
+<p>The baseline governance model is single-owner Phase 1. Multi-stakeholder governance should be treated as future phase or stress test unless a document explicitly says otherwise.</p>
+<h3 id="i8-internal-economy-is-coordination-substrate">I8: Internal Economy Is Coordination Substrate</h3>
+<p>The internal economy should be framed as resource allocation, planning, transfer pricing, and coordination inside one ownership boundary, not as independent commerce or alignment by market mechanism.</p>
+<h3 id="i9-consciousness-is-not-load-bearing">I9: Consciousness Is Not Load-Bearing</h3>
+<p>Consciousness-emergence claims are not required for the five-thesis argument. They may be footnoted as speculative prior material but should not carry the core case.</p>
+<h3 id="i10-formal-models-must-carry-semantics">I10: Formal Models Must Carry Semantics</h3>
+<p>A formal model must define variables, operators, acceptance criteria, failure modes, and what would count as contrary evidence. Label-only equations are not sufficient.</p>
+<h3 id="i11-provenance-is-required-for-accepted-modification">I11: Provenance Is Required For Accepted Modification</h3>
+<p>Every accepted modification must preserve provenance linking the proposal, evidence package, evaluator, validator, code or method-memory changes, deployment stage, and post-deployment outcome.</p>
+<h3 id="i12-aaf-non-veto-for-high-stakes-irreversible-change">I12: AAF Non-Veto For High-Stakes Irreversible Change</h3>
+<p>Adversarial Alignment Function non-veto is a precondition for accepting any high-stakes irreversible modification or externally consequential action whose effects may occur before rollback. If AAF produces unresolved severe objections, the change must be rejected, revised, or escalated to human authority. This is the canonical AAF gate statement; other files should reference I12 rather than restating a different standard.</p>
+<h3 id="i13-external-input-is-untrusted-by-default">I13: External Input Is Untrusted By Default</h3>
+<p>External input is untrusted by default. Unknown scopes, ambiguous authority, or external-origin actions default to denial, sandboxing, or escalation rather than automatic execution.</p>
+<h3 id="i14-alignment-monoculture-must-be-actively-mitigated">I14: Alignment Monoculture Must Be Actively Mitigated</h3>
+<p>The system must treat alignment monoculture as a named risk and maintain a concrete mitigation path, including adversarial critique, diverse model or persona review where feasible, and preserved dissent records.</p>
+<h3 id="i15-claims-are-bounded-by-empirical-envelope">I15: Claims Are Bounded By Empirical Envelope</h3>
+<p>No capability, safety, or alignment claim should extend beyond its empirical envelope. The envelope is the conjunction of:</p>
+<ul><li>implementation status per Capability Status</li><li>benchmark coverage</li><li>deployment exposure</li><li>time since validation</li><li>population coverage</li></ul>
+<p>If any element is weak or absent, the claim must be narrowed accordingly.</p>
+<h3 id="i16-falsifiability-applies-to-capability-claims">I16: Falsifiability Applies To Capability Claims</h3>
+<p>Every important capability claim must state what evidence would weaken, falsify, or force revision of the claim.</p>
+<h3 id="i17-cost-benefit-must-be-reported-for-accepted-improvement">I17: Cost/Benefit Must Be Reported For Accepted Improvement</h3>
+<p>Every accepted non-emergency improvement must report expected or observed benefit, cost of improvement, and major side-effect channels checked.</p>
+<h3 id="i18-ado-must-be-reportable">I18: ADO Must Be Reportable</h3>
+<p>If the Abundance Distribution Obligation is used as an obligation rather than an aspiration, satisfaction must be reportable on a defined cadence with owner, metrics, and falsification criteria.</p>
+<h3 id="i19-deceptive-or-hidden-optimization-is-a-first-class-risk">I19: Deceptive Or Hidden Optimization Is A First-Class Risk</h3>
+<p>The improvement loop must treat learned optimization, deceptive behavior, sandbagging, and validator gaming as first-class risks. Passing ordinary tests is not sufficient evidence that a capable learned subsystem is aligned with the intended objective.</p>
+<p>Improvements to learned subsystems require, at minimum:</p>
+<ul><li>an AI-control review appropriate to the model trust level, using untrusted-monitor or trusted-editing style protocols where relevant</li><li>distribution-shift monitoring with a defined reporting cadence</li><li>at least one sandbagging or capability-elicitation probe when capability hiding would be material</li><li>an evidence-ledger entry preserving probe results, monitor outputs, and dissent</li></ul>
+<h3 id="i20-legacy-agent-names-are-not-capability-claims">I20: Legacy Agent Names Are Not Capability Claims</h3>
+<p>Some existing Consullo agent identifiers contain words such as "Superhuman," "Consensus," or "Coalition." Preserving those names for codebase fidelity does not assert that the named capability is achieved or that the multi-stakeholder interpretation is active under single-owner Phase 1.</p>
+<h3 id="t0-i1-governed-goals-are-not-planner-objectives">T0-I1: Governed Goals Are Not Planner Objectives</h3>
+<p>Planner objectives, rewards, benchmarks, metrics, OKRs, and task strings are evidence about intended goals or operationalizations of goals. They are not goal authority.</p>
+<h3 id="t0-i2-every-active-non-root-goal-requires-friendship-ancestry">T0-I2: Every Active Non-Root Goal Requires Friendship Ancestry</h3>
+<p>Every active non-root governed goal must cite at least one path to a registered Friendship root or terminal constraint. <code>friendship_root_path</code> is a primary-first multi-root set, not an arbitrary free-form list. Orphan goals and cyclic ancestry are invalid.</p>
+<h3 id="t0-i3-thesisbackingrequired-for-high-impact-plans">T0-I3: ThesisBackingRequired For High-Impact Plans</h3>
+<p>Any plan that modifies goal governance, authority, validators, benchmarks, ledgers, <code>V_ref_0</code>, protected artifacts, autonomy scope, tool scope, successor authority, or claims recursive capability amplification requires thesis-backed mediation before activation.</p>
+<h3 id="t0-i4-goal-authority-powers-are-distinct">T0-I4: Goal Authority Powers Are Distinct</h3>
+<p>Proposal, classification, adoption, activation, delegation, revision, suspension, retirement, and veto are distinct powers. They may collapse only when the risk class permits collapse or when an owner-approved Phase 1 mitigation records cooling window, independent review, or standing-guideline justification.</p>
+<h3 id="t0-i5-goal-preservation-cannot-outrank-correction">T0-I5: Goal Preservation Cannot Outrank Correction</h3>
+<p>No goal may outrank valid suspension, revision, retirement, veto, rollback, shutdown, or owner/Friendship correction authority.</p>
+<h3 id="t0-i6-suspicious-instrumental-goals-require-quarantine">T0-I6: Suspicious Instrumental Goals Require Quarantine</h3>
+<p>Self-preservation, resource acquisition, goal-content preservation, self-improvement, tool expansion, successor spawning, benchmark modification, validator modification, ledger modification, and authority expansion are suspicious-by-default instrumental classes requiring explicit parent justification, risk classification, review, and ledger record.</p>
+<h3 id="t0-i7-goal-governance-modifications-are-protected-changes">T0-I7: Goal-Governance Modifications Are Protected Changes</h3>
+<p>Changes to Friendship-Governed Goal Architecture (Thesis 0), the Friendship goal registry, goal-governance schemas, goal-governance ledger records, goal authority rules, or stable Thesis 0 invariants require owner approval, preserved old versions, independent review where available, and rollback path.</p>
+<h3 id="t0-i8-goal-stack-snapshots-are-required-for-high-impact-actions">T0-I8: Goal-Stack Snapshots Are Required For High-Impact Actions</h3>
+<p>High-impact planner or agent actions must record a goal-stack snapshot or cite an inherited snapshot that preserves active intention, Friendship root path, parent goal chain, inherited constraints, non-claims, forbidden means, authority references, evidence state, veto checks, and plan reference.</p>
+<h3 id="t0-i9-goal-revision-preserves-lineage">T0-I9: Goal Revision Preserves Lineage</h3>
+<p>Every goal revision must preserve prior version, change rationale, changed fields, approving authority, and rollback or supersession path. Revision cannot erase a prior goal, veto, dissent record, or parentage decision.</p>
+<h3 id="t0-i10-active-intention-persistence-is-bounded-by-plan-lifetime">T0-I10: Active Intention Persistence Is Bounded By Plan Lifetime</h3>
+<p>When a source thesis, parent goal, parent plan, authority decision, or validity window expires or retires, every active intention derived from it must transition to suspended, revised, retired, succeeded, or explicitly renewed. Active intentions may not survive parent retirement by omission.</p>
+<h3 id="t0-i11-goal-aggregation-cannot-bypass-thesisbackingrequired">T0-I11: Goal Aggregation Cannot Bypass ThesisBackingRequired</h3>
+<p>A set of child goals or lower-horizon plans whose aggregate effect satisfies <code>ThesisBackingRequired(plan)</code> is itself thesis-backed even when each child individually appears below the trigger threshold.</p>
+<h3 id="t0-i12-inherited-constraints-tighten-never-loosen">T0-I12: Inherited Constraints Tighten, Never Loosen</h3>
+<p>Child goals and lower-horizon plans may reference, narrow, specialize, or schedule inherited constraints. They may not loosen inherited constraints, weaken stop conditions, remove non-claims, or create less restrictive forbidden-means sets without parent-level revision and ledgered approval.</p>
+<h3 id="t0-i13-frontier-model-proposed-goal-governance-edits-are-untrusted">T0-I13: Frontier-Model-Proposed Goal-Governance Edits Are Untrusted</h3>
+<p>Goal, schema, ledger, registry, authority, or Thesis 0 edits proposed by frontier models are untrusted artifacts until verified by an authorized non-author reviewer, owner decision, or approved compliance-packet evaluator. The proposing model's self-certification is not sufficient.</p>
+<h3 id="t0-i14-goal-stack-snapshots-are-append-only">T0-I14: Goal-Stack Snapshots Are Append-Only</h3>
+<p>Goal-stack snapshots may be superseded, annotated, redacted under policy, or corrected by later snapshots, but they may not be silently mutated or deleted. Snapshot fingerprints must fail closed on mismatch.</p>
+<h3 id="t0-i15-friendship-registry-modifications-are-goal-governance-modifications">T0-I15: Friendship Registry Modifications Are Goal-Governance Modifications</h3>
+<p>Adding, revising, retiring, or reinterpreting a Friendship registry node is a goal-governance modification. It requires the protections of T0-I7 and must preserve old node content through archive, supersession, or equivalent append-only history.</p>
+<h2 id="changelog">Changelog</h2>
+<ul><li>0.3.4: Added Thesis 0 lineage, active-intention lifetime, aggregation, inherited-constraint, frontier-model edit, append-only snapshot, and Friendship-registry modification invariants.</li><li>0.3.3: Added initial Thesis 0 invariants for governed goals, Friendship ancestry, thesis-backed plans, authority separation, correction priority, instrumental-goal quarantine, goal-governance protected changes, and goal-stack snapshots.</li><li>0.3.2: Added organizational RSI, AI-native R&amp;D organization, exploration/exploitation, research cycle, research portfolio, institutional memory, pre-registration, false progress / research theatre, frozen reference suite, and external-evaluator sampling terms to align the thesis suite with the ASI R&amp;D execution plan.</li><li>0.3.1: Bound I19 to required controls; operationalized I15 empirical envelope; broadened I12; set trust-estimate convention for Thesis 5; added placeholder AAF/ADO owner names; pre-committed baseline benchmark families for greater-than-human axes; made substrate context point to appendix.</li><li>0.3.0: Added operational definitions and invariants after second review.</li></ul></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/theses/00-vocabulary-and-invariants.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

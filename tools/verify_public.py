@@ -30,13 +30,21 @@ REQUIRED_FRONTMATTER = {
     "receipt",
     "non_claims",
 }
-ALLOWED_PAGE_STATUSES = {"specified", "proposed", "awaiting declassification"}
 ALLOWED_CAPABILITY_STATUSES = {
     "implemented",
     "specified but not implemented",
     "proposed extension",
     "speculative research target",
 }
+# New substantive pages use the canonical capability vocabulary. The two
+# exceptional values preserve honest private-content shells and the immutable,
+# content-addressed DDR-0005 constitutional edition respectively.
+ALLOWED_PAGE_STATUSES = ALLOWED_CAPABILITY_STATUSES | {
+    "awaiting declassification",
+    "specified",
+}
+MAX_PAGE_ESTIMATED_TOKENS = 32_000
+WITHHELD_ARTIFACT_BASENAMES = {"appendix-implementation-evidence-map.md"}
 ALLOWED_EVIDENCE_STRATA = {"none", "self-authored diagnostic", "witnessed", "independent"}
 ALLOWED_IMPLEMENTATION_STRATA = {
     "none",
@@ -254,6 +262,14 @@ def validate_llms_index() -> None:
         expected = (len((ROOT / source).read_text(encoding="utf-8")) + 3) // 4
         if estimate != expected:
             raise ValueError(f"llms.txt token estimate for {source} is {estimate}, expected {expected}")
+        if estimate > MAX_PAGE_ESTIMATED_TOKENS:
+            raise ValueError(
+                f"llms.txt token estimate for {source} exceeds the "
+                f"{MAX_PAGE_ESTIMATED_TOKENS:,}-token page budget"
+            )
+    budget_claim = f"No indexed page exceeds {MAX_PAGE_ESTIMATED_TOKENS:,} estimated tokens."
+    if budget_claim not in text:
+        raise ValueError("llms.txt omits the enforced per-page token-budget claim")
 
 
 def validate_document_logos() -> None:
@@ -333,6 +349,16 @@ def validate_public_boundary() -> None:
     for phrase in inflated_phrases:
         if phrase in combined:
             raise ValueError(f"unbounded assurance phrase found: {phrase}")
+
+
+def validate_withheld_artifacts_absent() -> None:
+    present = sorted(
+        path.relative_to(ROOT)
+        for path in ROOT.rglob("*")
+        if path.is_file() and path.name in WITHHELD_ARTIFACT_BASENAMES
+    )
+    if present:
+        raise ValueError(f"withheld publication artifacts are present: {present}")
 
 
 def validate_logos() -> None:
@@ -475,6 +501,7 @@ def main() -> int:
     validate_document_index()
     validate_llms_index()
     validate_public_boundary()
+    validate_withheld_artifacts_absent()
     validate_logos()
     validate_document_logos()
     validate_css_contrast()

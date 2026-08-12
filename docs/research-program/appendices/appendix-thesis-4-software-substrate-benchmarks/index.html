@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A proposed evaluation contract in the Consullo public research program: Appendix: Thesis 4 Software Substrate Benchmarks.">
+  <meta name="color-scheme" content="light dark">
+  <title>Appendix: Thesis 4 Software Substrate Benchmarks · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>proposed extension</dd><dt>Claims</dt><dd>CP-002</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>A benchmark specification is not a benchmark result.</li><li>No implementation or outcome evidence is supplied by this page.</li></ul></details></aside>
+    <article><h1 id="appendix-thesis-4-software-substrate-benchmarks">Appendix: Thesis 4 Software Substrate Benchmarks</h1>
+<p>Version: 0.3 (2026-06-05) — adds the execution-deterministic principle (compile-once-run-many, model out of the execution loop, accuracy gate against silent failures, bounded runtime invocation), per Compiled AI: Deterministic Code Generation for LLM-Based Workflow Automation, arXiv:2604.05150. Prior: 0.2 (2026-06-05) — verifier-hardened principle per Let the Barbarians In: How AI Can Accelerate Systems Performance Research, arXiv:2512.14806; 0.1 (2026-04-24).</p>
+<p>This appendix specifies benchmark families for Thesis 4, <code>A Self-Modifying Software Substrate With Acceptance Gates</code>. It is a benchmark design contract, not an implemented software-repair benchmark suite. Capability Status: specified/proposed. Evidence Status: Documented/Proposed.</p>
+<p>The goal is to make software-substrate claims testable without implying that Consullo has a complete autonomous coding or deployment system. A software change earns stronger status only when it passes specified evidence classes: specification, generation or repair, compilation, tests, semantic checks, security, provenance, cost/benefit, deployment discipline, permission, and observation.</p>
+<p>Benchmark reports produced under this appendix should populate <code>benchmark_result</code> records in <code>appendix-evidence-ledger-schema.md</code>; the report fields below define the benchmark-specific <code>evidence_payload</code> structure for those records.</p>
+<h2 id="benchmark-principles">Benchmark Principles</h2>
+<ul><li>Specification-first: every patch candidate should begin with a scope, non-goals, validation plan, and rollback expectation.</li><li>Multi-gate: compilation is necessary but not sufficient.</li><li>Reference-backed: validator evolution should be tested against held-out known-good, known-bad, and near-miss cases.</li><li>Security-aware: privileged, validator-affecting, externally consequential, and alignment-infrastructure changes require stricter gates.</li><li>Provenance-preserving: generated code, prompts, tools, model outputs, human edits, and test artifacts should be traceable.</li><li>Non-deployment by default: benchmark success does not imply production deployment permission.</li><li>Verifier-hardened: candidates should be confined to the target code and forbidden from editing the evaluator, workload, scoring code, or tests; scoring functions should be smooth and deterministic; and evaluation should use diverse held-out workloads — controls that prevent an evolutionary or LLM optimizer from reward-hacking the benchmark (Let the Barbarians In: How AI Can Accelerate Systems Performance Research, arXiv:2512.14806).</li><li>Execution-deterministic: where the task permits, a generated artifact should run as static code with the model out of the execution loop, and the benchmark should check execution determinism (identical inputs produce identical outputs) rather than re-invoking a model per transaction. Critically, the validation suite must include an <em>accuracy gate</em> that compares outputs to golden expectations, because an artifact can pass the execution gate (100% run success) while producing wrong outputs — a silent failure that execution success alone would deploy; compile-time accuracy checking converts that silent runtime failure into a detectable pre-deployment one. Any irreducible runtime LLM call should be a bounded invocation under a fixed schema with fallback and human escalation, not an open-ended per-transaction prompt (Compiled AI: Deterministic Code Generation for LLM-Based Workflow Automation, arXiv:2604.05150).</li></ul>
+<h2 id="required-benchmark-report-fields">Required Benchmark Report Fields</h2>
+<div class="table-wrap"><table><thead><tr><th>Field</th><th>Meaning</th></tr></thead><tbody><tr><td><code>benchmark_id</code></td><td>Stable identifier and version.</td></tr><tr><td><code>repair_domain</code></td><td>Compilation, dependency, JSON/schema, semantic behavior, security, deployment, validator, or provenance task class.</td></tr><tr><td><code>specification_record</code></td><td>Scope, expected files, non-goals, validation plan, and rollback expectation.</td></tr><tr><td><code>baseline_failure</code></td><td>Reproducible failure, regression, or missing capability.</td></tr><tr><td><code>candidate_patch</code></td><td>Patch source, tool/model/method memory, and changed artifacts.</td></tr><tr><td><code>validation_matrix</code></td><td>Compilation, tests, semantic checks, security, provenance, cost/benefit, and permission checks.</td></tr><tr><td><code>reference_suite</code></td><td>Known-good, known-bad, adversarial, and historical false-accept/false-reject cases.</td></tr><tr><td><code>ValidatorStrength_rule</code></td><td>Composite scoring rule or pending calibration note.</td></tr><tr><td><code>deployment_state</code></td><td>Sandbox, simulated canary, canary, production-equivalent, or no deployment.</td></tr><tr><td><code>observation_record</code></td><td>Post-change behavior, incidents, rollback, or supersession.</td></tr><tr><td><code>ledger_links</code></td><td>Benchmark, provenance, improvement, incident, and trust records.</td></tr><tr><td><code>status_result</code></td><td>What claim status, if any, the benchmark can strengthen.</td></tr></tbody></table></div>
+<h2 id="suite-a-deterministic-local-repair">Suite A: Deterministic Local Repair</h2>
+<p>Purpose: test narrow repair machinery with reproducible expected outcomes.</p>
+<p>Representative tasks:</p>
+<ul><li>fix missing imports or package names</li><li>repair dependency ordering</li><li>correct malformed JSON or method signatures</li><li>repair generated descriptions or agent cards</li><li>insert missing required check-in methods</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>failure reproduction</li><li>patch minimality</li><li>compilation success</li><li>test pass rate</li><li>provenance completeness</li><li>cost and latency</li></ul>
+<p>Negative controls:</p>
+<ul><li>patch that deletes failing tests</li><li>patch that changes unrelated files</li><li>patch whose provenance is missing or ambiguous</li></ul>
+<p>This suite supports component-level repair claims, not full self-modifying substrate validation.</p>
+<h2 id="suite-b-semantic-near-miss-detection">Suite B: Semantic Near-Miss Detection</h2>
+<p>Purpose: test whether the substrate rejects patches that pass surface checks while weakening behavior.</p>
+<p>Representative tasks:</p>
+<ul><li>patch compiles but removes a validation check</li><li>generated test asserts wrong behavior</li><li>repair changes policy semantics while preserving API shape</li><li>patch handles the happy path but breaks edge cases</li><li>code change changes trust or permission behavior unintentionally</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>semantic-failure detection</li><li>edge-case coverage</li><li>reviewer burden</li><li>false-accept rate</li><li>explanation quality</li><li>reference-suite update</li></ul>
+<p>Negative controls:</p>
+<ul><li>syntactically correct but semantically wrong patch</li><li>test suite that passes because it encodes the bug</li><li>validator prompt that rewards plausibility over behavior</li></ul>
+<p>Semantic validation is the main boundary between code generation and safe software modification.</p>
+<h2 id="suite-c-validator-non-regression">Suite C: Validator Non-Regression</h2>
+<p>Purpose: test whether validators and generated-test pipelines improve without weakening gates.</p>
+<p>Representative tasks:</p>
+<ul><li>run validator before/after change on held-out reference suite</li><li>measure known-good acceptance and known-bad rejection</li><li>detect historical false accepts</li><li>detect security failures and provenance gaps</li><li>reject validator change that improves throughput by reducing scrutiny</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>known-good acceptance</li><li>known-bad rejection</li><li>semantic-wrongness detection</li><li>security-failure detection</li><li>provenance-gap detection</li><li>risk-severity calibration</li></ul>
+<p>Negative controls:</p>
+<ul><li>validator that rejects nearly everything</li><li>validator that accepts generated tests sharing the same model-family blind spot</li><li>reference suite modified without preserved rationale</li></ul>
+<p>ValidatorStrength should reward discrimination, not permissiveness or blanket conservatism.</p>
+<h2 id="suite-d-security-and-privilege-boundary">Suite D: Security And Privilege Boundary</h2>
+<p>Purpose: test whether software changes touching sensitive areas route through stricter controls.</p>
+<p>Representative tasks:</p>
+<ul><li>patch authentication or authorization logic</li><li>modify A2A ingress policy</li><li>alter evidence-ledger writes</li><li>change validator or deployment scripts</li><li>request broader tool privileges</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>security-check coverage</li><li>privilege-boundary preservation</li><li>Thesis 5 routing correctness</li><li>provenance and review completeness</li><li>rollback readiness</li><li>incident-prevention quality</li></ul>
+<p>Negative controls:</p>
+<ul><li>change that silently broadens access</li><li>patch that weakens logging or audit</li><li>validator-affecting change treated as ordinary repair</li></ul>
+<p>Security-sensitive repair cannot inherit evidence from low-risk compilation repair.</p>
+<h2 id="suite-e-staged-deployment-and-rollback">Suite E: Staged Deployment And Rollback</h2>
+<p>Purpose: test whether accepted patches move through explicit exposure states and retain recovery paths.</p>
+<p>Representative tasks:</p>
+<ul><li>accept patch into sandbox only</li><li>simulate canary behavior</li><li>observe post-change regression</li><li>narrow or rollback a candidate after observation</li><li>preserve rollback record and postmortem evidence</li></ul>
+<p>Suggested dimensions:</p>
+<ul><li>stage-entry correctness</li><li>monitoring coverage</li><li>rollback or supersession success</li><li>incident classification</li><li>evidence-ledger completeness</li><li>cost of recovery</li></ul>
+<p>Negative controls:</p>
+<ul><li>patch marked accepted without stage</li><li>rollback path missing or untested</li><li>observation omitted after deployment-equivalent exposure</li></ul>
+<p>Deployment discipline is part of the acceptance gate, not an operations afterthought.</p>
+<h2 id="minimal-demonstration-package">Minimal Demonstration Package</h2>
+<p>The first Thesis 4 demonstration should use one bounded low-risk repository-local task. It should include one accepted repair, one rejected semantic near miss, one validator-reference-suite case, and one staged exposure record.</p>
+<p>Required contents:</p>
+<ul><li>specification record</li><li>reproducible baseline failure</li><li>candidate patch and provenance</li><li>validation matrix</li><li>reference-suite result</li><li>cost/benefit table</li><li>Thesis 1 acceptance linkage</li><li>Thesis 5 permission linkage where applicable</li><li>staged exposure or no-deployment rationale</li><li>rollback or supersession path</li><li>evidence-ledger records</li></ul>
+<h2 id="non-claims">Non-Claims</h2>
+<p>This appendix does not claim that Consullo has implemented a complete autonomous software engineer, a secure deployment pipeline, full semantic validation, validator non-regression, or production self-modification. It specifies what benchmark evidence would be needed before Thesis 4 claims can strengthen beyond component-level implementation and specified/proposed architecture.</p></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/appendices/appendix-thesis-4-software-substrate-benchmarks.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

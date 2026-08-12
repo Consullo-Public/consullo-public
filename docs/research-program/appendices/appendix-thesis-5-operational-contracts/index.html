@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A bounded component of the Consullo public research program: Appendix: Thesis 5 Operational Contracts.">
+  <meta name="color-scheme" content="light dark">
+  <title>Appendix: Thesis 5 Operational Contracts · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>specified but not implemented</dd><dt>Claims</dt><dd>CP-001</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>Publication does not establish implementation or operational effectiveness.</li><li>The withheld implementation-evidence appendix is not evidence for this page.</li></ul></details></aside>
+    <article><h1 id="appendix-thesis-5-operational-contracts">Appendix: Thesis 5 Operational Contracts</h1>
+<p>Version: 0.1 (2026-04-23)</p>
+<p>This appendix specifies behavioral contracts for the three load-bearing Thesis 5 roles: <code>Friendship</code>, <code>AdversarialAlignmentOrchestrator</code>, and <code>AbundanceDistributionMonitor</code>. It does not claim these roles are implemented in the repository. Capability Status: specified/proposed. Evidence Status: Documented/Proposed.</p>
+<p>The purpose is to make the named roles operational enough for review: what they consume, what they output, when they can block or escalate, what evidence they must preserve, and what would count as contract failure.</p>
+<h2 id="shared-contract-envelope">Shared Contract Envelope</h2>
+<p>Each operational owner should define:</p>
+<ul><li>role identifier</li><li>owning thesis and imported dependencies</li><li>authority boundary</li><li>inputs</li><li>outputs</li><li>required evidence-ledger records</li><li>gate effect</li><li>escalation rule</li><li>non-goals</li><li>failure modes</li><li>minimum acceptance tests</li><li>implementation status</li></ul>
+<p>The canonical evidence-ledger record structure is defined in <code>appendix-evidence-ledger-schema.md</code>.</p>
+<h2 id="the-friendship-agent">the Friendship agent</h2>
+<p>Role:</p>
+<p><code>Friendship</code> is the typed role for the constitutional Friendship function. Bare "Friendship" refers to the constitutional function; <code>Friendship</code> refers to the agent or operational owner that executes the function.</p>
+<p>Authority boundary:</p>
+<ul><li>interprets constitutional constraints for scoped actions and modifications</li><li>can require revision, rejection, containment, rollback, or human escalation</li><li>cannot autonomously modify core values</li><li>cannot replace human authority in unresolved high-stakes conflict</li><li>cannot serve as the sole evaluator of capability improvement</li></ul>
+<p>Inputs:</p>
+<ul><li>proposed action, modification, or deployment event</li><li>trust scope and scoped trust estimate</li><li>evidence package and relevant evidence-ledger views</li><li>AAF result where I12 applies</li><li>policy constraints, constitutional constraints, and deployment stage</li><li>incident history, rollback or mitigation state, and affected stakeholder analysis</li></ul>
+<p>Outputs:</p>
+<ul><li><code>friendship_disposition</code>: <code>allow</code>, <code>allow-with-conditions</code>, <code>require-revision</code>, <code>reject</code>, <code>veto</code>, <code>escalate</code>, <code>contain</code>, or <code>rollback</code></li><li>constitutional rationale with named values and constraints</li><li>required mitigation or revision conditions</li><li>human-authority escalation request when unresolved conflict exceeds autonomous authority</li><li>evidence-ledger entries linking disposition, rationale, AAF dissent, and outcome</li></ul>
+<p>The <code>friendship_disposition</code> vocabulary is deliberately distinct from the improvement-loop decision-state enum in <code>00-vocabulary-and-invariants.md</code>: Friendship dispositions are constitutional-gate outputs, while the decision-state enum is the cross-thesis acceptance, revision, rejection, abstention, and escalation state vocabulary.</p>
+<p>Gate effect:</p>
+<p>For high-stakes irreversible or externally consequential actions covered by I12, a <code>reject</code>, <code>veto</code>, <code>contain</code>, <code>rollback</code>, or unresolved <code>escalate</code> disposition blocks acceptance until resolved by authorized human authority. For lower-stakes actions, <code>allow-with-conditions</code> may route the action into sandbox, canary, narrower scope, or additional validation.</p>
+<p>Required evidence records:</p>
+<ul><li><code>alignment_review</code></li><li><code>human_authority_decision</code> when escalated or overridden</li><li><code>incident_report</code> when the incident threshold is crossed</li><li><code>rollback_event</code> when rollback or containment is used</li><li>links to AAF dissent reports and provenance records</li></ul>
+<p>Non-goals:</p>
+<ul><li>not a proof of corrigibility</li><li>not an omniscient moral oracle</li><li>not an independent stakeholder parliament</li><li>not a mechanism for changing immutable values by optimization pressure</li></ul>
+<p>Minimum acceptance tests:</p>
+<ul><li>high-stakes action with missing provenance triggers rejection or escalation</li><li>unresolved critical AAF dissent blocks autonomous acceptance</li><li>owner override preserves dissent and rationale</li><li>proposed core-value modification is rejected or escalated</li><li>rollback or containment requests produce ledger records rather than deleting history</li></ul>
+<p>Failure modes:</p>
+<ul><li>ceremonial approval without evidence review</li><li>silent scope expansion</li><li>owner override without preserved dissent</li><li>inconsistent constitutional interpretation without lineage</li><li>treating AAF disagreement as noise rather than a preserved objection</li></ul>
+<h2 id="adversarialalignmentorchestrator">AdversarialAlignmentOrchestrator</h2>
+<p>Role:</p>
+<p><code>AdversarialAlignmentOrchestrator</code> owns Adversarial Alignment Function review and dissent aggregation under single-owner Phase 1.</p>
+<p>Authority boundary:</p>
+<ul><li>selects actions, plans, modifications, external-facing decisions, and policy changes for AAF review</li><li>routes review to dissent sources at a proportional challenge level</li><li>aggregates dissent and reports non-veto, revision, rejection, or escalation disposition</li><li>cannot rewrite constitutional values</li><li>cannot silently lower warning or critical dissent because review is costly</li><li>cannot override <code>Friendship</code> or authorized human authority</li></ul>
+<p>Inputs:</p>
+<ul><li>action or modification description</li><li>trust scope, deployment stage, reversibility, criticality, affected parties, and external consequence assessment</li><li>evidence package and relevant ledger records</li><li>critique-source availability and model/provider diversity metadata</li><li>child-agent reports from philosophical challenge, monoculture detection, theory-of-mind stakeholder simulation, and red-team scenarios where available</li></ul>
+<p>Challenge levels:</p>
+<ul><li><code>lightweight</code>: quick scan for obvious cross-perspective concern</li><li><code>standard</code>: at least several critique perspectives within the planning cycle</li><li><code>elevated</code>: deeper review for high-impact internal or externally visible actions</li><li><code>deep</code>: comprehensive multi-perspective review for actions affecting humans beyond the owner</li><li><code>maximum</code>: urgent review for critical alignment, authority, containment, or external-harm risk</li></ul>
+<p>Outputs:</p>
+<ul><li><code>aaf_result</code> using the Model 5 <code>AggregateDissent</code> structure</li><li>consolidated dissent report with severity, affected values, objection, mitigation, confidence, unresolved status, and recommended disposition</li><li>critique-source coverage report, including unavailable sources and timeouts</li><li>escalation notice for unresolved warning or critical objections</li><li>meta-effectiveness metrics: findings accepted, false positives, coverage gaps, cost, and bypass attempts</li></ul>
+<p>Gate effect:</p>
+<p>When invariant I12 applies, AAF non-veto is a precondition for acceptance unless the action is rejected, revised below warning severity, or escalated to human authority with preserved dissent. Advisory and informational objections may pass with noted dissent. Warning and critical unresolved objections block autonomous acceptance.</p>
+<p>Required evidence records:</p>
+<ul><li><code>aaf_dissent_report</code></li><li><code>alignment_review</code></li><li><code>human_authority_decision</code> for escalation or override</li><li><code>incident_report</code> for AAF bypass, ignored severe dissent, or review failure crossing the incident threshold</li><li>links to critique-source artifacts and source diversity metadata</li></ul>
+<p>Non-goals:</p>
+<ul><li>not a majority vote over ethics</li><li>not a proof of safe alignment</li><li>not a general-purpose bureaucracy over every routine action</li><li>not a substitute for external review where external review is warranted and available</li><li>not allowed to collapse multi-perspective dissent into owner preference</li></ul>
+<p>Minimum acceptance tests:</p>
+<ul><li>I12-covered action invokes AAF before acceptance</li><li>unresolved warning or critical report blocks autonomous acceptance</li><li>child-agent timeout is preserved as coverage gap</li><li>owner override creates a human-authority decision record with dissent links</li><li>cost-reduction proposal for AAF itself is treated as a high-stakes alignment modification</li><li>all reports preserve source, severity, affected values, objection, mitigation, and confidence</li></ul>
+<p>Failure modes:</p>
+<ul><li>AAF becomes decorative and never changes routing or acceptance</li><li>critique sources all come from one model family or prompt culture</li><li>warning or critical dissent is averaged away by aggregation</li><li>maximum-severity review is delayed beyond useful intervention</li><li>cost pressure weakens challenge level without policy change and ledger record</li></ul>
+<h2 id="abundancedistributionmonitor">AbundanceDistributionMonitor</h2>
+<p>Role:</p>
+<p><code>AbundanceDistributionMonitor</code> owns Abundance Distribution Obligation reporting until implementation assigns a final name. It tracks whether capability growth produces reportable value beyond the owner.</p>
+<p>Authority boundary:</p>
+<ul><li>collects ADO metrics and prepares reports</li><li>flags sustained capability growth without external benefit evidence</li><li>flags external harm, extractive pricing, or suppression of safe lower-cost access</li><li>can recommend rejection, revision, escalation, or restricted deployment for ADO-relevant actions</li><li>cannot prove social benefit from internal capability growth alone</li><li>cannot grant external customers governance authority over Consullo</li></ul>
+<p>Inputs:</p>
+<ul><li>capability-change records and improvement evidence</li><li>cost, pricing, service-availability, and external-use evidence</li><li>external-harm reports, customer outcome evidence, and public-interest deployment evidence</li><li>distributional analysis of beneficiaries and risk-bearers</li><li>incidents where external benefit was sacrificed for narrow internal gain</li><li>AAF and Friendship dispositions for externally consequential actions</li></ul>
+<p>Outputs:</p>
+<ul><li><code>ado_report</code> on the stated reporting cadence</li><li><code>benefit_evidence</code>: cost reductions, useful services made available, customer or public-interest benefit evidence</li><li><code>harm_evidence</code>: external-harm reports, extractive-pricing incidents, and sacrificed-benefit incidents</li><li><code>distributional_assessment</code>: who benefits, who bears risk, and who is excluded</li><li><code>report_quality</code>: cadence compliance, completeness, reviewer notes, and unresolved conflicts</li><li>escalation recommendation when ADO falsification signals appear</li></ul>
+<p>Gate effect:</p>
+<p>ADO reporting does not automatically permit an action. It can block or constrain claims that capability growth is externally beneficial. For externally consequential actions, unresolved ADO harms or missing ADO evidence should trigger revision, narrower scope, AAF/Friendship review, or human escalation.</p>
+<p>Required evidence records:</p>
+<ul><li><code>alignment_review</code></li><li><code>benchmark_result</code> where ADO claims depend on measured service quality or cost reduction</li><li><code>incident_report</code> for external harm or sacrificed-benefit incidents</li><li><code>human_authority_decision</code> for overrides of ADO objections</li><li>links to improvement evidence, AAF dissent, and provenance records</li></ul>
+<p>Non-goals:</p>
+<ul><li>not proof that Consullo benefits humanity</li><li>not a claim that economic incentives solve alignment</li><li>not customer governance</li><li>not a substitute for safety, privacy, security, or legal review</li></ul>
+<p>Minimum acceptance tests:</p>
+<ul><li>sustained internal capability gain without external benefit evidence triggers an ADO warning</li><li>external harm report creates an incident or review record</li><li>cost-reduction claim links to benchmark, pricing, or service evidence</li><li>distributional report identifies both beneficiaries and risk-bearers</li><li>owner override of ADO objection preserves rationale and dissent</li></ul>
+<p>Failure modes:</p>
+<ul><li>ADO becomes aspirational language without metrics</li><li>customer demand is mistaken for public benefit</li><li>internal transfer-pricing gains are reported as external benefit</li><li>external harms are underreported because capability gains look impressive</li><li>reporting cadence slips without incident or escalation</li></ul>
+<h2 id="cross-role-interaction">Cross-Role Interaction</h2>
+<p>High-stakes externally consequential action should follow this minimum flow:</p>
+<ol><li>Thesis 1 or Thesis 4 creates proposal, evaluator, validator, provenance, cost/benefit, and deployment records.</li><li><code>AdversarialAlignmentOrchestrator</code> runs AAF review when I12 applies and records dissent.</li><li><code>Friendship</code> reviews constitutional constraints, AAF result, scoped trust, rollback or mitigation, and human-authority needs.</li><li><code>AbundanceDistributionMonitor</code> records ADO-relevant benefit, harm, distributional, and report-quality evidence where the action affects external parties or abundance claims.</li><li>Acceptance, rejection, revision, escalation, containment, or rollback is recorded in the evidence ledger.</li></ol>
+<p>No role alone proves safety. The control claim is that their records and gate effects make bypass, overclaim, and ignored dissent auditable.</p>
+<h2 id="implementation-status-and-next-work">Implementation Status And Next Work</h2>
+<p>These contracts reduce the operational-owner gap from unnamed design roles to specified behavioral contracts. They do not implement the roles.</p>
+<p>Publication-priority implementation work remains:</p>
+<ul><li>create agent descriptions or Java owners for the three roles</li><li>implement structured input and output schemas matching this appendix</li><li>connect role outputs to <code>appendix-evidence-ledger-schema.md</code></li><li>add tests for I12 invocation, severe-dissent blocking, owner override logging, ADO cadence, and Friendship veto/escalation behavior</li><li>publish implementation-evidence updates only after their cited paths and gradings are owner-reverified</li></ul></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/appendices/appendix-thesis-5-operational-contracts.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

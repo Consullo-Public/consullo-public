@@ -1,7 +1,7 @@
 ---
 title: Evidence and claim status
 summary: The root ledger for every substantive public claim.
-status: specified
+status: specified but not implemented
 provenance: repository-authored
 claim_ids: [CP-001, CP-002, CP-003]
 last_reviewed: 2026-08-12

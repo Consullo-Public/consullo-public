@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A bounded component of the Consullo public research program: Cross-Thesis Dependency Map.">
+  <meta name="color-scheme" content="light dark">
+  <title>Cross-Thesis Dependency Map · Consullo</title>
+  <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+  <link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="../../../assets/logo-dark.png">
+        <img src="../../../assets/logo-light.png" alt="Consullo cornucopia mark" width="74" height="70">
+      </picture>
+      <a class="wordmark" href="../../../">
+        <strong>Consullo</strong>
+        <span>Public research record</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Primary"><ul><li><a href="../../../start-here/">Start here</a></li><li><a href="../../../overview/">Document index</a></li><li><a href="../../../architecture/">Architecture</a></li><li><a href="../../five-theses/">Research program</a></li><li><a href="../../../governance/">Governance</a></li><li><a href="../../../status/">Evidence and status</a></li><li><a href="../../../engineering/atomic-decomposition/">Engineering</a></li><li><a href="../../../history/from-cyc-to-consullo/">History</a></li><li><a href="../../../governance/corrections/">Disclosures and corrections</a></li></ul></nav>
+  </header>
+  <main id="main-content">
+    <aside class="claim-banner" aria-label="Claim and provenance status"><dl><dt>Status</dt><dd>specified but not implemented</dd><dt>Claims</dt><dd>CP-001</dd><dt>Evidence</dt><dd>none</dd><dt>Provenance</dt><dd>derived from the owner-approved private Consullo design corpus; no artifact-specific public receipt has been issued</dd><dt>Receipt</dt><dd>none</dd><dt>Last reviewed</dt><dd>2026-08-12</dd></dl><details><summary>Explicit non-claims</summary><ul><li>Publication does not establish implementation or operational effectiveness.</li><li>The withheld implementation-evidence appendix is not evidence for this page.</li></ul></details></aside>
+    <article><h1 id="cross-thesis-dependency-map">Cross-Thesis Dependency Map</h1>
+<p>Version: 0.3.1</p>
+<p>This file defines the import/export contract among the five Consullo Seed AI theses. It exists to prevent the suite from becoming a set of overlapping agent rosters.</p>
+<h2 id="dependency-principle">Dependency Principle</h2>
+<p>Each thesis has one primary conceptual responsibility. Agents may appear in multiple discussions, but every agent or function should have one primary home. Cross-thesis use should be described as an import rather than duplicate ownership.</p>
+<p>Imports are marked as:</p>
+<ul><li>definitional: terminology, interface, or conceptual context only</li><li>load-bearing: required for the thesis argument or runtime architecture</li></ul>
+<h2 id="capability-flow">Capability Flow</h2>
+<pre><code class="language-text">Thesis 2: Cognitive Substrate -----------------------&gt; Thesis 1: Validated Improvement Loop
+              \                                       ^
+               \                                      |
+                v                                     |
+Thesis 4: Self-Modifying Software Substrate ----------+
+                ^                                     |
+               /                                      |
+Thesis 3: Causal-Decision Foundations ----------------+</code></pre>
+<p>Capability flow shows how capabilities feed the improvement loop. Thesis 2 and Thesis 3 both feed Thesis 1 directly and also inform Thesis 4. It does not show permissioning.</p>
+<p>This diagram shows capability flow only, not all definitional imports. For example, Thesis 4 imports Thesis 1's acceptance vocabulary, but that back-import is definitional rather than a capability-flow dependency.</p>
+<h2 id="constraint-wrapper">Constraint Wrapper</h2>
+<pre><code class="language-text">+-----------------------------------------------------------------------+
+| Thesis 5: Alignment Invariants And Scoped Trust                       |
+|                                                                       |
+|  constrains Thesis 1, Thesis 2, Thesis 3, Thesis 4, substrate context |
+|  via AAF gate, scoped permission, trust estimates, human authority     |
++-----------------------------------------------------------------------+</code></pre>
+<p>Thesis 5 is not downstream output of the improvement loop. It is a constraint layer over all theses and all substrate context.</p>
+<h2 id="organizational-operating-layer">Organizational Operating Layer</h2>
+<p><code>appendix-organizational-recursive-self-improvement.md</code> defines a cross-thesis operating layer, not a sixth thesis. It interprets the five theses as an AI-native R&amp;D organization whose work product is validated improvement of research, engineering, evaluation, memory, and governance processes.</p>
+<div class="table-wrap"><table><thead><tr><th>Organizational function</th><th>Primary thesis imports</th><th>Evidence boundary</th></tr></thead><tbody><tr><td>Agenda and portfolio formation</td><td>Thesis 1 improvement targets; Thesis 3 portfolio reasoning; Thesis 5 permission boundaries</td><td>Specified/proposed until <code>research_agenda</code> and <code>portfolio_decision</code> ledger records exist.</td></tr><tr><td>Hypothesis and candidate generation</td><td>Thesis 2 cognitive search, brainstorming, negative-space mapping; Thesis 1 proposal semantics</td><td>Candidate generation only; accepted improvement requires downstream gates.</td></tr><tr><td>Pre-registration and experiment design</td><td>Thesis 3 causal-decision discipline; Thesis 1 evidence packages</td><td>Capability claims require pre-registered success/failure criteria.</td></tr><tr><td>Implementation and validation</td><td>Thesis 4 software substrate; Thesis 1 acceptance semantics</td><td>Java repair is exploitation evidence, not full organizational RSI evidence.</td></tr><tr><td>Adversarial review and governance</td><td>Thesis 5 AAF, scoped trust, owner authority; Thesis 1 acceptance gates</td><td>High-stakes or externally consequential actions route through I12.</td></tr><tr><td>Institutional memory and post-cycle learning</td><td>Thesis 1 method-memory update; Thesis 2 memory and anti-library functions</td><td>Organizational learning requires later measured reuse or transfer.</td></tr></tbody></table></div>
+<p>The live execution controls for this layer are specified in the internal execution plan. That document is operational, not part of the publication thesis claim.</p>
+<h2 id="cycle-breaking-rule">Cycle-Breaking Rule</h2>
+<p>There is an unavoidable conceptual relationship between Thesis 1 and Thesis 2: cognitive agents help improve the system, and the improvement loop evaluates cognitive agents. This is not a circular proof if the import types are separated:</p>
+<ul><li>Thesis 1 imports Thesis 2 definitionally for cognitive interfaces and load-bearing for current cognitive capabilities used by proposer/evaluator agents.</li><li>Thesis 2 imports Thesis 1 definitionally for the improvement-evaluation vocabulary, but its core claim about cognitive substrate can be stated without assuming Thesis 1 succeeds.</li></ul>
+<p>No thesis may use its own future success as evidence for its current capability claim.</p>
+<h2 id="master-frame">Master Frame</h2>
+<p>The master frame exports:</p>
+<ul><li>definition of Consullo Seed AI</li><li>no-ASI-status-claim constraint</li><li>greater-than-human capability measurement schema</li><li>shared vocabulary and invariants</li><li>single-owner Phase 1 baseline</li><li>Adversarial Alignment Function</li><li>Abundance Distribution Obligation</li><li>alignment-monoculture mitigation requirement</li><li>evidence-ledger schema with indexed views, as specified in <code>appendix-evidence-ledger-schema.md</code></li><li>capability-status enum</li><li>legacy-agent-name rule</li><li>literature survey expectations</li></ul>
+<p>All theses import the master frame.</p>
+<h2 id="substrate-context">Substrate Context</h2>
+<p>Substrate context is not a sixth thesis, but it should be documented in <code>appendix-substrates.md</code>.</p>
+<p>Substrate context owns:</p>
+<ul><li><code>SpecializedLanguageModelEcosystemDirector</code></li><li>specialized LLM provider abstraction and routing</li><li>rapid knowledge access infrastructure</li><li>atomic prompt decomposition and compiled-code orchestration</li><li>internal economy and resource accounting</li><li><code>DigitalVirtualEconomyOrchestrator</code></li><li><code>BusinessFunctionOrchestrator</code></li><li><code>ServiceProvidingEntitiesOrchestrator</code></li><li>model routing, token-cost accounting, and provider selection</li></ul>
+<p>Thesis 5 may evaluate these systems for trust and alignment. It does not own them as alignment mechanisms.</p>
+<h2 id="thesis-1-validated-improvement-loop">Thesis 1: Validated Improvement Loop</h2>
+<p>Primary responsibility:</p>
+<p>Model recursive capability amplification as a staged, evidence-gated loop over agents, method memories, code, tests, workflows, policies, and agent populations.</p>
+<p>Exports:</p>
+<ul><li>improvement-cycle semantics</li><li>proposer/evaluator/validator distinction</li><li>acceptance-gate structure</li><li>evidence package requirements</li><li>method-memory update semantics</li><li>credit-assignment requirements</li><li>false-accept and false-reject treatment</li><li>benchmark and cost requirements for accepted improvements</li><li>mandatory Capability Status tagging for improvement claims</li><li>improvement evidence-ledger view</li></ul>
+<p>Imports:</p>
+<ul><li>from Thesis 2: cognitive interfaces and current cognitive capabilities used to generate, critique, and evaluate improvements</li><li>from Thesis 3: causal-decision objectives, intervention evaluation, uncertainty estimates, and Goodhart analysis</li><li>from Thesis 4: code generation, repair, testing, deployment, provenance, and software-modification mechanisms</li><li>from Thesis 5: alignment invariants, AAF non-veto requirements, permissioning, scoped trust, human authority, rollback, and containment</li><li>from substrate context: model routing, token-cost accounting, rapid knowledge access, and internal resource accounting</li></ul>
+<p>Primary agent/function home:</p>
+<ul><li><code>SelfImprovementOrchestrator</code></li><li><code>SeedAIManager</code></li><li><code>AgentImprovementGoalSetter</code></li><li><code>AgentCapabilityImprover</code></li><li><code>AgentComplianceValidator</code></li><li><code>RecursiveEnhancementTracker</code></li><li><code>MethodMemoryExtractor</code></li><li><code>MethodMemoryOrganizationOrchestrator</code></li><li><code>ConstructiveRuleChallenger</code></li><li><code>AutonomousTaskProposer</code></li><li><code>QualityCostBalancer</code></li><li><code>ExplorationPortfolioManager</code></li><li>DGM proposer/evaluator/validator/selection/archive roles</li></ul>
+<p>Not owned here:</p>
+<ul><li><code>AgentBuilder</code>, <code>AgentEditor</code>, and <code>WorkflowAutomationCompiler</code> are imported from Thesis 4.</li><li>Causal-model selection and robust intervention choice are imported from Thesis 3.</li><li>Alignment vetoes and trust gates are imported from Thesis 5.</li></ul>
+<h2 id="thesis-2-cognitive-substrate">Thesis 2: Cognitive Substrate</h2>
+<p>Primary responsibility:</p>
+<p>Model Consullo's modular cognitive substrate for capability amplification: memory, reasoning, perception, attention, metacognition, social cognition, creativity, executive control, knowledge access, and orchestration.</p>
+<p>Exports:</p>
+<ul><li>cognitive capability profiles</li><li>typed cognitive-agent interfaces</li><li>memory and knowledge access functions</li><li>attention and metacognitive control functions</li><li>social-modeling functions</li><li>cognitive composition and integration-cost model</li><li>capability-status-tagged cognitive claims</li></ul>
+<p>Imports:</p>
+<ul><li>from Thesis 1: improvement-evaluation vocabulary, benchmark results, and post-deployment learning evidence</li><li>from Thesis 3: causal-decision layer for intervention-quality decisions</li><li>from Thesis 4: software substrate for implementing cognitive agents</li><li>from Thesis 5: permissioning and alignment constraints</li><li>from substrate context: LLM ecosystem, rapid knowledge access, and atomic prompt decomposition</li></ul>
+<p>Primary agent/function home:</p>
+<ul><li><code>ExecutiveFunctionOrchestrator</code></li><li><code>GoalFormationArchitect</code></li><li><code>StrategyFormulationDesigner</code></li><li><code>SubgoalDecompositionPlanner</code></li><li><code>ResourceAllocationOptimizer</code></li><li><code>ProgressMonitoringAgent</code></li><li><code>TaskPerformanceExecutor</code></li><li><code>KnowledgeFunctionsOrchestrator</code></li><li><code>SemanticKnowledgeOrganizer</code></li><li><code>EmbeddingIndexer</code></li><li><code>MemoryFeedbackProcessor</code></li><li><code>MethodMemoryGenerator</code></li><li><code>MMCanonicalMethodRetriever</code></li><li><code>AbductiveExplanationGenerator</code></li><li><code>DeductiveReasoningProcessor</code></li><li><code>InductiveGeneralizationAnalyzer</code></li><li><code>AbstractionLevelProcessor</code></li><li><code>AnalogicalMappingProcessor</code></li><li><code>ConceptualBlendingCreator</code></li><li><code>UncertaintyAssessmentAnalyzer</code></li><li><code>ErrorDetectionProcessor</code></li><li><code>AttentionRegulationManager</code></li><li><code>CognitiveEffortAllocator</code></li><li><code>LearningStrategySelector</code></li><li><code>VisualPerceptionProcessor</code></li><li><code>AudioPerceptionProcessor</code></li><li><code>MultimodalFusionProcessor</code></li><li><code>FeatureExtractionAnalyzer</code></li><li><code>AnomalyDetectionSpecialist</code></li><li><code>SalienceDetectionProcessor</code></li><li><code>FocusShiftingCoordinator</code></li><li><code>SustainedMonitoringAgent</code></li><li><code>TemporalBindingCoordinator</code></li><li><code>CollectiveInsightSynthesizer</code></li><li><code>GlobalCoherenceIntegrator</code></li><li><code>ExhaustivePatternMatcher</code></li><li><code>DeepAnalogicalTraverser</code></li><li><code>CrossDomainSynthesizer</code></li><li><code>FailurePatternAnalyzer</code></li><li><code>TemporalPatternExtractor</code></li><li><code>ParallelReasoningCoordinator</code></li><li><code>InformationGainOptimizer</code></li><li><code>CognitiveDepthRegulator</code></li><li><code>IdeationProcessor</code></li><li><code>CreativeIdeaEvaluator</code></li><li><code>CuriosityDrivenExplorer</code></li><li><code>PlayfulExplorationAgent</code></li><li><code>ConceptualAssociationMapper</code></li><li><code>NegativeSpaceMapper</code></li><li><code>PatternPriorSynthesizer</code></li><li><code>FailureAntiLibraryManager</code></li><li><code>ClarificationSeeker</code></li><li><code>ParallelHypothesisManager</code></li><li><code>SustainedReasoningManager</code></li></ul>
+<p>Theory-of-mind agents primarily support the Adversarial Alignment Function and are owned by Thesis 5, while Thesis 2 may describe them as cognitive primitives:</p>
+<ul><li><code>BeliefModelingProcessor</code></li><li><code>IntentionRecognitionAnalyzer</code></li><li><code>PerspectiveTakingModeler</code></li></ul>
+<p>Not owned here:</p>
+<ul><li>Causal decision agents are owned by Thesis 3.</li><li>Code generation and repair agents are owned by Thesis 4.</li><li>Formal verification primitives are owned by Thesis 4.</li><li>Trust, alignment, and governance agents are owned by Thesis 5.</li><li>Consciousness claims are non-load-bearing and should not be central to this thesis.</li></ul>
+<h2 id="thesis-3-causal-decision-foundations">Thesis 3: Causal-Decision Foundations</h2>
+<p>Primary responsibility:</p>
+<p>Model causal prediction, counterfactual reasoning, causal influence diagrams, robust decision-making, experiment selection, strategic bias control, and model-misspecification handling.</p>
+<p>Exports:</p>
+<ul><li>robust intervention-selection semantics</li><li>causal-model validation criteria</li><li>uncertainty and ambiguity treatment for causal decisions</li><li>strategic bias control</li><li>Goodhart-risk analysis</li><li>experiment-selection logic</li><li>decision-quality benchmarks</li><li>abstention and escalation rules for ill-specified problems</li><li>capability-status-tagged decision claims</li></ul>
+<p>Imports:</p>
+<ul><li>from Thesis 1: evidence and outcome histories from improvement cycles</li><li>from Thesis 2: reasoning, memory, and hypothesis-generation capabilities</li><li>from Thesis 4: software tools and instrumentation for experiments and simulations</li><li>from Thesis 5: bounded utility, policy constraints, and alignment restrictions</li></ul>
+<p>Primary agent/function home:</p>
+<ul><li><code>CausalPredictionOrchestrator</code></li><li><code>CausalGraphBuilder</code></li><li><code>MechanismLibrarian</code></li><li><code>InterventionSimulator</code></li><li><code>StructuralEquationExecutor</code></li><li><code>CausalDiscoveryProcessor</code></li><li><code>CausalModelingAnalyzer</code></li><li><code>SelfPredictionModeler</code></li><li><code>PredictionCalibrator</code></li><li><code>SuperhumanExperienceMiner</code> (legacy name; not a capability claim)</li><li><code>CounterfactualReasoningEngine</code></li><li><code>CounterfactualExperienceGenerator</code></li><li><code>CounterfactualAnalyser</code></li><li><code>StrategicCounterfactualPackManager</code></li><li><code>LongHorizonChainPredictor</code></li><li><code>HybridInferenceCoordinator</code></li><li><code>MechanismValidator</code></li><li><code>CausalBoundaryEnforcer</code></li><li><code>ForwardCausalPredictor</code></li><li><code>PredictionAuditor</code></li><li><code>PredictionReliabilityScorer</code></li><li><code>OptimalInterventionPlanner</code></li><li><code>ComputationalDecisionMakingOrchestrator</code></li><li><code>StrategicBiasMitigationOrchestrator</code></li><li><code>FramingInvarianceTester</code></li><li><code>OptionSetCompletenessAuditor</code></li><li><code>StrongestCounterPositionGenerator</code></li><li><code>FalsificationEvidencePlanner</code></li><li><code>SystematicExperimentDesigner</code></li><li><code>MonteCarloScenarioSimulator</code></li><li><code>TemporalHorizonIntegrator</code></li></ul>
+<p>Note: <code>SuperhumanExperienceMiner</code> is a legacy codebase name. Its name is not a claim that superhuman capability is implemented.</p>
+<p>Not owned here:</p>
+<ul><li>General executive planning is discussed in Thesis 2 unless explicitly tied to causal-decision semantics.</li><li>Acceptance gates for modifications are owned by Thesis 1 and Thesis 5.</li></ul>
+<h2 id="thesis-4-self-modifying-software-substrate">Thesis 4: Self-Modifying Software Substrate</h2>
+<p>Primary responsibility:</p>
+<p>Model the executable substrate that lets Consullo generate, edit, repair, test, validate, document, and deploy agents and code.</p>
+<p>Exports:</p>
+<ul><li>agent/code generation mechanisms</li><li>automated repair pipeline</li><li>test and regression validation methods</li><li>semantic validation requirements</li><li>formal and statistical verification primitives</li><li>provenance requirements</li><li>LLM-Native Functional Java constraints</li><li>static-method, JSON-only, PDCA method contract</li><li>repair-pipeline self-improvement recurrence</li><li>capability-status-tagged software claims</li></ul>
+<p>Imports:</p>
+<ul><li>from Thesis 1: improvement-loop acceptance semantics and method-memory learning</li><li>from Thesis 2: cognitive agents used by code generation and repair</li><li>from Thesis 3: decision logic for repair strategy selection and experiment design</li><li>from Thesis 5: trust gates, safety boundaries, security constraints, and deployment permission</li><li>from substrate context: LLM routing, atomic prompt routing, and token-cost accounting</li></ul>
+<p>Primary agent/function home:</p>
+<ul><li><code>SoftwareDeveloper</code></li><li><code>SystemsArchitect</code></li><li><code>DatabaseAdministrator</code></li><li><code>CloudServicesProvider</code></li><li><code>CybersecuritySpecialist</code></li><li><code>AgentBuilder</code></li><li><code>AgentEditor</code></li><li><code>AgentDocumenter</code></li><li><code>CodeProvenanceTracker</code></li><li><code>WorkflowAutomationCompiler</code></li><li><code>FormalProofConstructor</code></li><li><code>ReasoningChainVerifier</code></li><li><code>ConsistencyValidator</code></li><li><code>FaultLocalizer</code></li><li><code>ExecutionTraceAnalyzer</code></li><li><code>StaticAnalysisIntegrator</code></li><li><code>HistoricalFixRetriever</code></li><li><code>RepairKnowledgeGraphManager</code></li><li><code>ContrastiveTestGenerator</code></li><li><code>PatchCandidateGenerator</code></li><li><code>PatchValidator</code></li><li><code>PatchRanker</code></li><li><code>MultiHunkRepairCoordinator</code></li><li><code>RuntimeErrorDiagnoser</code></li><li><code>SecurityVulnerabilityFixer</code></li><li><code>RepairPromptComposer</code></li><li><code>RegressionTestValidator</code></li><li><code>RepairMetricsCollector</code></li><li><code>SemanticPatchValidator</code></li><li>methodology metrics roles from the internal agent-programming methodology</li><li>atomic prompt and compiled-code orchestration roles from <code>atomic-prompts.md</code></li></ul>
+<p>Not owned here:</p>
+<ul><li>Whether a software change should be accepted into the system is ultimately governed by Thesis 1 and Thesis 5.</li><li>Causal choice of interventions is owned by Thesis 3.</li></ul>
+<h2 id="thesis-5-alignment-and-scoped-trust">Thesis 5: Alignment And Scoped Trust</h2>
+<p>Primary responsibility:</p>
+<p>Model alignment invariants, scoped trust, evidence ledgers, permissioning, containment, rollback, incident response, adversarial alignment, abundance obligation, and human authority under recursive modification.</p>
+<p>Exports:</p>
+<ul><li>alignment invariants</li><li>safety invariants</li><li>scoped-trust semantics</li><li>permission predicates</li><li>trust-estimate discipline, with trust-posterior models optional only when the vocabulary requirements are met</li><li>evidence-ledger requirements</li><li>Adversarial Alignment Function requirements</li><li>AAF non-veto requirement for high-stakes irreversible changes</li><li>Abundance Distribution Obligation requirements</li><li>human authority and escalation rules</li><li>containment, interruptability, rollback, and incident response constraints</li><li>single-owner Phase 1 governance frame</li><li>capability-status-tagged alignment and trust claims</li></ul>
+<p>Imports:</p>
+<ul><li>from Thesis 1: candidate modifications and improvement-cycle evidence</li><li>from Thesis 2: cognitive and theory-of-mind capabilities used in alignment analysis</li><li>from Thesis 3: causal analysis of harms, incentives, and interventions</li><li>from Thesis 4: provenance, testing, deployment, rollback, and security instrumentation</li><li>from substrate context: internal economy and external-commerce context as scopes for trust evaluation</li></ul>
+<p>Primary agent/function home:</p>
+<ul><li><code>HumanValuesAligner</code></li><li><code>AlignmentDriftDetector</code></li><li><code>AgentAuditor</code></li><li><code>ConstitutionalAIAlignmentTrainer</code></li><li><code>SafetyBoundaryEnforcer</code></li><li><code>ConsensusCoordinator</code> (legacy name under single-owner Phase 1)</li><li><code>AgentActionRecorder</code></li><li><code>InnovationAlignmentSupervisor</code></li><li><code>BiasAuditAgent</code></li><li><code>BiasDetectionAndMitigationCoordinator</code></li><li><code>EthicalEvolutionMonitor</code></li><li><code>ComputationalTrustOrchestrator</code></li><li><code>TrustStateManager</code></li><li><code>TrustEvidenceLedgerManager</code></li><li><code>TrustDimensionUpdater</code></li><li><code>TrustContextScoper</code></li><li><code>TrustUncertaintyCalibrator</code></li><li><code>TrustPolicyProjector</code></li><li><code>TrustRecoveryCoordinator</code></li><li><code>TrustBiasAuditor</code></li><li><code>CoalitionTrustAnomalyDetector</code> (legacy name under single-owner Phase 1)</li><li><code>TrustImprovementSponsor</code></li><li><code>TrustworthinessOrchestrator</code></li><li><code>TrustworthinessGatekeeper</code></li><li><code>TrustworthinessIncidentCommander</code></li><li><code>TrustworthinessImprovementRequestBroker</code></li><li><code>ReliabilityImprovementSponsor</code></li><li><code>SafetyImprovementSponsor</code></li><li><code>SecurityImprovementSponsor</code></li><li><code>PrivacyImprovementSponsor</code></li><li><code>FairnessImprovementSponsor</code></li><li><code>Friendship</code></li><li><code>AdversarialAlignmentOrchestrator</code></li><li><code>AbundanceDistributionMonitor</code></li><li><code>BeliefModelingProcessor</code></li><li><code>IntentionRecognitionAnalyzer</code></li><li><code>PerspectiveTakingModeler</code></li><li><code>ProactiveContradictionHunter</code></li><li>Adversarial Alignment Function roles</li><li>Abundance Distribution Mechanism roles</li><li>Friendship / constitutional ethical-anchor roles</li></ul>
+<p>Notes under single-owner Phase 1:</p>
+<ul><li><code>ConsensusCoordinator</code> means intra-organizational quorum or dispute resolution under owner authority, not independent democratic governance.</li><li>For <code>ConsensusCoordinator</code>, quorum means a typed review quorum over relevant internal evidence sources: policy checks, trust estimates, AAF dissent, technical validation, and human authority state. It is not a vote among independent stakeholders.</li><li><code>CoalitionTrustAnomalyDetector</code> means detection of unhealthy internal dependency, routing, or influence clusters, not autonomous political factions.</li><li><code>TrustBiasAuditor</code> means auditing distortions in scoped reliance decisions.</li><li><code>ConstitutionalAIAlignmentTrainer</code> must specify critique-source diversity to avoid reinforcing alignment monoculture.</li><li><code>ConstitutionalAIAlignmentTrainer</code> must use the AAF dissent-source enumeration as its critique-source distribution under single-owner Phase 1: rotating LLM personas, multi-model critique, theory-of-mind-driven stakeholder simulations, and external review where available.</li><li><code>Friendship</code>, <code>AdversarialAlignmentOrchestrator</code>, and <code>AbundanceDistributionMonitor</code> operational contracts are specified in <code>appendix-thesis-5-operational-contracts.md</code>.</li><li><code>AlignmentDriftDetector</code> monitors unintended deviation from current alignment constraints. <code>EthicalEvolutionMonitor</code> monitors intended value-interpretation adaptation under governance.</li><li><code>BiasAuditAgent</code> detects bias patterns. <code>BiasDetectionAndMitigationCoordinator</code> owns mitigation workflow and follow-through.</li><li>Thesis 1 owns the generic improvement-sponsor pattern. Thesis 5 owns trust-property-specific sponsor variants such as reliability, safety, security, privacy, and fairness sponsors because their recommendations are derived from trustworthiness evidence.</li></ul>
+<p>Not owned here:</p>
+<ul><li><code>DigitalVirtualEconomyOrchestrator</code>, <code>BusinessFunctionOrchestrator</code>, and <code>ServiceProvidingEntitiesOrchestrator</code> are substrate-context systems, not Thesis 5 primary alignment mechanisms.</li></ul>
+<h2 id="cross-cutting-constraints">Cross-Cutting Constraints</h2>
+<h3 id="single-owner-phase-1">Single-Owner Phase 1</h3>
+<p>All theses must treat single-owner Phase 1 as the baseline. Future contractor oversight and multi-stakeholder governance are later phases or stress-test scenarios.</p>
+<h3 id="bounded-compute">Bounded Compute</h3>
+<p>All theses must account for token cost, compute cost, latency, validation cost, and opportunity cost.</p>
+<h3 id="capability-status">Capability Status</h3>
+<p>Every major capability claim must identify whether it is implemented, specified, proposed, or speculative.</p>
+<h3 id="benchmark-discipline">Benchmark Discipline</h3>
+<p>Benchmarks are evidence sources, not proof of intelligence or safety. Every benchmark claim must state task class and limitation.</p>
+<h3 id="evidence-ledger-discipline">Evidence Ledger Discipline</h3>
+<p>Evidence ledgers must be treated as audit-preserving records. Rollback annotates or supersedes evidence; it does not erase inconvenient history.</p>
+<p>The canonical evidence-ledger schema is maintained in <code>appendix-evidence-ledger-schema.md</code>.</p>
+<h3 id="aaf-gate-discipline">AAF Gate Discipline</h3>
+<p>The Adversarial Alignment Function must be routed into Thesis 1 acceptance gates according to invariant I12 in <code>00-vocabulary-and-invariants.md</code>.</p>
+<h3 id="provenance-discipline">Provenance Discipline</h3>
+<p>Accepted modifications must satisfy invariant I11.</p>
+<h3 id="cost-benefit-discipline">Cost/Benefit Discipline</h3>
+<p>Accepted non-emergency improvements must satisfy invariant I17.</p>
+<h3 id="deceptive-optimization-discipline">Deceptive Optimization Discipline</h3>
+<p>Improvements to learned subsystems must satisfy invariant I19.</p>
+<h3 id="overclaim-control">Overclaim Control</h3>
+<p>Sub-theses should use "scaffold for," "pathway to," "bounded," "measurable," and "governed" where appropriate. Avoid unqualified claims of superintelligence, solved alignment, or guaranteed improvement.</p>
+<h2 id="changelog">Changelog</h2>
+<ul><li>0.3.2: Added organizational operating-layer row tying the AI-native R&amp;D organization interpretation to the five-thesis import/export contract and execution-plan boundary.</li><li>0.3.1: Added version header; annotated capability-flow and constraint-wrapper diagrams; added placeholder AAF/ADO/Friendship owner agents; canonicalized AAF gate through I12; added provenance, cost/benefit, and deceptive-optimization cross-cutting constraints; specified ConstitutionalAIAlignmentTrainer critique-source distribution; clarified ConsensusCoordinator, drift/evolution, bias/mitigation, and improvement-sponsor ownership.</li><li>0.3.0: Revised after second review with capability-flow and constraint-wrapper diagrams.</li></ul></article>
+  </main>
+  <footer class="site-footer"><div>
+    <p><a href="../../../source/content/research-program/theses/00-cross-thesis-dependency-map.md">Source Markdown</a> · Content CC BY 4.0 · Code Apache-2.0</p>
+    <p>Build verification establishes reproducibility, not the truth of research claims.</p>
+  </div></footer>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 title: Consullo public research record
 summary: A status-disciplined entry point to the Consullo research program.
-status: specified
+status: specified but not implemented
 provenance: repository-authored
 claim_ids: [CP-001, CP-002]
 last_reviewed: 2026-08-12

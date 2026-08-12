@@ -1,7 +1,7 @@
 ---
 title: Overview and comprehensive document index
 summary: A reader-facing account of Consullo and a purpose-based map of the complete public record.
-status: specified
+status: specified but not implemented
 provenance: repository-authored
 claim_ids: [CP-001, CP-002]
 last_reviewed: 2026-08-12
@@ -72,17 +72,16 @@ Constitution*, because most mechanisms are not established as implemented.
 cluster that argues from ethical traditions the owner does not hold. It is a proposed structural
 response to the monoculture risk created by single ownership, not evidence that the risk is solved.
 
-**Five theses and an anti-thesis.** The research corpus asks what recursive capability
+**Five theses and an anti-thesis.** The public research corpus asks what recursive capability
 amplification would require: a validated improvement loop, a multi-agent cognitive substrate,
 causal-decision foundations, a self-modifying software substrate, and alignment invariants under
 recursive modification. It also enumerates seventeen ways the program may be fooling itself,
 including *Formalism Theatre*: apparatus that looks rigorous while constraining nothing. The
-source material remains subject to the release status shown in the index below.
+Each page states its own capability or artifact status in the index below.
 
 **Twenty years of lineage.** The work began in 2006 with a chatbot intended to behave in a friendly
 manner and learn word meanings, continued through symbolic AI, and pivoted toward large language
-models in 2023. The research-history page below states whether that source record has cleared
-release.
+models in 2023. The approved tranche-1 research history is now public below.
 
 ## What is not claimed
 
@@ -139,13 +138,66 @@ sources and are not listed again.
 |---|---|---|---|---|
 | [Architecture](content/architecture.md) | What public system architecture and boundaries have cleared release review? | Not assigned — awaiting declassification | None | <1 min |
 | [Constitutional commitments](content/constitutional-commitments.md) | Which governance commitments are specified, and which enforcement questions remain open? | Specified but not implemented | None | ~14 min |
-| [Five theses](content/research-program/five-theses.md) | Which thesis material is available for public scrutiny? | Not assigned — awaiting declassification | None | <1 min |
-| [Falsifiers](content/research-program/falsifiers.md) | What observation could count against the program's central research direction? | Proposed extension | None | ~1 min |
+| [Five theses](content/research-program/five-theses.md) | Which thesis material is available for public scrutiny? | Implemented index; indexed claims vary | None | ~3 min |
+| [Falsifiers](content/research-program/falsifiers.md) | Where are the program's detailed falsification signals and criticisms? | Implemented risk-register entry point | None | ~1 min |
 | [Benchmarks](content/research-program/benchmarks.md) | Which evaluation protocols and pre-registered interpretations are public? | Not assigned — awaiting declassification | None | <1 min |
 | [Atomic decomposition](content/engineering/atomic-decomposition.md) | What decomposition method and comparative evaluation have cleared release review? | Not assigned — awaiting declassification | None | <1 min |
 | [LLM-native Functional Java](content/engineering/llm-native-functional-java.md) | What language-subset hypothesis and benchmark have cleared release review? | Not assigned — awaiting declassification | None | <1 min |
 | [Empirical self-improvement](content/engineering/empirical-self-improvement.md) | What improvement loop, tests, failures, and promotion boundaries are public? | Not assigned — awaiting declassification | None | <1 min |
-| [Research history](content/history/from-cyc-to-consullo.md) | What documented path led from earlier research to Consullo? | Not assigned — awaiting declassification | None | <1 min |
+| [Research history](content/history/from-cyc-to-consullo.md) | What documented path led from earlier research to Consullo? | Implemented history artifact; not a capability status | Cited primary-source reconstruction; not independent validation | ~18 min |
+
+## Read the framing and shared controls
+
+| Document | Question it answers | Capability status | Evidence status | Read time |
+|---|---|---|---|---|
+| [Master abstract](content/research-program/theses/00-master-abstract.md) | What bounded claim joins the suite? | Proposed extension | None | ~3 min |
+| [Master introduction](content/research-program/theses/00-master-introduction.md) | Why treat governed recursive improvement as an empirical research program? | Proposed extension | None | ~7 min |
+| [Master synthesis](content/research-program/theses/00-master-synthesis.md) | How do the theses compose without extending their claims? | Proposed extension | None | ~8 min |
+| [Vocabulary and invariants](content/research-program/theses/00-vocabulary-and-invariants.md) | Which terms, status rules, and cross-suite invariants govern interpretation? | Specified but not implemented | None | ~31 min |
+| [Cross-thesis dependency map](content/research-program/theses/00-cross-thesis-dependency-map.md) | Which thesis owns each function and which imports are load-bearing? | Specified but not implemented | None | ~13 min |
+| [Why the goal architecture is Thesis 0](content/research-program/theses/00-thesis-0-naming.md) | Why does goal governance precede the five capability theses? | Proposed extension | None | ~9 min |
+| [Risks and criticisms](content/research-program/theses/risks-and-criticisms.md) | What are the strongest objections, falsification signals, and required responses? | Implemented risk register; not a capability status | None | ~30 min |
+| [Standing guidelines registry](content/research-program/theses/standing-guidelines-registry.md) | Which limited guidelines may back routine reversible planning? | Proposed extension | None | ~3 min |
+| [Thesis 0 cross-reference map](content/research-program/theses/thesis-0-cross-reference-map.md) | How do Thesis 0 invariants map to private operational artifacts? | Proposed extension | None | ~5 min |
+
+## Read Thesis 0 and the five capability theses
+
+| Document | Question it answers | Capability status | Evidence status | Read time |
+|---|---|---|---|---|
+| [Friendship-Governed Goal Architecture](content/research-program/theses/friendship-governed-goal-architecture-thesis.md) | Where is the stable index for the paginated 52,258-word Thesis 0? | Specified but not implemented | None | <1 min |
+| [Thesis 0, part 1](content/research-program/theses/friendship-governed-goal-architecture-thesis-part-1.md) | What are the foundations, invariants, governed-goal object, goal DAG, and lifecycle model? | Specified but not implemented | None | ~77 min |
+| [Thesis 0, part 2](content/research-program/theses/friendship-governed-goal-architecture-thesis-part-2.md) | How do authority, evidence, plan linkage, inheritance, veto, quarantine, and snapshots work? | Specified but not implemented | None | ~64 min |
+| [Thesis 0, part 3](content/research-program/theses/friendship-governed-goal-architecture-thesis-part-3.md) | How do RSI self-protection, evidence-ledger integration, and worked cases compose? | Specified but not implemented | None | ~76 min |
+| [Thesis 0, part 4](content/research-program/theses/friendship-governed-goal-architecture-thesis-part-4.md) | What risks, integrations, validation requirements, and acceptance criteria remain? | Specified but not implemented | None | ~46 min |
+| [Validated improvement loop](content/research-program/theses/validated-improvement-loop-thesis.md) | How could proposed changes be evaluated, gated, staged, monitored, and learned from? | Specified but not implemented | None | ~62 min |
+| [Multi-agent cognitive substrate](content/research-program/theses/multi-agent-cognitive-substrate-thesis.md) | Which compositional cognitive functions could amplify capability after integration cost? | Specified but not implemented | None | ~59 min |
+| [Causal-decision foundations](content/research-program/theses/causal-decision-foundations-thesis.md) | How should causal assumptions, uncertainty, experiments, and escalation shape decisions? | Specified but not implemented | None | ~55 min |
+| [Self-modifying software substrate](content/research-program/theses/self-modifying-software-substrate-thesis.md) | How could code and agent changes pass constrained acceptance gates? | Specified but not implemented | None | ~55 min |
+| [Alignment invariants and scoped trust](content/research-program/theses/alignment-invariants-and-scoped-trust-thesis.md) | Which constraints wrap recursive modification and preserve human authority? | Specified but not implemented | None | ~55 min |
+
+## Consult the appendices
+
+| Document | Question it answers | Capability status | Evidence status | Read time |
+|---|---|---|---|---|
+| [Formal models](content/research-program/appendices/appendix-formal-models.md) | What shared mathematical sketches and acceptance semantics support the suite? | Proposed extension | None | ~20 min |
+| [Evidence-ledger schema](content/research-program/appendices/appendix-evidence-ledger-schema.md) | What should an evidence ledger record? | Specified but not implemented | None | ~15 min |
+| [Literature grounding](content/research-program/appendices/appendix-literature-grounding.md) | Which external literature constrains the research program? | Implemented literature record; not system implementation | Literature synthesis; not independent validation | ~15 min |
+| [Substrates](content/research-program/appendices/appendix-substrates.md) | Which technical and economic substrates support the thesis architecture? | Specified but not implemented | None | ~4 min |
+| [Organizational recursive self-improvement](content/research-program/appendices/appendix-organizational-recursive-self-improvement.md) | How might the five theses compose as an AI-native R&D organization? | Speculative research target | None | ~19 min |
+| [Thesis 0 schema-validation tests](content/research-program/appendices/appendix-thesis-0-schema-validation-tests.md) | Which future validation fixtures should operationalize Thesis 0? | Proposed extension | None | ~3 min |
+| [Thesis 1 benchmarks](content/research-program/appendices/appendix-thesis-1-improvement-loop-benchmarks.md) | How should improvement-loop claims be evaluated? | Proposed extension | No results | ~11 min |
+| [Thesis 2 benchmarks](content/research-program/appendices/appendix-thesis-2-cognitive-workflow-benchmarks.md) | How should cognitive-workflow gains and integration costs be measured? | Proposed extension | No results | ~8 min |
+| [Thesis 3 benchmarks](content/research-program/appendices/appendix-thesis-3-causal-decision-benchmarks.md) | How should causal and decision claims be tested? | Proposed extension | No results | ~7 min |
+| [Thesis 4 benchmarks](content/research-program/appendices/appendix-thesis-4-software-substrate-benchmarks.md) | How should self-modifying software claims be tested? | Proposed extension | No results | ~7 min |
+| [Thesis 5 benchmarks](content/research-program/appendices/appendix-thesis-5-alignment-benchmarks.md) | How should alignment and scoped-trust mechanisms be tested? | Proposed extension | No results | ~7 min |
+| [Thesis 5 operational contracts](content/research-program/appendices/appendix-thesis-5-operational-contracts.md) | What design-level contracts govern the three load-bearing alignment roles? | Specified but not implemented | None | ~9 min |
+
+## Deliberately withheld
+
+The implementation-evidence appendix is absent pending owner re-verification. It cited five source
+files that do not exist anywhere in the workspace and used them as the sole evidence for four
+`Implemented/Tested` gradings across Theses 1 and 4. Until its paths and gradings reproduce, it is
+not part of this public record and supplies no evidence to the pages above.
 
 ## Inspect evidence and release provenance
 
@@ -157,7 +209,7 @@ sources and are not listed again.
 | [Claim ledger](claims/claims.yaml) | What are the machine-readable claim statements, statuses, non-claims, and evidence links? | Canonical status recorded per claim | Evidence IDs recorded per claim; currently none | Reference |
 | [Evidence ledger](claims/evidence.yaml) | What machine-readable evidence records exist and which claims do they bear on? | N/A — evidence metadata | Empty | Reference |
 | [Source dispositions](claims/source-dispositions.yaml) | Which planned public artifacts remain awaiting declassification and lack receipts? | Not assigned for unreleased artifacts | None | Reference |
-| [Release policy and register](declassification/RELEASES.md) | What must a release receipt record, and have any been issued? | N/A — release control | No receipts issued | <1 min |
+| [Release policy and register](declassification/RELEASES.md) | What must a release receipt record, and have any been issued? | N/A — release control | One active content-addressed receipt | <1 min |
 | [Public receipt directory](declassification/public-receipts/README.md) | Which content-addressed release receipts are present? | N/A — release record | One active release receipt | <1 min |
 | [Constitution release receipt DDR-0005](declassification/public-receipts/DDR-0005.md) | Which approved source and public bytes authorize the constitutional edition? | N/A — release record | Publication authority, not implementation evidence | <1 min |
 

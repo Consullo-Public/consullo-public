@@ -1,7 +1,7 @@
 ---
 title: Public evidence
 summary: Evidence strata, public experiments, and negative results.
-status: specified
+status: specified but not implemented
 provenance: repository-authored
 claim_ids: [CP-001, CP-002]
 last_reviewed: 2026-08-12
