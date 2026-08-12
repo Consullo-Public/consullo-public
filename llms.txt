@@ -15,7 +15,7 @@ No indexed page exceeds 32,000 estimated tokens.
 
 ## Orientation and status
 
-- [Overview and comprehensive document index](OVERVIEW.md): ~5,772 estimated tokens
+- [Overview and comprehensive document index](OVERVIEW.md): ~1,111 estimated tokens
 - [Consullo public research record](content/index.md): ~286 estimated tokens
 - [Start here](content/start-here.md): ~191 estimated tokens
 - [Evidence and claim status](STATUS.md): ~708 estimated tokens
